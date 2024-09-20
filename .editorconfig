@@ -1,0 +1,23 @@
+# Top-most EditorConfig file
+root = true
+
+# Default settings for all files
+[*]
+# Indentation style and size
+indent_style = space
+indent_size = 2
+
+# Tab width
+tab_width = 2
+
+# End of line type (LF for Linux/Mac, CRLF for Windows)
+end_of_line = lf
+
+# Character encoding
+charset = utf-8
+
+# Ensure files end with a newline
+insert_final_newline = true
+
+# Trim trailing whitespace on save
+trim_trailing_whitespace = true
