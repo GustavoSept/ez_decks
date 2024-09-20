@@ -5,10 +5,10 @@ root = true
 [*]
 # Indentation style and size
 indent_style = space
-indent_size = 2
+indent_size = 3
 
 # Tab width
-tab_width = 2
+tab_width = 3
 
 # End of line type (LF for Linux/Mac, CRLF for Windows)
 end_of_line = lf
