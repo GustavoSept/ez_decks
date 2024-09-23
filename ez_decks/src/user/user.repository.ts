@@ -1,13 +1,15 @@
-import { Injectable } from '@nestjs/common';
 import { Prisma, User } from '@prisma/client';
-import { UserRepository } from './user.repository';
+import { PrismaService } from '../prisma/prisma.service';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class UserService {
-   constructor(private readonly repo: UserRepository) {}
+export class UserRepository {
+   constructor(private readonly prisma: PrismaService) {}
 
    async create(data: Prisma.UserCreateInput): Promise<User> {
-      return this.repo.create(data);
+      return this.prisma.user.create({
+         data,
+      });
    }
 
    findMany(params: {
@@ -18,7 +20,7 @@ export class UserService {
       orderBy?: Prisma.UserOrderByWithRelationInput;
    }): Promise<User[]> {
       const { skip, take, cursor, where, orderBy } = params;
-      return this.repo.findMany({
+      return this.prisma.user.findMany({
          skip,
          take,
          cursor,
@@ -28,14 +30,20 @@ export class UserService {
    }
 
    findOne(id: Prisma.UserWhereUniqueInput): Promise<User | null> {
-      return this.repo.findOne(id);
+      return this.prisma.user.findUnique({
+         where: id,
+      });
    }
 
    update(params: { where: Prisma.UserWhereUniqueInput; data: Prisma.UserUpdateInput }) {
-      return this.repo.update(params);
+      const { where, data } = params;
+      return this.prisma.user.update({
+         data,
+         where,
+      });
    }
 
    remove(id: Prisma.UserWhereUniqueInput) {
-      return this.repo.remove(id);
+      return this.prisma.user.delete({ where: id });
    }
 }
