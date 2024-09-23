@@ -2,7 +2,7 @@ FROM node:20.17-bookworm-slim
 
 WORKDIR /usr/src/app
 
-RUN apt-get update -y && apt-get install -y openssl
+RUN apt-get update -y && apt-get install -y openssl procps
 
 # Copy package files and install dependencies
 COPY package*.json ./

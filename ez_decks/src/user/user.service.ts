@@ -1,6 +1,4 @@
 import { Injectable } from '@nestjs/common';
-// import { CreateUserDto } from './dto/create-user.dto';
-// import { UpdateUserDto } from './dto/update-user.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Prisma, User } from '@prisma/client';
 
@@ -31,17 +29,21 @@ export class UserService {
       });
    }
 
-   findOne(query: Prisma.UserWhereUniqueInput): Promise<User | null> {
+   findOne(id: Prisma.UserWhereUniqueInput): Promise<User | null> {
       return this.prisma.user.findUnique({
-         where: query,
+         where: id,
       });
    }
 
-   // update(id: number, updateUserDto: UpdateUserDto) {
-   //    return `This action updates a #${id} user`;
-   // }
+   update(params: { where: Prisma.UserWhereUniqueInput; data: Prisma.UserUpdateInput }) {
+      const { where, data } = params;
+      return this.prisma.user.update({
+         data,
+         where,
+      });
+   }
 
-   // remove(id: number) {
-   //    return `This action removes a #${id} user`;
-   // }
+   remove(id: Prisma.UserWhereUniqueInput) {
+      return this.prisma.user.delete({ where: id });
+   }
 }
