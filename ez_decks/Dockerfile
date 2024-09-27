@@ -21,5 +21,5 @@ ENV NODE_ENV=${NODE_ENV}
 # Different commands for different environments
 CMD if [ "$NODE_ENV" = "production" ]; then npm run start:prod; \
    elif [ "$NODE_ENV" = "development" ]; then npm run start:dev; \
-   elif [ "$NODE_ENV" = "test" ]; then npm run test:watch; \
+   elif [ "$NODE_ENV" = "test" ]; then npm run test -- --watchAll; \
    else npm run start; fi
