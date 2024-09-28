@@ -56,7 +56,7 @@ describe('WordEngineService', () => {
       const startTime = Date.now();
 
       // Number of times to repeat the process
-      const repeatCount = 50;
+      const repeatCount = 100;
 
       for (let i = 0; i < repeatCount; i++) {
          const listStr = service.process_srt(fileContent);
@@ -73,8 +73,8 @@ describe('WordEngineService', () => {
 
       console.log(`Elapsed time to run process_srt() test ${repeatCount} times: ${elapsedTime}ms`);
 
-      // Assert that the entire process took less than 1000 milliseconds (1 second)
-      expect(elapsedTime).toBeLessThan(1000);
+      // Assert that the entire process took less than 1250 milliseconds (1.25 seconds)
+      expect(elapsedTime).toBeLessThan(1250);
    });
 
    it('Prints resource usage', async () => {
