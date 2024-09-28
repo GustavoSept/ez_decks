@@ -18,11 +18,69 @@ describe('WordEngineService', () => {
       expect(service).toBeDefined();
    });
 
-   it('is processing .srt file into string[] (How to sell drugs online fast s01e01)', async () => {
+   it('is processing .srt file into string[]', async () => {
       let fileContent: string;
 
+      const expectedWords: string[] = [
+         '',
+         'Funksprüche',
+         'Rufe',
+         'Junge',
+         'Ein',
+         'Typ',
+         'der',
+         'im',
+         'Internet',
+         'Drogen',
+         'verkauft',
+         'So',
+         'stellt',
+         'ihr',
+         'euch',
+         'das',
+         'sicher',
+         'vor',
+         'Aber',
+         'ich',
+         'muss',
+         'euch',
+         'enttäuschen',
+         'Dieser',
+         'Kleinkriminelle',
+         'bin',
+         'nicht',
+         'ich',
+         'Das',
+         'ist',
+         'einer',
+         'meiner',
+         'zahlreichen',
+         'Nachahmer',
+         'Was',
+         'soll',
+         'der',
+         'Junge',
+         'denn',
+         'gemacht',
+         'haben',
+         'Mal',
+         'überlegen',
+         'Er',
+         'hat',
+         'die',
+         'Datenbank',
+         'seines',
+         'Online-Drogenshops',
+         'nicht',
+         'gegen',
+         'Angriffe',
+         'der',
+         'Ermittlungsbehörden',
+         'gesichert',
+      ];
+
       try {
-         const filePath = path.join(__dirname, 'test_files', 'How.to.Sell.Drugs.Online.Fast.S01E01.German.NetflixSD.x264-4SJ-de.srt');
+         const filePath = path.join(__dirname, 'test_files', 'short_subtitle.srt');
 
          // Read the file content asynchronously
          fileContent = await fs.readFile(filePath, 'utf8');
@@ -33,15 +91,14 @@ describe('WordEngineService', () => {
 
       const listStr = service.process_srt(fileContent);
 
-      // console.log(listStr);
-
-      // Ensure the result is an array of strings
+      // Ensure the result is the correct array of strings
       expect(Array.isArray(listStr)).toBe(true);
       expect(listStr.length).toBeGreaterThan(0);
       expect(listStr.every((item) => typeof item === 'string')).toBe(true);
+      expect(listStr.sort()).toEqual(expectedWords.sort());
    });
 
-   it('processes the .srt file multiple times in less than 1 second', async () => {
+   it('processes the .srt file multiple times fast enough', async () => {
       const filePath = path.join(__dirname, 'test_files', 'How.to.Sell.Drugs.Online.Fast.S01E01.German.NetflixSD.x264-4SJ-de.srt');
 
       let fileContent: string;

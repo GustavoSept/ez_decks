@@ -1,0 +1,47 @@
+1
+00:00:10,805 --> 00:00:12,165
+[Funksprüche]
+
+2
+00:00:31,205 --> 00:00:32,285
+[Rufe]
+
+3
+00:00:32,365 --> 00:00:35,245
+[Junge]<i> Ein Typ,</i>
+<i>der im Internet Drogen verkauft.</i>
+
+4
+00:00:35,325 --> 00:00:38,485
+<i>So stellt ihr euch das sicher vor.</i>
+<i>Aber ich muss euch enttäuschen.</i>
+
+5
+00:00:38,565 --> 00:00:41,045
+<i>Dieser Kleinkriminelle bin nicht ich.</i>
+
+6
+00:00:41,125 --> 00:00:43,445
+<i>Das ist einer</i>
+<i>meiner zahlreichen Nachahmer.</i>
+
+7
+00:00:43,525 --> 00:00:46,165
+Was soll der Junge
+denn gemacht haben?
+
+8
+00:00:46,245 --> 00:00:47,045
+<i>Mal überlegen.</i>
+
+9
+00:00:47,125 --> 00:00:49,365
+<i>Er hat die Datenbank</i>
+<i>seines Online-Drogenshops</i>
+
+10
+00:00:49,445 --> 00:00:52,045
+<i>nicht gegen Angriffe</i>
+<i>der Ermittlungsbehörden gesichert</i>
+
+
