@@ -2,7 +2,6 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { WordEngineService } from './word_engine.service';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { logSystemInfo } from '../common/utils/system.util';
 
 describe('WordEngineService', () => {
    let service: WordEngineService;
@@ -74,10 +73,6 @@ describe('WordEngineService', () => {
       console.log(`Elapsed time to run process_srt() test ${repeatCount} times: ${elapsedTime}ms`);
 
       // Assert that the entire process took less than 1250 milliseconds (1.25 seconds)
-      expect(elapsedTime).toBeLessThan(1250);
-   });
-
-   it('Prints resource usage', async () => {
-      logSystemInfo();
+      expect(elapsedTime).toBeLessThan(650);
    });
 });
