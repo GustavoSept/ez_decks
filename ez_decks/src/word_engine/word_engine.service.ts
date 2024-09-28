@@ -47,4 +47,14 @@ export class WordEngineService {
          })
          .map((word) => word.charAt(0).toUpperCase() + word.slice(1)); // Capitalize the first letter
    }
+
+   /**
+    * Removes filtered words from `input_list`
+    */
+   filterText(input_list: string[], filter_list: string[]): string[] {
+      const lowercasedFilterList = new Set(filter_list.map((word) => word.toLowerCase()));
+
+      // Filter the input_list to exclude words that are present in the filter_list (case-insensitive)
+      return input_list.filter((word) => !lowercasedFilterList.has(word.toLowerCase()));
+   }
 }

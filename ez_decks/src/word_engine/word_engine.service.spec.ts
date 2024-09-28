@@ -114,6 +114,48 @@ describe('WordEngineService', () => {
       'Überlegen',
    ];
 
+   const expectedWords_filtered: string[] = [
+      'Aber',
+      'Angriffe',
+      'Datenbank',
+      'Dieser',
+      'Drogen',
+      'Ermittlungsbehörden',
+      'Funksprüche',
+      'Internet',
+      'Junge',
+      'Kleinkriminelle',
+      'Mal',
+      'Nachahmer',
+      'Online-drogenshops',
+      'Rufe',
+      'So',
+      'Typ',
+      'Bin',
+      'Denn',
+      'Einer',
+      'Enttäuschen',
+      'Euch',
+      'Gegen',
+      'Gemacht',
+      'Gesichert',
+      'Haben',
+      'Hat',
+      'Meiner',
+      'Muss',
+      'Nicht',
+      'Seines',
+      'Sicher',
+      'Soll',
+      'Stellt',
+      'Verkauft',
+      'Vor',
+      'Zahlreichen',
+      'Überlegen',
+   ];
+
+   const wordsToFilter: string[] = ['Ein', 'Er', 'Das', 'Was', 'Der', 'Die', 'Ich', 'Ihr', 'Im', 'Ist'];
+
    beforeEach(async () => {
       const module: TestingModule = await Test.createTestingModule({
          providers: [WordEngineService],
@@ -156,6 +198,16 @@ describe('WordEngineService', () => {
       expect(deduplicatedStr.length).toBeGreaterThan(0);
       expect(deduplicatedStr.every((item) => typeof item === 'string')).toBe(true);
       expect(deduplicatedStr.sort()).toEqual(expectedWords_deduplicated.sort());
+   });
+
+   it('is filtering a string[]', async () => {
+      const filteredStr: string[] = service.filterText(expectedWords_deduplicated, wordsToFilter);
+
+      // Ensure the result is the correct array of strings
+      expect(Array.isArray(filteredStr)).toBe(true);
+      expect(filteredStr.length).toBeGreaterThan(0);
+      expect(filteredStr.every((item) => typeof item === 'string')).toBe(true);
+      expect(filteredStr.sort()).toEqual(expectedWords_filtered.sort());
    });
 
    it('processes the .srt file multiple times fast enough', async () => {
