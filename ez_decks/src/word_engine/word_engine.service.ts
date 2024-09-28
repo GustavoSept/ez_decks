@@ -28,4 +28,23 @@ export class WordEngineService {
       // Step 5: Split into words and return
       return cleanedText.split(/\s+/);
    }
+
+   /**
+    * Removes duplicate words from a string[], and Capitalizes them.
+    */
+   deduplicateAndFormat(words: string[]): string[] {
+      const seen = new Set<string>();
+
+      return words
+         .filter((word) => word.trim() !== '') // Remove empty strings
+         .map((word) => word.toLowerCase()) // Convert to lowercase for consistent comparison
+         .filter((word) => {
+            if (seen.has(word)) {
+               return false; // Skip duplicates
+            }
+            seen.add(word);
+            return true;
+         })
+         .map((word) => word.charAt(0).toUpperCase() + word.slice(1)); // Capitalize the first letter
+   }
 }

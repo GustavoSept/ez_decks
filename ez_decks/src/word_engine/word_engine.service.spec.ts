@@ -6,6 +6,114 @@ import path from 'node:path';
 describe('WordEngineService', () => {
    let service: WordEngineService;
 
+   const expectedWords_duplicated: string[] = [
+      '',
+      'Funksprüche',
+      'Rufe',
+      'Junge',
+      'Ein',
+      'Typ',
+      'der',
+      'im',
+      'Internet',
+      'Drogen',
+      'verkauft',
+      'So',
+      'stellt',
+      'ihr',
+      'euch',
+      'das',
+      'sicher',
+      'vor',
+      'Aber',
+      'ich',
+      'muss',
+      'euch',
+      'enttäuschen',
+      'Dieser',
+      'Kleinkriminelle',
+      'bin',
+      'nicht',
+      'ich',
+      'Das',
+      'ist',
+      'einer',
+      'meiner',
+      'zahlreichen',
+      'Nachahmer',
+      'Was',
+      'soll',
+      'der',
+      'Junge',
+      'denn',
+      'gemacht',
+      'haben',
+      'Mal',
+      'überlegen',
+      'Er',
+      'hat',
+      'die',
+      'Datenbank',
+      'seines',
+      'Online-Drogenshops',
+      'nicht',
+      'gegen',
+      'Angriffe',
+      'der',
+      'Ermittlungsbehörden',
+      'gesichert',
+   ];
+
+   const expectedWords_deduplicated: string[] = [
+      'Aber',
+      'Angriffe',
+      'Das',
+      'Datenbank',
+      'Dieser',
+      'Drogen',
+      'Ein',
+      'Er',
+      'Ermittlungsbehörden',
+      'Funksprüche',
+      'Internet',
+      'Junge',
+      'Kleinkriminelle',
+      'Mal',
+      'Nachahmer',
+      'Online-drogenshops',
+      'Rufe',
+      'So',
+      'Typ',
+      'Was',
+      'Bin',
+      'Denn',
+      'Der',
+      'Die',
+      'Einer',
+      'Enttäuschen',
+      'Euch',
+      'Gegen',
+      'Gemacht',
+      'Gesichert',
+      'Haben',
+      'Hat',
+      'Ich',
+      'Ihr',
+      'Im',
+      'Ist',
+      'Meiner',
+      'Muss',
+      'Nicht',
+      'Seines',
+      'Sicher',
+      'Soll',
+      'Stellt',
+      'Verkauft',
+      'Vor',
+      'Zahlreichen',
+      'Überlegen',
+   ];
+
    beforeEach(async () => {
       const module: TestingModule = await Test.createTestingModule({
          providers: [WordEngineService],
@@ -20,64 +128,6 @@ describe('WordEngineService', () => {
 
    it('is processing .srt file into string[]', async () => {
       let fileContent: string;
-
-      const expectedWords: string[] = [
-         '',
-         'Funksprüche',
-         'Rufe',
-         'Junge',
-         'Ein',
-         'Typ',
-         'der',
-         'im',
-         'Internet',
-         'Drogen',
-         'verkauft',
-         'So',
-         'stellt',
-         'ihr',
-         'euch',
-         'das',
-         'sicher',
-         'vor',
-         'Aber',
-         'ich',
-         'muss',
-         'euch',
-         'enttäuschen',
-         'Dieser',
-         'Kleinkriminelle',
-         'bin',
-         'nicht',
-         'ich',
-         'Das',
-         'ist',
-         'einer',
-         'meiner',
-         'zahlreichen',
-         'Nachahmer',
-         'Was',
-         'soll',
-         'der',
-         'Junge',
-         'denn',
-         'gemacht',
-         'haben',
-         'Mal',
-         'überlegen',
-         'Er',
-         'hat',
-         'die',
-         'Datenbank',
-         'seines',
-         'Online-Drogenshops',
-         'nicht',
-         'gegen',
-         'Angriffe',
-         'der',
-         'Ermittlungsbehörden',
-         'gesichert',
-      ];
 
       try {
          const filePath = path.join(__dirname, 'test_files', 'short_subtitle.srt');
@@ -95,7 +145,17 @@ describe('WordEngineService', () => {
       expect(Array.isArray(listStr)).toBe(true);
       expect(listStr.length).toBeGreaterThan(0);
       expect(listStr.every((item) => typeof item === 'string')).toBe(true);
-      expect(listStr.sort()).toEqual(expectedWords.sort());
+      expect(listStr.sort()).toEqual(expectedWords_duplicated.sort());
+   });
+
+   it('is deduplicating a string[]', async () => {
+      const deduplicatedStr: string[] = service.deduplicateAndFormat(expectedWords_duplicated);
+
+      // Ensure the result is the correct array of strings
+      expect(Array.isArray(deduplicatedStr)).toBe(true);
+      expect(deduplicatedStr.length).toBeGreaterThan(0);
+      expect(deduplicatedStr.every((item) => typeof item === 'string')).toBe(true);
+      expect(deduplicatedStr.sort()).toEqual(expectedWords_deduplicated.sort());
    });
 
    it('processes the .srt file multiple times fast enough', async () => {
