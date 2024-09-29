@@ -6,6 +6,7 @@ import { DatabaseInterceptor } from './common/errors/interceptors/database.inter
 async function bootstrap() {
    const appPort: string = process.env.NODEAPP_PORT || '4000';
 
+   // TODO: add logic to activate DictGenerator instead of creating the app from AppModule.
    const app = await NestFactory.create(AppModule);
 
    app.useGlobalPipes(
