@@ -4,5 +4,6 @@ import { OpenAIProvider } from './providers';
 
 @Module({
    providers: [OpenaiService, OpenAIProvider],
+   exports: [OpenaiService],
 })
 export class OpenaiModule {}
