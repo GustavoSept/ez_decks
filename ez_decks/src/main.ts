@@ -5,7 +5,6 @@ import { DatabaseInterceptor } from './common/errors/interceptors/database.inter
 import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
-   // TODO: add logic to activate DictGenerator instead of creating the app from AppModule.
    // Create the app from AppModule
    const app = await NestFactory.create(AppModule);
 
