@@ -14,11 +14,11 @@ services:
       - ./ez_decks/.env.${NODE_ENV}.local
     volumes:
       - ./ez_decks:/usr/src/app
-    deploy:
-      resources:
-        limits:
-          memory: 1G
-          cpus: '0.5'
+   #  deploy:
+   #    resources:
+   #      limits:
+   #        memory: 1G
+   #        cpus: '0.5'
 
   db:
     image: postgres:16-bookworm
