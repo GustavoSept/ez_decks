@@ -1,10 +1,12 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
-import { DatabaseInterceptor } from './common/errors/interceptors/database.interceptor';
 import { ConfigService } from '@nestjs/config';
+import { AppModule } from './app.module';
+import { node_env } from './common/config/constants';
+import { DatabaseInterceptor } from './common/errors/interceptors/database.interceptor';
 
 async function bootstrap() {
+   console.log(`\n\nRunning on ${node_env} environment!\n\n`);
    // Create the app from AppModule
    const app = await NestFactory.create(AppModule);
 

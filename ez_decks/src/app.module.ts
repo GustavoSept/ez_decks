@@ -6,15 +6,7 @@ import { PrismaService } from './prisma/prisma.service';
 import { WordEngineModule } from './word_engine/word_engine.module';
 import { ConfigModule } from '@nestjs/config';
 import { DictGeneratorModule } from './dict-generator/dict-generator.module';
-
-const nodeEnvValues = ['development', 'test', 'production'] as const;
-type node_env_choices = (typeof nodeEnvValues)[number];
-
-const isValidNodeEnv = (env: any): env is node_env_choices => {
-   return nodeEnvValues.includes(env);
-};
-
-const node_env: node_env_choices = isValidNodeEnv(process.env.NODE_ENV) ? (process.env.NODE_ENV as node_env_choices) : 'development';
+import { node_env } from './common/config/constants';
 
 @Module({
    imports: [
