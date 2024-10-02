@@ -5,6 +5,7 @@ import { OpenAIProvider } from './providers';
 import { ChatCompletionMessage } from 'openai/resources';
 import { z } from 'zod';
 import { node_env } from '../../common/config/constants';
+import { BatchService } from './batch.service';
 
 describe('OpenaiService', () => {
    let service: OpenaiService;
@@ -22,7 +23,7 @@ describe('OpenaiService', () => {
                expandVariables: true,
             }),
          ],
-         providers: [OpenaiService, OpenAIProvider],
+         providers: [OpenaiService, OpenAIProvider, BatchService],
       }).compile();
 
       service = module.get<OpenaiService>(OpenaiService);
