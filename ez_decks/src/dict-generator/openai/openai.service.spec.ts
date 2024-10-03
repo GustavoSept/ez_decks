@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { node_env } from '../../common/config/constants';
+import { TranslationResponse } from '../structs/translation-response.zod';
 import { OpenaiService } from './openai.service';
 import { OpenAIProvider } from './providers';
 import { DEFAULT_SYS_MESSAGE } from './constants';
-import { ChatCompletionMessage } from 'openai/resources';
-import { z } from 'zod';
-import { node_env } from '../../common/config/constants';
 import { BatchService } from './batch.service';
+import { ChatCompletionMessage } from 'openai/resources';
 
 describe('OpenaiService: simple queries', () => {
    let service: OpenaiService;
@@ -55,26 +55,6 @@ describe('OpenaiService: simple queries', () => {
          console.log('Skipping external API test since RUN_EXTERNAL_API_TESTS is not set to true');
          return;
       }
-
-      const TranslationResponse = z.object({
-         response: z.array(
-            z.object({
-               german_word: z.string(), // German word as a key inside each object
-               translations: z.object({
-                  verb: z.array(z.string()).optional(),
-                  noun: z.array(z.string()).optional(),
-                  adjective: z.array(z.string()).optional(),
-                  adverb: z.array(z.string()).optional(),
-                  pronoun: z.array(z.string()).optional(),
-                  preposition: z.array(z.string()).optional(),
-                  conjunction: z.array(z.string()).optional(),
-                  article: z.array(z.string()).optional(),
-                  numeral: z.array(z.string()).optional(),
-                  modal_verb: z.array(z.string()).optional(),
-               }),
-            })
-         ),
-      });
 
       // Adjusting the prompt for the structure
       const prompt = `Translate these words: "gehen", "Haus", "schön"`;
