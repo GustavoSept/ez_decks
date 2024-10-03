@@ -2,6 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import { AppModule } from '../src/app.module';
 import { CreateBatchFileDto } from '../src/dict-generator/DTOs/create-batch-file.dto';
+import { DEFAULT_SYS_MESSAGE } from '../src/dict-generator/openai/constants';
 import request from 'supertest';
 
 describe('DictGeneratorController (e2e)', () => {
@@ -41,7 +42,7 @@ describe('DictGeneratorController (e2e)', () => {
                   ['word1', 'word2'],
                   ['word3', 'word4'],
                ],
-               systemMessage: "You're a helpful assistant", // Default value
+               systemMessage: DEFAULT_SYS_MESSAGE, // Default value
             });
          });
    });

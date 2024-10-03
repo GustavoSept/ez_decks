@@ -2,6 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { OpenaiService } from './openai.service';
 import { OpenAIProvider } from './providers';
+import { DEFAULT_SYS_MESSAGE } from './constants';
 import { ChatCompletionMessage } from 'openai/resources';
 import { z } from 'zod';
 import { node_env } from '../../common/config/constants';
@@ -77,37 +78,7 @@ describe('OpenaiService: simple queries', () => {
 
       // Adjusting the prompt for the structure
       const prompt = `Translate these words: "gehen", "Haus", "schön"`;
-      const sysMsg = `Translate the provided German words into English. Return the response as an object with a key "response". The value should be an array of objects, where each object contains:
-   - "german_word": The German word being translated.
-   - "translations": An object with keys representing grammatical attributes (such as 'verb', 'noun', 'adjective').
-   - For each grammatical attribute, provide a list of possible English translations.
-
-   Respond only with the JSON object.
-
-   Example response:
-   {
-      "response": [
-         {
-            "german_word": "gehen",
-            "translations": {
-               "verb": ["go", "walk"],
-               "noun": ["going", "walk"]
-            }
-         },
-         {
-            "german_word": "Haus",
-            "translations": {
-               "noun": ["house", "home"]
-            }
-         },
-         {
-            "german_word": "schön",
-            "translations": {
-               "adjective": ["beautiful", "pretty"]
-            }
-         }
-      ]
-   }`;
+      const sysMsg = DEFAULT_SYS_MESSAGE;
 
       const response = await service.structuredQuery(prompt, TranslationResponse, 'germanTranslation', sysMsg);
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { DEFAULT_MAX_TOKEN_OUTPUT, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
+import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
 import { BatchUnit } from './types';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { ZodSchema } from 'zod';
@@ -18,7 +18,7 @@ export class BatchService {
    createBatchUnit<T>(
       id: number,
       userMsg: string,
-      systemMsg: string = 'You are a helpful assistant.',
+      systemMsg: string = DEFAULT_SYS_MESSAGE,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT,
       suppressWarning: boolean = false,

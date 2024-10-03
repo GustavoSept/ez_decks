@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { DEFAULT_SYS_MESSAGE } from './constants';
 import { BatchService } from './batch.service';
 import { BatchUnit } from './types';
 import * as fs from 'fs';
@@ -17,7 +18,7 @@ describe('BatchService', () => {
          body: {
             model: 'gpt-3.5-turbo-0125',
             messages: [
-               { role: 'system', content: 'You are a helpful assistant.' },
+               { role: 'system', content: DEFAULT_SYS_MESSAGE },
                { role: 'user', content: 'Hello world!' },
             ],
             max_tokens: 1000,
@@ -62,7 +63,7 @@ describe('BatchService', () => {
       it('should create a valid BatchUnit', () => {
          const id = 1;
          const userMsg = 'Test message';
-         const systemMsg = 'Test system message';
+         const systemMsg = DEFAULT_SYS_MESSAGE;
          const model = configService.get<string>('OPENAI_MODEL') || 'gpt-3';
          const maxTokens = 100;
 
@@ -96,7 +97,7 @@ describe('BatchService', () => {
 
          const batchUnit = service.createBatchUnit(id, userMsg);
 
-         expect(batchUnit.body.messages[0].content).toBe('You are a helpful assistant.');
+         expect(batchUnit.body.messages[0].content).toBe(DEFAULT_SYS_MESSAGE);
          expect(batchUnit.body.model).toBe(configService.get('OPENAI_MODEL', 'gpt-3'));
       });
 

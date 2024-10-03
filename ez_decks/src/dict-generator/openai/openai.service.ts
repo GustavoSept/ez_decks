@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
 import { ZodSchema } from 'zod';
 import { zodResponseFormat } from 'openai/helpers/zod';
-import { DEFAULT_MAX_TOKEN_OUTPUT, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
+import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
 import { BatchService } from './batch.service';
 import { BatchUnit } from './types';
 import * as fs from 'fs';
@@ -18,7 +18,7 @@ export class OpenaiService {
 
    async query(
       userMsg: string,
-      systemMsg: string = 'You are a helpful assistant.',
+      systemMsg: string = DEFAULT_SYS_MESSAGE,
       maxOutput: number = DEFAULT_MAX_TOKEN_OUTPUT,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL)
    ): Promise<OpenAI.Chat.Completions.ChatCompletionMessage> {
@@ -41,7 +41,7 @@ export class OpenaiService {
       userMsg: string,
       struct: ZodSchema<T>,
       structName: string = 'response',
-      systemMsg: string = 'You are a helpful assistant.',
+      systemMsg: string = DEFAULT_SYS_MESSAGE,
       maxOutput: number = DEFAULT_MAX_TOKEN_OUTPUT,
       model: string = this.configService.get<string>('OPENAI_MODEL', 'gpt-4o-mini')
    ): Promise<T> {

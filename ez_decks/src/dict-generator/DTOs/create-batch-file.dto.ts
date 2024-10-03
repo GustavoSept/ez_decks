@@ -1,5 +1,6 @@
-import { IsString, IsOptional } from 'class-validator';
+import { DEFAULT_SYS_MESSAGE } from '../openai/constants';
 import { IsArrayOfNonEmptyStringArrays } from '../../common/utils/validators/is-array-of-non-empty-string-arrays';
+import { IsString, IsOptional } from 'class-validator';
 
 export class CreateBatchFileDto {
    @IsArrayOfNonEmptyStringArrays({
@@ -12,6 +13,6 @@ export class CreateBatchFileDto {
    systemMessage: string;
 
    constructor() {
-      this.systemMessage = "You're a helpful assistant";
+      this.systemMessage = DEFAULT_SYS_MESSAGE;
    }
 }
