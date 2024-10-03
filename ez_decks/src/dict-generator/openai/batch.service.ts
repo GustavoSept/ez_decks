@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, PayloadTooLargeException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
 import { BatchUnit } from './types';
@@ -79,16 +79,37 @@ export class BatchService {
     * Returns path of the local file
     */
    async createLocalJSONL(batchUnits: BatchUnit[]): Promise<string> {
+      // Check total number of batch units (current limit: 50,000)
+      // https://platform.openai.com/docs/guides/batch/rate-limits
+      const MAX_BATCH_UNITS = 50_000;
+      if (batchUnits.length > MAX_BATCH_UNITS) {
+         throw new PayloadTooLargeException(`Exceeded maximum batch units limit of ${MAX_BATCH_UNITS}. Received ${batchUnits.length}.`);
+      }
+
       return new Promise((resolve, reject) => {
          const tempFilePath = path.join(this.configService.get<string>('NODE_TEMP_PATH', '/tmp'), `${uuidv4()}.jsonl`);
          const writeStream = fs.createWriteStream(tempFilePath);
 
+         let totalSizeInBytes = 0;
+
+         const MAX_SIZE_IN_BYTES = Math.max(100 * 1024 * 1024, 0) - 256; // 100 MB - 256 bytes
+
          writeStream.on('error', (err) => reject(err));
          writeStream.on('finish', () => resolve(tempFilePath));
 
-         batchUnits.forEach((unit) => {
-            writeStream.write(JSON.stringify(unit) + '\n');
-         });
+         for (const unit of batchUnits) {
+            const unitString = JSON.stringify(unit) + '\n';
+            const unitSizeInBytes = Buffer.byteLength(unitString, 'utf8');
+
+            totalSizeInBytes += unitSizeInBytes;
+            if (totalSizeInBytes > MAX_SIZE_IN_BYTES) {
+               writeStream.end(); // Ensure the stream is closed
+               reject(new PayloadTooLargeException(`Exceeded maximum batch file size of 100 MB.`));
+               return;
+            }
+
+            writeStream.write(unitString);
+         }
 
          writeStream.end();
       });
