@@ -1,8 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { BatchService } from './batch.service';
-import * as fs from 'fs';
 import { BatchUnit } from './types';
+import * as fs from 'fs';
+import { z } from 'zod';
 
 describe('BatchService', () => {
    let service: BatchService;
@@ -97,6 +98,67 @@ describe('BatchService', () => {
 
          expect(batchUnit.body.messages[0].content).toBe('You are a helpful assistant.');
          expect(batchUnit.body.model).toBe(configService.get('OPENAI_MODEL', 'gpt-3'));
+      });
+
+      it('should include response_format when struct is provided', () => {
+         const id = 1;
+         const userMsg = 'Test message';
+         const systemMsg = 'Test system message';
+         const model = 'gpt-3';
+         const maxTokens = 100;
+
+         const responseSchema = z.object({
+            text: z.string(),
+         });
+
+         const batchUnit = service.createBatchUnit(id, userMsg, systemMsg, model, maxTokens, false, responseSchema, 'custom_response');
+
+         expect(batchUnit.body).toHaveProperty('response_format');
+         expect(batchUnit.body.response_format).toMatchObject({
+            type: 'json_schema',
+            json_schema: {
+               name: 'custom_response',
+               schema: {
+                  $schema: 'http://json-schema.org/draft-07/schema#',
+                  additionalProperties: false,
+                  properties: {
+                     text: { type: 'string' },
+                  },
+                  required: ['text'],
+                  type: 'object',
+               },
+            },
+         });
+      });
+
+      it('should not include response_format when struct is not provided', () => {
+         const id = 1;
+         const userMsg = 'Test message';
+         const systemMsg = 'Test system message';
+         const model = 'gpt-3';
+         const maxTokens = 100;
+
+         const batchUnit = service.createBatchUnit(id, userMsg, systemMsg, model, maxTokens);
+
+         expect(batchUnit.body).not.toHaveProperty('response_format');
+      });
+
+      it('should allow custom structName for response_format', () => {
+         const id = 1;
+         const userMsg = 'Test message';
+         const systemMsg = 'Test system message';
+         const model = 'gpt-3';
+         const maxTokens = 100;
+
+         const responseSchema = z.object({
+            text: z.string(),
+         });
+
+         const customStructName = 'custom_response';
+
+         const batchUnit = service.createBatchUnit(id, userMsg, systemMsg, model, maxTokens, false, responseSchema, customStructName);
+
+         expect(batchUnit.body.response_format.json_schema.name).toBe(customStructName);
       });
    });
 

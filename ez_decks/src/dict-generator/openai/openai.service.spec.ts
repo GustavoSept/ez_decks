@@ -7,7 +7,7 @@ import { z } from 'zod';
 import { node_env } from '../../common/config/constants';
 import { BatchService } from './batch.service';
 
-describe('OpenaiService', () => {
+describe('OpenaiService: simple queries', () => {
    let service: OpenaiService;
    let configService: ConfigService;
    let runExternalApiTests: boolean;
@@ -32,7 +32,7 @@ describe('OpenaiService', () => {
       runExternalApiTests = configService.get<string>('RUN_EXTERNAL_API_TESTS', 'false') === 'true';
    });
 
-   it('should be defined', () => {
+   it('openai object should be defined', () => {
       expect(service).toBeDefined();
       expect(service['openai']).toBeDefined(); // Ensuring the OpenAI instance is injected
    });

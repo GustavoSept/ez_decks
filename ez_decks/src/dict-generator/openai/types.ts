@@ -6,5 +6,6 @@ export interface BatchUnit {
       model: string;
       messages: { role: 'system' | 'user' | 'assistant'; content: string }[];
       max_tokens: number;
+      response_format?;
    };
 }

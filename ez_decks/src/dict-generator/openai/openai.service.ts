@@ -61,7 +61,10 @@ export class OpenaiService {
       return completion.choices[0].message.parsed as T;
    }
 
-   async batchQuery(
+   /**
+    * Upload file to OpenAI (we can use the id to batch process later)
+    */
+   async batchGetFile(
       inputWords: string[][],
       sysMsg: string,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
@@ -74,21 +77,121 @@ export class OpenaiService {
 
       try {
          // Stream the file to the OpenAI API
-         const req = await this.openai.files.create({
+         const file = await this.openai.files.create({
             file: fs.createReadStream(tempFilePath),
             purpose: 'batch',
          });
 
-         return req;
+         return file;
       } finally {
          // Delete the temporary file after the API request
          this.batchService.deleteLocalJSONL(tempFilePath);
       }
    }
 
-   async batchStructuredQuery() {}
+   /**
+    * Upload file to OpenAI (we can use the id to batch process later).
+    * Structured Version, provide a schema.
+    */
+   async batchGetStructuredFile<T>(
+      inputWords: string[][],
+      struct: ZodSchema<T>,
+      structName: string = 'response',
+      sysMsg: string,
+      model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
+      maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT
+   ) {
+      const batchUnits: BatchUnit[] = inputWords.map((words, index) =>
+         this.batchService.createBatchUnit(index, words.join(' '), sysMsg, model, maxTokens, false, struct, structName)
+      );
 
-   async batchCheckIsReady() {}
+      // Create the local JSONL file
+      const tempFilePath = await this.batchService.createLocalJSONL(batchUnits);
 
-   async batchCheckSentBatches() {}
+      try {
+         // Stream the file to the OpenAI API
+         const file = await this.openai.files.create({
+            file: fs.createReadStream(tempFilePath),
+            purpose: 'batch',
+         });
+
+         return file;
+      } finally {
+         // Delete the temporary file after the API request
+         this.batchService.deleteLocalJSONL(tempFilePath);
+      }
+   }
+
+   /**
+    * Start batch processing
+    */
+   async batchCreateProcess(
+      inputFileId: string,
+      endpoint: '/v1/chat/completions' | '/v1/embeddings' | '/v1/completions' = '/v1/chat/completions',
+      completionWindow: '24h' = '24h',
+      metadata?: Record<string, any>
+   ) {
+      const batch = await this.openai.batches.create({
+         input_file_id: inputFileId,
+         endpoint: endpoint,
+         completion_window: completionWindow,
+         metadata: metadata,
+      });
+
+      return batch;
+   }
+
+   /**
+    * Given batch id, check status
+    */
+   async batchCheckStatus(batchId: string): Promise<OpenAI.Batch> {
+      return await this.openai.batches.retrieve(batchId);
+   }
+
+   /**
+    * Returns the retrieved results
+    */
+   async batchRetrieveResults(batchId: string): Promise<{ results: object[]; errors: any[] }> {
+      const batch = await this.batchCheckStatus(batchId);
+
+      let results: object[] = [];
+      if (batch.output_file_id) {
+         const fileResponse = await this.openai.files.content(batch.output_file_id);
+         const fileContents = await fileResponse.text();
+
+         const lines = fileContents.trim().split('\n');
+         results = lines.map((line) => JSON.parse(line));
+      }
+
+      let errors: object[] = [];
+      if (batch.error_file_id) {
+         const errorFileResponse = await this.openai.files.content(batch.error_file_id);
+         const errorFileContents = await errorFileResponse.text();
+
+         const errorLines = errorFileContents.trim().split('\n');
+         errors = errorLines.map((line) => JSON.parse(line));
+      }
+
+      return { results, errors };
+   }
+
+   /**
+    * Given batch id, cancel processing
+    */
+   async batchCancelProcess(batchId: string): Promise<OpenAI.Batch> {
+      const batch = await this.openai.batches.cancel(batchId);
+      return batch;
+   }
+
+   /**
+    * Returns a list of every sent OpenAI batch
+    */
+   async batchListAllProcesses(limit?: number, after?: string): Promise<OpenAI.Batch[]> {
+      const batches: OpenAI.Batch[] = [];
+      const list = await this.openai.batches.list({ limit, after });
+      for await (const batch of list) {
+         batches.push(batch);
+      }
+      return batches;
+   }
 }

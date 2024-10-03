@@ -2,9 +2,11 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { DEFAULT_MAX_TOKEN_OUTPUT, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
 import { BatchUnit } from './types';
+import { zodResponseFormat } from 'openai/helpers/zod';
+import { ZodSchema } from 'zod';
+import { v4 as uuidv4 } from 'uuid';
 import * as fs from 'fs';
 import * as path from 'path';
-import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class BatchService {
@@ -13,19 +15,22 @@ export class BatchService {
    /**
     * returns a single line from .jsonl "file"/stream
     */
-   createBatchUnit(
+   createBatchUnit<T>(
       id: number,
       userMsg: string,
       systemMsg: string = 'You are a helpful assistant.',
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT,
-      suppressWarning: boolean = false
+      suppressWarning: boolean = false,
+      struct?: ZodSchema<T>,
+      structName: string = 'response'
    ): BatchUnit {
       if (!Number.isInteger(id)) {
          if (!suppressWarning) console.warn(`ID must be an integer, but received: ${id}. Truncating variable to get a valid id.`);
          id = Math.trunc(id);
       }
-      return {
+
+      const batchUnit: BatchUnit = {
          custom_id: `request-${id}`,
          method: 'POST',
          url: '/v1/chat/completions',
@@ -38,6 +43,12 @@ export class BatchService {
             max_tokens: Math.trunc(maxTokens),
          },
       };
+
+      if (struct) {
+         batchUnit.body['response_format'] = zodResponseFormat(struct, structName);
+      }
+
+      return batchUnit;
    }
 
    /**
