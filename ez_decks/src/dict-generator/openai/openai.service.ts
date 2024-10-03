@@ -64,46 +64,19 @@ export class OpenaiService {
    /**
     * Upload file to OpenAI (we can use the id to batch process later)
     */
-   async batchGetFile(
+   async batchGetFile<T>(
       inputWords: string[][],
       sysMsg: string,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
-      maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT
+      maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT,
+      struct?: ZodSchema<T>,
+      structName: string = 'response'
    ) {
-      const batchUnits: BatchUnit[] = this.batchService.createJSONArrayFromWords(inputWords, sysMsg, model, maxTokens);
-
-      // Create the local JSONL file
-      const tempFilePath = await this.batchService.createLocalJSONL(batchUnits);
-
-      try {
-         // Stream the file to the OpenAI API
-         const file = await this.openai.files.create({
-            file: fs.createReadStream(tempFilePath),
-            purpose: 'batch',
-         });
-
-         return file;
-      } finally {
-         // Delete the temporary file after the API request
-         this.batchService.deleteLocalJSONL(tempFilePath);
-      }
-   }
-
-   /**
-    * Upload file to OpenAI (we can use the id to batch process later).
-    * Structured Version, provide a schema.
-    */
-   async batchGetStructuredFile<T>(
-      inputWords: string[][],
-      struct: ZodSchema<T>,
-      structName: string = 'response',
-      sysMsg: string,
-      model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
-      maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT
-   ) {
-      const batchUnits: BatchUnit[] = inputWords.map((words, index) =>
-         this.batchService.createBatchUnit(index, words.join(' '), sysMsg, model, maxTokens, false, struct, structName)
-      );
+      const batchUnits: BatchUnit[] = struct
+         ? inputWords.map((words, index) =>
+              this.batchService.createBatchUnit(index, words.join(' '), sysMsg, model, maxTokens, false, struct, structName)
+           )
+         : this.batchService.createJSONArrayFromWords(inputWords, sysMsg, model, maxTokens);
 
       // Create the local JSONL file
       const tempFilePath = await this.batchService.createLocalJSONL(batchUnits);
