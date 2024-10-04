@@ -1,7 +1,7 @@
 import { Injectable, PayloadTooLargeException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
-import { BatchUnit } from './types';
+import { BatchUnit } from './types/batch-unit';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { ZodSchema } from 'zod';
 import { v4 as uuidv4 } from 'uuid';

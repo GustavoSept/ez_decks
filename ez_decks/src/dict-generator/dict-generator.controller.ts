@@ -7,7 +7,7 @@ import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
 import { TranslationResponse } from './structs/translation-response.zod';
 import { DictGeneratorService } from './dict-generator.service';
-import { BatchResponse } from './openai/types';
+import { BatchResponse } from './openai/types/batch-result';
 
 @Controller('dict-generator')
 export class DictGeneratorController {

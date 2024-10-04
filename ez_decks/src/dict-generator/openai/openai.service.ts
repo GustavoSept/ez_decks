@@ -5,7 +5,8 @@ import { ZodSchema } from 'zod';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
 import { BatchService } from './batch.service';
-import { BatchResponse, BatchUnit } from './types';
+import { BatchUnit } from './types/batch-unit';
+import { BatchResponse } from './types/batch-result';
 import * as fs from 'fs';
 
 @Injectable()

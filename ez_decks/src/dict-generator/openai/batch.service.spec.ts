@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { DEFAULT_SYS_MESSAGE } from './constants';
 import { BatchService } from './batch.service';
-import { BatchUnit } from './types';
+import { BatchUnit } from './types/batch-unit';
 import * as fs from 'fs';
 import { z } from 'zod';
 
