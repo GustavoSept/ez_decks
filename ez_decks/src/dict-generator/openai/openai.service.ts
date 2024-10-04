@@ -6,7 +6,7 @@ import { zodResponseFormat } from 'openai/helpers/zod';
 import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
 import { BatchService } from './batch.service';
 import { BatchUnit } from './types/batch-unit';
-import { BatchResponse } from './types/batch-result';
+import { BatchResponse, BatchResult } from './types/batch-result';
 import { CreatedFileObject } from './types/batch-created-file';
 import { BatchProcess } from './types/batch-process';
 import * as fs from 'fs';
@@ -136,16 +136,25 @@ export class OpenaiService {
    /**
     * Returns the retrieved results
     */
-   async batchRetrieveResults(batchId: string): Promise<BatchResponse> {
+   async batchRetrieveResults(batchId: string): Promise<BatchResponse & { refusals: string[] }> {
       const batch = await this.batchCheckStatus(batchId);
 
-      let results: object[] = [];
+      let results: BatchResult[] = [];
+      const refusals: string[] = []; // List of custom_ids with refusals
+
       if (batch.output_file_id) {
          const fileResponse = await this.openai.files.content(batch.output_file_id);
          const fileContents = await fileResponse.text();
 
          const lines = fileContents.trim().split('\n');
-         results = lines.map((line) => JSON.parse(line));
+         results = lines.map((line) => JSON.parse(line)) as BatchResult[];
+
+         for (const result of results) {
+            const message = result.response.body.choices[0].message;
+            if (message.refusal) {
+               refusals.push(result.custom_id);
+            }
+         }
       }
 
       let errors: object[] = [];
@@ -157,7 +166,7 @@ export class OpenaiService {
          errors = errorLines.map((line) => JSON.parse(line));
       }
 
-      return { results, errors } as BatchResponse;
+      return { results, errors, refusals };
    }
 
    /**

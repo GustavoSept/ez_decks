@@ -54,10 +54,10 @@ export class DictGeneratorController {
    }
 
    @Post('batch-results/:batchId')
-   async getBatchResults(@Param('batchId') batchId: string): Promise<BatchResponse> {
-      const { results, errors } = await this.openaiServ.batchRetrieveResults(batchId);
+   async getBatchResults(@Param('batchId') batchId: string): Promise<BatchResponse & { refusals: string[] }> {
+      const { results, errors, refusals } = await this.openaiServ.batchRetrieveResults(batchId);
       // TODO: store result in some database
-      return { results, errors };
+      return { results, errors, refusals };
    }
 
    @Post('batch-cancel/:batchId')

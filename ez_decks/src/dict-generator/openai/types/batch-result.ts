@@ -6,7 +6,7 @@ export interface BatchResponse {
    errors: any[];
 }
 
-interface BatchResult {
+export interface BatchResult {
    id: string;
    custom_id: string;
    response: BatchResponseData;
