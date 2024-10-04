@@ -7,6 +7,7 @@ import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
 import { TranslationResponse } from './structs/translation-response.zod';
 import { DictGeneratorService } from './dict-generator.service';
+import { BatchResponse } from './openai/types';
 
 @Controller('dict-generator')
 export class DictGeneratorController {
@@ -41,8 +42,8 @@ export class DictGeneratorController {
       return status;
    }
 
-   @Get('batch-results/:batchId')
-   async getBatchResults(@Param('batchId') batchId: string) {
+   @Post('batch-results/:batchId')
+   async getBatchResults(@Param('batchId') batchId: string): Promise<BatchResponse> {
       const { results, errors } = await this.openaiServ.batchRetrieveResults(batchId);
       // TODO: store result in some database
       return { results, errors };

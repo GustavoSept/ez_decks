@@ -5,7 +5,7 @@ import { ZodSchema } from 'zod';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
 import { BatchService } from './batch.service';
-import { BatchUnit } from './types';
+import { BatchResponse, BatchUnit } from './types';
 import * as fs from 'fs';
 
 @Injectable()
@@ -124,7 +124,7 @@ export class OpenaiService {
    /**
     * Returns the retrieved results
     */
-   async batchRetrieveResults(batchId: string): Promise<{ results: object[]; errors: any[] }> {
+   async batchRetrieveResults(batchId: string): Promise<BatchResponse> {
       const batch = await this.batchCheckStatus(batchId);
 
       let results: object[] = [];
@@ -145,7 +145,7 @@ export class OpenaiService {
          errors = errorLines.map((line) => JSON.parse(line));
       }
 
-      return { results, errors };
+      return { results, errors } as BatchResponse;
    }
 
    /**
