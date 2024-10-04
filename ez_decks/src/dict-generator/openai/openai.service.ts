@@ -7,6 +7,8 @@ import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_
 import { BatchService } from './batch.service';
 import { BatchUnit } from './types/batch-unit';
 import { BatchResponse } from './types/batch-result';
+import { CreatedFileObject } from './types/batch-created-file';
+import { BatchProcess } from './types/batch-process';
 import * as fs from 'fs';
 
 @Injectable()
@@ -72,10 +74,19 @@ export class OpenaiService {
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT,
       struct?: ZodSchema<T>,
       structName: string = 'response'
-   ) {
+   ): Promise<CreatedFileObject> {
       const batchUnits: BatchUnit[] = struct
          ? inputWords.map((words, index) =>
-              this.batchService.createBatchUnit(index, words.join(' '), sysMsg, model, maxTokens, false, struct, structName)
+              this.batchService.createBatchUnit(
+                 index,
+                 'Translate the following words: ' + words.join(' '),
+                 sysMsg,
+                 model,
+                 maxTokens,
+                 false,
+                 struct,
+                 structName
+              )
            )
          : this.batchService.createJSONArrayFromWords(inputWords, sysMsg, model, maxTokens);
 
@@ -89,7 +100,7 @@ export class OpenaiService {
             purpose: 'batch',
          });
 
-         return file;
+         return file as unknown as Promise<CreatedFileObject>;
       } finally {
          // Delete the temporary file after the API request
          this.batchService.deleteLocalJSONL(tempFilePath);
@@ -104,7 +115,7 @@ export class OpenaiService {
       endpoint: '/v1/chat/completions' | '/v1/embeddings' | '/v1/completions' = '/v1/chat/completions',
       completionWindow: '24h' = '24h',
       metadata?: Record<string, any>
-   ) {
+   ): Promise<BatchProcess> {
       const batch = await this.openai.batches.create({
          input_file_id: inputFileId,
          endpoint: endpoint,
@@ -112,14 +123,14 @@ export class OpenaiService {
          metadata: metadata,
       });
 
-      return batch;
+      return batch as unknown as Promise<BatchProcess>;
    }
 
    /**
     * Given batch id, check status
     */
-   async batchCheckStatus(batchId: string): Promise<OpenAI.Batch> {
-      return await this.openai.batches.retrieve(batchId);
+   async batchCheckStatus(batchId: string): Promise<BatchProcess> {
+      return (await this.openai.batches.retrieve(batchId)) as unknown as Promise<BatchProcess>;
    }
 
    /**
@@ -160,12 +171,12 @@ export class OpenaiService {
    /**
     * Returns a list of every sent OpenAI batch
     */
-   async batchListAllProcesses(limit?: number, after?: string): Promise<OpenAI.Batch[]> {
+   async batchListAllProcesses(limit?: number, after?: string): Promise<BatchProcess[]> {
       const batches: OpenAI.Batch[] = [];
       const list = await this.openai.batches.list({ limit, after });
       for await (const batch of list) {
          batches.push(batch);
       }
-      return batches;
+      return batches as unknown as Promise<BatchProcess[]>;
    }
 }

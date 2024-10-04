@@ -8,6 +8,8 @@ import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
 import { TranslationResponse } from './structs/translation-response.zod';
 import { DictGeneratorService } from './dict-generator.service';
 import { BatchResponse } from './openai/types/batch-result';
+import { CreatedFileObject } from './openai/types/batch-created-file';
+import { BatchProcess } from './openai/types/batch-process';
 
 @Controller('dict-generator')
 export class DictGeneratorController {
@@ -17,27 +19,36 @@ export class DictGeneratorController {
    ) {}
 
    @Post('create-batch-file')
-   async createBatchFile(@Body() body: CreateBatchFileDto) {
+   async createBatchFile(@Body() body: CreateBatchFileDto): Promise<CreatedFileObject> {
       const file = await this.openaiServ.batchGetFile(body.wordList, body.systemMessage, undefined, undefined, TranslationResponse);
       return file;
    }
 
    @Post('load-and-create-batch-file')
    @UseInterceptors(FileInterceptor('wordFile'))
-   async loadAndCreateBatchFile(@UploadedFile() file: Express.Multer.File, @Body() body: LoadAndCreateBatchFileDto) {
+   async loadAndCreateBatchFile(
+      @UploadedFile() file: Express.Multer.File,
+      @Body() body: LoadAndCreateBatchFileDto
+   ): Promise<CreatedFileObject> {
       const wordList = this.dictServ.splitFileIntoBatches(file.buffer); // Convert file to Buffer, then to string[][]
-      const batchFile = await this.openaiServ.batchGetFile(wordList, body.systemMessage, undefined, undefined, TranslationResponse);
+      const batchFile: CreatedFileObject = await this.openaiServ.batchGetFile(
+         wordList,
+         body.systemMessage,
+         undefined,
+         undefined,
+         TranslationResponse
+      );
       return batchFile;
    }
 
    @Post('create-batch-process')
-   async createBatchProcess(@Body() body: CreateBatchProcessDto) {
+   async createBatchProcess(@Body() body: CreateBatchProcessDto): Promise<BatchProcess> {
       const batch = await this.openaiServ.batchCreateProcess(body.inputFileId, undefined, undefined, body.metadata);
       return batch;
    }
 
    @Get('batch-status/:batchId')
-   async checkBatchStatus(@Param('batchId') batchId: string) {
+   async checkBatchStatus(@Param('batchId') batchId: string): Promise<BatchProcess> {
       const status = await this.openaiServ.batchCheckStatus(batchId);
       return status;
    }
@@ -56,7 +67,7 @@ export class DictGeneratorController {
    }
 
    @Get('list-batch-processes')
-   async listBatchProcesses(@Query() query: ListBatchProcessesDto) {
+   async listBatchProcesses(@Query() query: ListBatchProcessesDto): Promise<BatchProcess[]> {
       const batches = await this.openaiServ.batchListAllProcesses(query.limit, query.after);
       return batches;
    }
