@@ -73,22 +73,12 @@ export class OpenaiService {
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT,
       struct?: ZodSchema<T>,
-      structName: string = 'response'
+      structName: string = 'response',
+      userMsgPrefix?: string
    ): Promise<CreatedFileObject> {
       const batchUnits: BatchUnit[] = struct
-         ? inputWords.map((words, index) =>
-              this.batchService.createBatchUnit(
-                 index,
-                 'Translate the following words: ' + words.join(' '),
-                 sysMsg,
-                 model,
-                 maxTokens,
-                 false,
-                 struct,
-                 structName
-              )
-           )
-         : this.batchService.createJSONArrayFromWords(inputWords, sysMsg, model, maxTokens);
+         ? this.batchService.createJSONArrayFromWordsWithStruct(inputWords, userMsgPrefix, sysMsg, model, maxTokens, struct, structName)
+         : this.batchService.createJSONArrayFromWords(inputWords, userMsgPrefix, sysMsg, model, maxTokens);
 
       // Create the local JSONL file
       const tempFilePath = await this.batchService.createLocalJSONL(batchUnits);

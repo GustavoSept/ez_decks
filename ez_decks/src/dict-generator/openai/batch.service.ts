@@ -1,6 +1,6 @@
 import { Injectable, PayloadTooLargeException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
+import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, DEFAULT_USER_MESSAGE_PREFIX, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
 import { BatchUnit } from './types/batch-unit';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { ZodSchema } from 'zod';
@@ -56,21 +56,41 @@ export class BatchService {
     */
    createJSONArrayFromWords(
       inputWords: string[][],
+      userMsgPrefix: string = DEFAULT_USER_MESSAGE_PREFIX,
       sysMsg: string,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT
    ): BatchUnit[] {
+      console.log('running createJSONArrayFromWords()');
       const JSONL_Array: BatchUnit[] = [];
 
       for (let i = 0; i < inputWords.length; i++) {
          const wordList = inputWords[i].join(', ');
-         const userMsg = `Translate the following words: ${wordList}`;
+         const userMsg = `${userMsgPrefix}${wordList}`;
 
          const batchUnit: BatchUnit = this.createBatchUnit(i + 1, userMsg, sysMsg, model, maxTokens);
          JSONL_Array.push(batchUnit);
       }
 
       return JSONL_Array;
+   }
+
+   /**
+    * Generates a BatchUnit[] (with structured return) representing the .jsonl
+    */
+   createJSONArrayFromWordsWithStruct<T>(
+      inputWords: string[][],
+      userMsgPrefix: string = DEFAULT_USER_MESSAGE_PREFIX,
+      sysMsg: string,
+      model: string,
+      maxTokens: number,
+      struct: ZodSchema<T>,
+      structName: string
+   ): BatchUnit[] {
+      console.log('running createJSONArrayFromWordsWithStruct()');
+      return inputWords.map((words, index) =>
+         this.createBatchUnit(index, `${userMsgPrefix}` + words.join(' '), sysMsg, model, maxTokens, false, struct, structName)
+      );
    }
 
    /**

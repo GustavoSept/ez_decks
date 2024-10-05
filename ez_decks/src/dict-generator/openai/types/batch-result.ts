@@ -38,7 +38,7 @@ interface BatchChoice {
 
 interface BatchMessage {
    role: string;
-   content: string;
+   content: string; // Where our actual response is
    refusal: any;
 }
 

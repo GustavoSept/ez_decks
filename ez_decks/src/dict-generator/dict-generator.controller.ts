@@ -20,7 +20,15 @@ export class DictGeneratorController {
 
    @Post('create-batch-file')
    async createBatchFile(@Body() body: CreateBatchFileDto): Promise<CreatedFileObject> {
-      const file = await this.openaiServ.batchGetFile(body.wordList, body.systemMessage, undefined, undefined, TranslationResponse);
+      const file = await this.openaiServ.batchGetFile(
+         body.wordList,
+         body.systemMessage,
+         undefined,
+         undefined,
+         TranslationResponse,
+         undefined,
+         body.userMessagePrefix
+      );
       return file;
    }
 
@@ -36,7 +44,9 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         TranslationResponse
+         TranslationResponse,
+         undefined,
+         body.userMessagePrefix
       );
       return batchFile;
    }
