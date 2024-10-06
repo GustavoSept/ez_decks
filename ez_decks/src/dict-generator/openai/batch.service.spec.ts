@@ -173,7 +173,7 @@ describe('BatchService', () => {
          const model = configService.get<string>('OPENAI_MODEL') || 'gpt-3';
          const maxTokens = 100;
 
-         const batchUnits = service.createJSONArrayFromWords(inputWords, sysMsg, model, maxTokens);
+         const batchUnits = service.createJSONArrayFromWords(inputWords, undefined, sysMsg, model, maxTokens);
 
          expect(batchUnits.length).toBe(2);
          expect(batchUnits[0].body.messages[1].content).toBe('Translate the following words: hello, world');
