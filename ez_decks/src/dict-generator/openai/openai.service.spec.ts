@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { node_env } from '../../common/config/constants';
-import { TranslationResponse } from '../structs/translation-response.zod';
+import { GermanTranslationResponse } from '../structs/translation-response.zod';
 import { OpenaiService } from './openai.service';
 import { OpenAIProvider } from './providers';
 import { DEFAULT_SYS_MESSAGE } from './constants';
@@ -60,7 +60,7 @@ describe('OpenaiService: simple queries', () => {
       const prompt = `Translate these words: "gehen", "Haus", "schön"`;
       const sysMsg = DEFAULT_SYS_MESSAGE;
 
-      const response = await service.structuredQuery(prompt, TranslationResponse, 'germanTranslation', sysMsg);
+      const response = await service.structuredQuery(prompt, GermanTranslationResponse, 'germanTranslation', sysMsg);
 
       expect(response).toBeTruthy();
       expect(response.response).toBeInstanceOf(Array);

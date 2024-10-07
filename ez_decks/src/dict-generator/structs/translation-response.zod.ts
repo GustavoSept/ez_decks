@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const TranslationResponse = z.object({
+export const GermanTranslationResponse = z.object({
    response: z.array(
       z.object({
          german_word: z.string(),
@@ -19,3 +19,14 @@ export const TranslationResponse = z.object({
       })
    ),
 });
+
+// Infer TypeScript type directly from the Zod schema
+export type GermanTranslationResponseType = z.infer<typeof GermanTranslationResponse>;
+
+/**
+ * Error return interface from openAI
+ */
+export interface ErrorInfo {
+   custom_id: string;
+   error: any;
+}

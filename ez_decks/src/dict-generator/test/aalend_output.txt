@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "id": "batch_req_3",
+      "custom_id": "request-3",
+      "response": {
+        "status_code": 200,
+        "request_id": "specific-word-request",
+        "body": {
+          "id": "chatcmpl-specific",
+          "object": "chat.completion",
+          "created": 1728035274,
+          "model": "gpt-4o-mini-2024-07-18",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n   \"response\": [\n      {\n         \"german_word\": \"aalend\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"],\n            \"noun\": [],\n            \"adjective\": [\"eeling\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                "refusal": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "completion_tokens_details": {
+              "cached_tokens": 0,
+              "reasoning_tokens": 0
+            }
+          },
+          "system_fingerprint": "fp_specific"
+        }
+      },
+      "error": null
+    }
+  ],
+  "errors": []
+}

@@ -5,7 +5,7 @@ import { CreateBatchFileDto } from './DTOs/create-batch-file.dto';
 import { LoadAndCreateBatchFileDto } from './DTOs/load-and-create-batch-file.dto';
 import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
-import { TranslationResponse } from './structs/translation-response.zod';
+import { GermanTranslationResponse } from './structs/translation-response.zod';
 import { DictGeneratorService } from './dict-generator.service';
 import { BatchResponse } from './openai/types/batch-result';
 import { CreatedFileObject } from './openai/types/batch-created-file';
@@ -25,7 +25,7 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         TranslationResponse,
+         GermanTranslationResponse,
          undefined,
          body.userMessagePrefix
       );
@@ -44,7 +44,7 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         TranslationResponse,
+         GermanTranslationResponse,
          undefined,
          body.userMessagePrefix
       );
@@ -67,6 +67,7 @@ export class DictGeneratorController {
    async getBatchResults(@Param('batchId') batchId: string): Promise<BatchResponse & { refusals: string[] }> {
       const { results, errors, refusals } = await this.openaiServ.batchRetrieveResults(batchId);
       // TODO: store result in some database
+      console.log({ results, errors, refusals });
       return { results, errors, refusals };
    }
 
