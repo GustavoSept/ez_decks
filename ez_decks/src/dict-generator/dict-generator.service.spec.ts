@@ -175,17 +175,51 @@ describe('DictGeneratorService', () => {
       });
    });
 
-   describe('addSimilarWords()', () => {
+   describe('processTranslationResponse()', () => {
       it('should add `similar words` based on `word` property', () => {
          const input: GenericTranslationShape[] = [
-            { word: 'Aachen', translations: { noun: ['Aachen'] } },
+            { word: 'Aachenerin', translations: { noun: ['female native of Aachen'] } },
             { word: 'Aachener', translations: { noun: ['native of Aachen'] } },
          ];
 
          const result = service.processTranslationResponse(input);
 
          expect(result[0]).toHaveProperty('similar_words');
-         expect(result[1].similar_words).toContain('Aachen');
+         expect(result[1].similar_words).toContain('Aachenerin');
+      });
+      it('should remove word if all translations are identical to the word itself', () => {
+         const input: GenericTranslationShape[] = [
+            { word: 'Aachenerin', translations: { noun: ['female native of Aachen'] } },
+            { word: 'Aachen', translations: { noun: ['Aachen'] } },
+         ];
+
+         const result = service.processTranslationResponse(input);
+
+         expect(result).toHaveLength(1);
+      });
+      it('should remove word if there are no translations', () => {
+         const input: GenericTranslationShape[] = [
+            { word: 'Aachenerin', translations: { noun: ['female native of Aachen'] } },
+            {
+               word: 'Unknown Word',
+               translations: {
+                  verb: [],
+                  noun: [],
+                  adjective: [],
+                  adverb: [],
+                  pronoun: [],
+                  preposition: [],
+                  conjunction: [],
+                  article: [],
+                  numeral: [],
+                  modal_verb: [],
+               },
+            },
+         ];
+
+         const result = service.processTranslationResponse(input);
+
+         expect(result).toHaveLength(1);
       });
       it('should add `similar words` based on their translations', () => {
          const input_noTranslation: GenericTranslationShape[] = [
@@ -247,7 +281,7 @@ describe('DictGeneratorService', () => {
          */
          expect(result[0]).toHaveProperty('similar_words');
          expect(result[0]).toHaveProperty('grammar_categories');
-         expect(result).toHaveLength(194);
+         expect(result).toHaveLength(180); // Some words are removed due to filtering
       });
    });
 });

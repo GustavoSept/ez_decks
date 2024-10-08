@@ -80,6 +80,7 @@ export class DictGeneratorService {
 
    /**
     * Gathers `similar_words` and `grammar_categories` fields for each word.
+    * Removes words which all translations are identical to the word itself (acronyms, proper nouns), or contain no translations
     *
     * - `similar_words` is based on the Levenshtein edit distance between the word and its neighbors.
     *   The distance check is applied both to the words themselves and their translations. If the
@@ -97,18 +98,25 @@ export class DictGeneratorService {
       distanceThreshold: number = 3,
       maxNeighbours: number = 50
    ): ProcessedTranslationResponse<T>[] {
-      return input.map((currentWord, index) => {
+      return input.reduce<ProcessedTranslationResponse<T>[]>((acc, currentWord, index, arr) => {
+         const currentTranslations = Object.values(currentWord.translations).flat();
+         const hasDifferentTranslation = currentTranslations.some((translation) => translation !== currentWord.word);
+
+         if (!hasDifferentTranslation) {
+            return acc; // Skip this word if all translations are identical to the word itself (acronyms, proper nouns), or there are no translations
+         }
+
          const similarWords: string[] = [];
          const grammarCategories: string[] = [];
 
          // Determine the range of neighboring words to consider
          const start = Math.max(0, index - maxNeighbours);
-         const end = Math.min(input.length, index + maxNeighbours + 1);
+         const end = Math.min(arr.length, index + maxNeighbours + 1);
 
          for (let i = start; i < end; i++) {
             if (i === index) continue; // Skip iteration when index is at currentWord
 
-            const neighbor = input[i];
+            const neighbor = arr[i];
 
             // Compare the distance between the current and neighboring 'word' properties
             const wordDistance = levenshteinEditDistance(currentWord.word, neighbor.word, true);
@@ -118,7 +126,6 @@ export class DictGeneratorService {
             }
 
             // Compare the distances between all translations of currentWord and neighbor's
-            const currentTranslations = Object.values(currentWord.translations).flat();
             const neighborTranslations = Object.values(neighbor.translations).flat();
 
             let foundSimilarTranslation = false;
@@ -145,11 +152,13 @@ export class DictGeneratorService {
             }
          }
 
-         return {
+         acc.push({
             ...currentWord,
             similar_words: similarWords,
             grammar_categories: grammarCategories,
-         };
-      });
+         });
+
+         return acc;
+      }, []);
    }
 }
