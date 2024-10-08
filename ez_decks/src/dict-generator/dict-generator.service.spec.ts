@@ -67,8 +67,6 @@ describe('DictGeneratorService', () => {
          const batchResponse: BatchResponse = JSON.parse(fileContent);
          const result = service.extractWordsAndTranslations(batchResponse);
 
-         console.log(JSON.stringify(result.words, undefined, 3));
-
          expect(result.words.length).toBeGreaterThan(0);
          expect(result.errors.length).toBe(0);
          expect(result.words[0]).toHaveProperty('word');
@@ -178,21 +176,78 @@ describe('DictGeneratorService', () => {
    });
 
    describe('addSimilarWords()', () => {
-      it('should add similar words to each entry', () => {
+      it('should add `similar words` based on `word` property', () => {
          const input: GenericTranslationShape[] = [
             { word: 'Aachen', translations: { noun: ['Aachen'] } },
             { word: 'Aachener', translations: { noun: ['native of Aachen'] } },
-            { word: 'Aal', translations: { noun: ['eel'] } },
-            { word: 'Aalangeln', translations: { verb: ['to fish for eels'] } },
          ];
 
-         const result = service.addSimilarWords(input);
-
-         console.log(JSON.stringify(result));
+         const result = service.processTranslationResponse(input);
 
          expect(result[0]).toHaveProperty('similar_words');
          expect(result[1].similar_words).toContain('Aachen');
-         expect(result[2].similar_words.length).toBeGreaterThan(0);
+      });
+      it('should add `similar words` based on their translations', () => {
+         const input_noTranslation: GenericTranslationShape[] = [
+            { word: 'aalähnlich', translations: { adjective: ['asdasddas'] } },
+            { word: 'aalartig', translations: { adjective: ['ggfd'] } },
+         ];
+         const input_withTranslation: GenericTranslationShape[] = [
+            { word: 'aalähnlich', translations: { adjective: ['eel-like', 'similar to an eel'] } },
+            { word: 'aalartig', translations: { adjective: ['eel-like'] } },
+         ];
+
+         const result_shouldFail = service.processTranslationResponse(input_noTranslation);
+         const result_working = service.processTranslationResponse(input_withTranslation);
+
+         expect(result_shouldFail[0]).toHaveProperty('similar_words');
+         expect(result_shouldFail[0].similar_words).toHaveLength(0);
+         expect(result_shouldFail[1].similar_words).toHaveLength(0);
+         expect(result_working[0].similar_words).toContain('aalartig');
+         expect(result_working[1].similar_words).toContain('aalähnlich');
+      });
+      it('should add `grammar_categories` based on `word` translations', () => {
+         const input_noTranslation: GenericTranslationShape[] = [
+            {
+               word: 'Aachener',
+               translations: {
+                  verb: [],
+                  noun: ['native of Aachen', 'Aachen resident'],
+                  adjective: ['Aachen'],
+                  adverb: [],
+                  pronoun: [],
+                  preposition: [],
+                  conjunction: [],
+                  article: [],
+                  numeral: [],
+                  modal_verb: [],
+               },
+            },
+         ];
+
+         const result = service.processTranslationResponse(input_noTranslation);
+
+         expect(result[0]).toHaveProperty('grammar_categories');
+         expect(result[0].grammar_categories).toHaveLength(2);
+         expect(result[0].grammar_categories).toEqual(expect.arrayContaining(['noun', 'adjective']));
+      });
+      it('should handle mid-sized inputs (194 words)', () => {
+         const fileContent = fs.readFileSync(path.join(__dirname, 'test', '200_word_output.json'), 'utf8');
+
+         const batchResponse: GenericTranslationShape[] = JSON.parse(fileContent);
+
+         const result = service.processTranslationResponse(batchResponse, 3, 50);
+
+         /* NOTE: For testing / debug purposes
+
+         const testPath = path.join(__dirname, 'test', 'json_output');
+         fs.mkdirSync(testPath, { recursive: true });
+         fs.writeFileSync(path.join(testPath, 'similar_distThresh-3_maxNeigh-50.json'), JSON.stringify(result, undefined, 2));
+
+         */
+         expect(result[0]).toHaveProperty('similar_words');
+         expect(result[0]).toHaveProperty('grammar_categories');
+         expect(result).toHaveLength(194);
       });
    });
 });

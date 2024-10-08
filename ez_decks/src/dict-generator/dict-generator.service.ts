@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { levenshteinEditDistance } from 'levenshtein-edit-distance';
+import { levenshteinEditDistance } from '../common/utils/levenshtein-edit-distance';
 import { BatchResponse, BatchResult } from './openai/types/batch-result';
 import {
    GermanTranslationResponseType,
    ErrorInfo,
-   TranslationWithSimilarWords,
+   ProcessedTranslationResponse,
    GenericTranslationShape,
 } from './structs/translation-response.structs';
 
@@ -79,29 +79,38 @@ export class DictGeneratorService {
    }
 
    /**
-    * Gathers `similar_words` field, based on letter edit distances. The distance check is run on the words themselves, and their translations.
+    * Gathers `similar_words` and `grammar_categories` fields for each word.
+    *
+    * - `similar_words` is based on the Levenshtein edit distance between the word and its neighbors.
+    *   The distance check is applied both to the words themselves and their translations. If the
+    *   distance is less than or equal to the `distanceThreshold`, the word is considered similar.
+    *
+    * - `grammar_categories` is derived by inspecting the `translations` of each word. The keys
+    *   (which represent grammatical categories) of any non-empty translation record are collected.
+    *
     * @param input Some `WesternTranslationResponse` input
     * @param distanceThreshold Match definition: any word pair with distance <= distanceThreshold
     * @param maxNeighbours word amount to run the algorithm on (in each direction)
     */
-   addSimilarWords<T extends GenericTranslationShape>(
+   processTranslationResponse<T extends GenericTranslationShape>(
       input: T[],
       distanceThreshold: number = 3,
-      maxNeighbours: number = 30
-   ): TranslationWithSimilarWords<T>[] {
+      maxNeighbours: number = 50
+   ): ProcessedTranslationResponse<T>[] {
       return input.map((currentWord, index) => {
          const similarWords: string[] = [];
+         const grammarCategories: string[] = [];
 
          // Determine the range of neighboring words to consider
          const start = Math.max(0, index - maxNeighbours);
          const end = Math.min(input.length, index + maxNeighbours + 1);
 
          for (let i = start; i < end; i++) {
-            if (i == index) continue; // Skip iteration when index is at currentWord
+            if (i === index) continue; // Skip iteration when index is at currentWord
 
             const neighbor = input[i];
 
-            // First, compare the distance between the current and neighboring 'word' properties
+            // Compare the distance between the current and neighboring 'word' properties
             const wordDistance = levenshteinEditDistance(currentWord.word, neighbor.word, true);
             if (wordDistance <= distanceThreshold) {
                similarWords.push(neighbor.word);
@@ -129,9 +138,17 @@ export class DictGeneratorService {
             }
          }
 
+         // Gather grammar categories by checking non-empty translation records
+         for (const [category, translations] of Object.entries(currentWord.translations)) {
+            if (translations.length > 0) {
+               grammarCategories.push(category);
+            }
+         }
+
          return {
             ...currentWord,
             similar_words: similarWords,
+            grammar_categories: grammarCategories,
          };
       });
    }

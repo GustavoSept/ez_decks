@@ -24,9 +24,9 @@ export const WesternTranslationResponse = z.object({
 export type GermanTranslationResponseType = z.infer<typeof WesternTranslationResponse>;
 
 /**
- * Generic TranslationResponse + `similar_words` field
+ * Generic TranslationResponse + `similar_words` and `grammar_categories` fields
  */
-export type TranslationWithSimilarWords<T> = T & { similar_words: string[] };
+export type ProcessedTranslationResponse<T> = T & { similar_words: string[]; grammar_categories: string[] };
 
 /**
  * Represents any TranslationResponse

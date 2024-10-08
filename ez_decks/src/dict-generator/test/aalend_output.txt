@@ -16,7 +16,7 @@
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n   \"response\": [\n      {\n         \"german_word\": \"aalend\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"],\n            \"noun\": [],\n            \"adjective\": [\"eeling\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalend\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"],\n            \"noun\": [],\n            \"adjective\": [\"eeling\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
                 "refusal": null
               },
               "logprobs": null,
