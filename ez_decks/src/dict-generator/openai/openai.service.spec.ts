@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { node_env } from '../../common/config/constants';
-import { GermanTranslationResponse } from '../structs/translation-response.zod';
+import { WesternTranslationResponse } from '../structs/translation-response.structs';
 import { OpenaiService } from './openai.service';
 import { OpenAIProvider } from './providers';
 import { DEFAULT_SYS_MESSAGE } from './constants';
@@ -60,19 +60,19 @@ describe('OpenaiService: simple queries', () => {
       const prompt = `Translate these words: "gehen", "Haus", "schön"`;
       const sysMsg = DEFAULT_SYS_MESSAGE;
 
-      const response = await service.structuredQuery(prompt, GermanTranslationResponse, 'germanTranslation', sysMsg);
+      const response = await service.structuredQuery(prompt, WesternTranslationResponse, 'germanTranslation', sysMsg);
 
       expect(response).toBeTruthy();
       expect(response.response).toBeInstanceOf(Array);
 
-      const gehenObj = response.response.find((item) => item.german_word === 'gehen');
+      const gehenObj = response.response.find((item) => item.word === 'gehen');
       expect(gehenObj).toBeTruthy();
       expect(gehenObj?.translations.verb).toContain('go');
 
-      const hausObj = response.response.find((item) => item.german_word === 'Haus');
+      const hausObj = response.response.find((item) => item.word === 'Haus');
       expect(hausObj?.translations.noun).toContain('house');
 
-      const schonObj = response.response.find((item) => item.german_word === 'schön');
+      const schonObj = response.response.find((item) => item.word === 'schön');
       expect(schonObj?.translations.adjective).toContain('beautiful');
 
       expect(schonObj?.translations.conjunction?.length).toBe(0);

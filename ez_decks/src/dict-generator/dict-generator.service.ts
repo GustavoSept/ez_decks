@@ -1,6 +1,12 @@
 import { Injectable } from '@nestjs/common';
+import { levenshteinEditDistance } from 'levenshtein-edit-distance';
 import { BatchResponse, BatchResult } from './openai/types/batch-result';
-import { GermanTranslationResponseType, ErrorInfo } from './structs/translation-response.zod';
+import {
+   GermanTranslationResponseType,
+   ErrorInfo,
+   TranslationWithSimilarWords,
+   GenericTranslationShape,
+} from './structs/translation-response.structs';
 
 @Injectable()
 export class DictGeneratorService {
@@ -70,5 +76,63 @@ export class DictGeneratorService {
          custom_id: result.custom_id,
          error: result.response.body.choices[0].message.refusal,
       };
+   }
+
+   /**
+    * Gathers `similar_words` field, based on letter edit distances. The distance check is run on the words themselves, and their translations.
+    * @param input Some `WesternTranslationResponse` input
+    * @param distanceThreshold Match definition: any word pair with distance <= distanceThreshold
+    * @param maxNeighbours word amount to run the algorithm on (in each direction)
+    */
+   addSimilarWords<T extends GenericTranslationShape>(
+      input: T[],
+      distanceThreshold: number = 3,
+      maxNeighbours: number = 30
+   ): TranslationWithSimilarWords<T>[] {
+      return input.map((currentWord, index) => {
+         const similarWords: string[] = [];
+
+         // Determine the range of neighboring words to consider
+         const start = Math.max(0, index - maxNeighbours);
+         const end = Math.min(input.length, index + maxNeighbours + 1);
+
+         for (let i = start; i < end; i++) {
+            if (i == index) continue; // Skip iteration when index is at currentWord
+
+            const neighbor = input[i];
+
+            // First, compare the distance between the current and neighboring 'word' properties
+            const wordDistance = levenshteinEditDistance(currentWord.word, neighbor.word, true);
+            if (wordDistance <= distanceThreshold) {
+               similarWords.push(neighbor.word);
+               continue; // No need to check translations if word is similar
+            }
+
+            // Compare the distances between all translations of currentWord and neighbor's
+            const currentTranslations = Object.values(currentWord.translations).flat();
+            const neighborTranslations = Object.values(neighbor.translations).flat();
+
+            let foundSimilarTranslation = false;
+
+            for (const currentTranslation of currentTranslations) {
+               for (const neighborTranslation of neighborTranslations) {
+                  const translationDistance = levenshteinEditDistance(currentTranslation, neighborTranslation, true);
+                  if (translationDistance <= distanceThreshold) {
+                     similarWords.push(neighbor.word);
+                     foundSimilarTranslation = true;
+                     break;
+                  }
+               }
+               if (foundSimilarTranslation) {
+                  break;
+               }
+            }
+         }
+
+         return {
+            ...currentWord,
+            similar_words: similarWords,
+         };
+      });
    }
 }

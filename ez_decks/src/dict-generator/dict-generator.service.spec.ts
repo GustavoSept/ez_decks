@@ -3,6 +3,7 @@ import { DictGeneratorService } from './dict-generator.service';
 import { BatchResponse } from './openai/types/batch-result';
 import * as fs from 'fs';
 import path from 'path';
+import { GenericTranslationShape } from './structs/translation-response.structs';
 
 describe('DictGeneratorService', () => {
    let service: DictGeneratorService;
@@ -66,9 +67,11 @@ describe('DictGeneratorService', () => {
          const batchResponse: BatchResponse = JSON.parse(fileContent);
          const result = service.extractWordsAndTranslations(batchResponse);
 
+         console.log(JSON.stringify(result.words, undefined, 3));
+
          expect(result.words.length).toBeGreaterThan(0);
          expect(result.errors.length).toBe(0);
-         expect(result.words[0]).toHaveProperty('german_word');
+         expect(result.words[0]).toHaveProperty('word');
          expect(result.words[0]).toHaveProperty('translations');
       });
 
@@ -167,10 +170,29 @@ describe('DictGeneratorService', () => {
          const result = service.extractWordsAndTranslations(batchResponse);
 
          expect(result.words.length).toBe(1);
-         expect(result.words[0].german_word).toBe('aalend');
+         expect(result.words[0].word).toBe('aalend');
          expect(result.words[0].translations.verb).toEqual(['eel-shaped', 'relating to an eel']);
          expect(result.words[0].translations.adjective).toEqual(['eeling']);
          expect(result.words[0].translations.noun).toEqual([]);
+      });
+   });
+
+   describe('addSimilarWords()', () => {
+      it('should add similar words to each entry', () => {
+         const input: GenericTranslationShape[] = [
+            { word: 'Aachen', translations: { noun: ['Aachen'] } },
+            { word: 'Aachener', translations: { noun: ['native of Aachen'] } },
+            { word: 'Aal', translations: { noun: ['eel'] } },
+            { word: 'Aalangeln', translations: { verb: ['to fish for eels'] } },
+         ];
+
+         const result = service.addSimilarWords(input);
+
+         console.log(JSON.stringify(result));
+
+         expect(result[0]).toHaveProperty('similar_words');
+         expect(result[1].similar_words).toContain('Aachen');
+         expect(result[2].similar_words.length).toBeGreaterThan(0);
       });
    });
 });

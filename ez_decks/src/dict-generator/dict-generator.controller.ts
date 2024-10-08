@@ -5,7 +5,7 @@ import { CreateBatchFileDto } from './DTOs/create-batch-file.dto';
 import { LoadAndCreateBatchFileDto } from './DTOs/load-and-create-batch-file.dto';
 import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
-import { GermanTranslationResponse } from './structs/translation-response.zod';
+import { WesternTranslationResponse } from './structs/translation-response.structs';
 import { DictGeneratorService } from './dict-generator.service';
 import { BatchResponse } from './openai/types/batch-result';
 import { CreatedFileObject } from './openai/types/batch-created-file';
@@ -25,7 +25,7 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         GermanTranslationResponse,
+         WesternTranslationResponse,
          undefined,
          body.userMessagePrefix
       );
@@ -44,7 +44,7 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         GermanTranslationResponse,
+         WesternTranslationResponse,
          undefined,
          body.userMessagePrefix
       );

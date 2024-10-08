@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-export const GermanTranslationResponse = z.object({
+export const WesternTranslationResponse = z.object({
    response: z.array(
       z.object({
-         german_word: z.string(),
+         word: z.string(),
          translations: z.object({
             verb: z.array(z.string()).optional(),
             noun: z.array(z.string()).optional(),
@@ -21,7 +21,20 @@ export const GermanTranslationResponse = z.object({
 });
 
 // Infer TypeScript type directly from the Zod schema
-export type GermanTranslationResponseType = z.infer<typeof GermanTranslationResponse>;
+export type GermanTranslationResponseType = z.infer<typeof WesternTranslationResponse>;
+
+/**
+ * Generic TranslationResponse + `similar_words` field
+ */
+export type TranslationWithSimilarWords<T> = T & { similar_words: string[] };
+
+/**
+ * Represents any TranslationResponse
+ */
+export interface GenericTranslationShape {
+   word: string;
+   translations: Record<string, string[]>;
+}
 
 /**
  * Error return interface from openAI
