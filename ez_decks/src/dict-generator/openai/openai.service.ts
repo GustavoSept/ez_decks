@@ -3,20 +3,25 @@ import { ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
 import { ZodSchema } from 'zod';
 import { zodResponseFormat } from 'openai/helpers/zod';
+import * as fs from 'fs';
 import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
 import { BatchService } from './batch.service';
 import { BatchUnit } from './types/batch-unit';
 import { BatchResponse, BatchResult } from './types/batch-result';
 import { CreatedFileObject } from './types/batch-created-file';
 import { BatchProcess } from './types/batch-process';
-import * as fs from 'fs';
+import { GenericTranslationShape, ProcessedTranslationResponse } from '../structs/translation-response.structs';
+import { mapStringToGrammarType } from '../../prisma/utils/grammar-type-conversion';
+import { PrismaService } from '../../prisma/prisma.service';
+import { Language } from '../../prisma/language.enum';
 
 @Injectable()
 export class OpenaiService {
    constructor(
       @Inject(OPENAI_SDK) private readonly openai: OpenAI,
       private readonly configService: ConfigService,
-      private readonly batchService: BatchService
+      private readonly batchService: BatchService,
+      private readonly prisma: PrismaService
    ) {}
 
    async query(
@@ -126,11 +131,10 @@ export class OpenaiService {
    /**
     * Returns the retrieved results
     */
-   async batchRetrieveResults(batchId: string): Promise<BatchResponse & { refusals: string[] }> {
+   async batchRetrieveResults(batchId: string): Promise<BatchResponse> {
       const batch = await this.batchCheckStatus(batchId);
 
       let results: BatchResult[] = [];
-      const refusals: string[] = []; // List of custom_ids with refusals
 
       if (batch.output_file_id) {
          const fileResponse = await this.openai.files.content(batch.output_file_id);
@@ -138,13 +142,6 @@ export class OpenaiService {
 
          const lines = fileContents.trim().split('\n');
          results = lines.map((line) => JSON.parse(line)) as BatchResult[];
-
-         for (const result of results) {
-            const message = result.response.body.choices[0].message;
-            if (message.refusal) {
-               refusals.push(result.custom_id);
-            }
-         }
       }
 
       let errors: object[] = [];
@@ -156,7 +153,7 @@ export class OpenaiService {
          errors = errorLines.map((line) => JSON.parse(line));
       }
 
-      return { results, errors, refusals };
+      return { results, errors };
    }
 
    /**
@@ -177,5 +174,76 @@ export class OpenaiService {
          batches.push(batch);
       }
       return batches as unknown as Promise<BatchProcess[]>;
+   }
+
+   async saveBatchResult<T extends GenericTranslationShape>(
+      processedWords: ProcessedTranslationResponse<T>[],
+      primary_language: Language = Language.German,
+      secondary_language: Language = Language.English
+   ) {
+      for (const processedWord of processedWords) {
+         const { word, translations, similar_words, grammar_categories } = processedWord;
+
+         // Step 1: Save or find the Word
+         let wordEntry = await this.prisma.word.findFirst({
+            where: {
+               word: word,
+               primary_language: primary_language,
+            },
+         });
+
+         if (!wordEntry) {
+            wordEntry = await this.prisma.word.create({
+               data: {
+                  word: word,
+                  language: {
+                     connect: { id: primary_language },
+                  },
+               },
+            });
+         }
+
+         const wordId = wordEntry.id;
+
+         // Step 2: Save translations
+         for (const [type, translationList] of Object.entries(translations)) {
+            const grammarType = mapStringToGrammarType(type);
+            for (const translation of translationList) {
+               await this.prisma.translation.create({
+                  data: {
+                     wordId: wordId,
+                     primary_language: primary_language,
+                     secondary_language: secondary_language,
+                     type: grammarType,
+                     translation: translation,
+                  },
+               });
+            }
+         }
+
+         // Step 3: Save similar words
+         for (const similarWord of similar_words) {
+            await this.prisma.similarWord.create({
+               data: {
+                  wordId: wordId,
+                  primary_language: primary_language,
+                  similarWord: similarWord,
+               },
+            });
+         }
+
+         // Step 4: Save grammar categories
+         for (const grammarCategory of grammar_categories) {
+            const grammarType = mapStringToGrammarType(grammarCategory);
+            await this.prisma.grammarCategory.create({
+               data: {
+                  wordId: wordId,
+                  primary_language: primary_language,
+                  secondary_language: secondary_language,
+                  category: grammarType,
+               },
+            });
+         }
+      }
    }
 }

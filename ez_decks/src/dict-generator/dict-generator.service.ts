@@ -2,10 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { levenshteinEditDistance } from '../common/utils/levenshtein-edit-distance';
 import { BatchResponse, BatchResult } from './openai/types/batch-result';
 import {
-   GermanTranslationResponseType,
    ErrorInfo,
    ProcessedTranslationResponse,
    GenericTranslationShape,
+   WesternTranslationResponse,
 } from './structs/translation-response.structs';
 
 @Injectable()
@@ -30,10 +30,10 @@ export class DictGeneratorService {
    }
 
    /**
-    * Extracts the German words and their translations from the batch response.
+    * Extracts the primary_language words and their translations from the batch response.
     */
-   extractWordsAndTranslations(batchResponse: BatchResponse): { words: GermanTranslationResponseType['response']; errors: ErrorInfo[] } {
-      const words: GermanTranslationResponseType['response'] = [];
+   extractWordsAndTranslations(batchResponse: BatchResponse): { words: WesternTranslationResponse; errors: ErrorInfo[] } {
+      const words: WesternTranslationResponse = [];
       const errors: ErrorInfo[] = [];
 
       batchResponse.results.forEach((result) => {
@@ -52,9 +52,9 @@ export class DictGeneratorService {
    /**
     * Extracts valid German words and translations from a batch result.
     */
-   private extractValidWords(result: BatchResult): GermanTranslationResponseType['response'] {
+   private extractValidWords(result: BatchResult): WesternTranslationResponse {
       const messageContent = result.response.body.choices[0].message.content;
-      const parsedContent: GermanTranslationResponseType = JSON.parse(messageContent);
+      const parsedContent: { response: WesternTranslationResponse } = JSON.parse(messageContent);
       return parsedContent.response;
    }
 
@@ -64,6 +64,7 @@ export class DictGeneratorService {
    private extractErrorInfo(result: BatchResult): ErrorInfo {
       return {
          custom_id: result.custom_id,
+         type: 'error',
          error: result.error,
       };
    }
@@ -74,6 +75,7 @@ export class DictGeneratorService {
    private extractRefusalInfo(result: BatchResult): ErrorInfo {
       return {
          custom_id: result.custom_id,
+         type: 'refusal',
          error: result.response.body.choices[0].message.refusal,
       };
    }

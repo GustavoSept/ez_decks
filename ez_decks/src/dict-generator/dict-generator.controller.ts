@@ -5,9 +5,8 @@ import { CreateBatchFileDto } from './DTOs/create-batch-file.dto';
 import { LoadAndCreateBatchFileDto } from './DTOs/load-and-create-batch-file.dto';
 import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
-import { WesternTranslationResponse } from './structs/translation-response.structs';
+import { WesternTranslationResponseObj } from './structs/translation-response.structs';
 import { DictGeneratorService } from './dict-generator.service';
-import { BatchResponse } from './openai/types/batch-result';
 import { CreatedFileObject } from './openai/types/batch-created-file';
 import { BatchProcess } from './openai/types/batch-process';
 
@@ -25,7 +24,7 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         WesternTranslationResponse,
+         WesternTranslationResponseObj,
          undefined,
          body.userMessagePrefix
       );
@@ -44,7 +43,7 @@ export class DictGeneratorController {
          body.systemMessage,
          undefined,
          undefined,
-         WesternTranslationResponse,
+         WesternTranslationResponseObj,
          undefined,
          body.userMessagePrefix
       );
@@ -64,11 +63,15 @@ export class DictGeneratorController {
    }
 
    @Post('batch-results/:batchId')
-   async getBatchResults(@Param('batchId') batchId: string): Promise<BatchResponse & { refusals: string[] }> {
-      const { results, errors, refusals } = await this.openaiServ.batchRetrieveResults(batchId);
-      // TODO: store result in some database
-      console.log({ results, errors, refusals });
-      return { results, errors, refusals };
+   async getBatchResults(@Param('batchId') batchId: string) {
+      const batchResponse = await this.openaiServ.batchRetrieveResults(batchId);
+
+      const { words, errors } = this.dictServ.extractWordsAndTranslations(batchResponse);
+
+      const processedWords = this.dictServ.processTranslationResponse(words);
+
+      this.openaiServ.saveBatchResult(processedWords);
+      return { processedWords, errors };
    }
 
    @Post('batch-cancel/:batchId')

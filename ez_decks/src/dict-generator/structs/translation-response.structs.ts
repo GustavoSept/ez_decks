@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const WesternTranslationResponse = z.object({
+export const WesternTranslationResponseObj = z.object({
    response: z.array(
       z.object({
          word: z.string(),
@@ -21,7 +21,10 @@ export const WesternTranslationResponse = z.object({
 });
 
 // Infer TypeScript type directly from the Zod schema
-export type GermanTranslationResponseType = z.infer<typeof WesternTranslationResponse>;
+export type WesternTranslationResponse = z.infer<typeof WesternTranslationResponseObj>['response'];
+
+/* TODO: Make a switch or factory to dynamically choose specific language types later */
+// export type GermanTranslationResponseType = z.infer<typeof WesternTranslationResponseObj>['response'];
 
 /**
  * Generic TranslationResponse + `similar_words` and `grammar_categories` fields
@@ -41,5 +44,6 @@ export interface GenericTranslationShape {
  */
 export interface ErrorInfo {
    custom_id: string;
+   type: 'error' | 'refusal';
    error: any;
 }
