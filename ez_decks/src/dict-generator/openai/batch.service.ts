@@ -61,7 +61,6 @@ export class BatchService {
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT
    ): BatchUnit[] {
-      console.log('running createJSONArrayFromWords()');
       const JSONL_Array: BatchUnit[] = [];
 
       for (let i = 0; i < inputWords.length; i++) {
