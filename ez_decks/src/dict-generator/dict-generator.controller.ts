@@ -20,7 +20,7 @@ export class DictGeneratorController {
    @Post('create-batch-file')
    async createBatchFile(@Body() body: CreateBatchFileDto): Promise<CreatedFileObject> {
       const file = await this.openaiServ.batchGetFile(
-         body.wordList,
+         { arrays: body.wordList },
          body.systemMessage,
          undefined,
          undefined,
@@ -36,18 +36,25 @@ export class DictGeneratorController {
    async loadAndCreateBatchFile(
       @UploadedFile() file: Express.Multer.File,
       @Body() body: LoadAndCreateBatchFileDto
-   ): Promise<CreatedFileObject> {
+   ): Promise<CreatedFileObject[]> {
       const wordList = this.dictServ.splitFileIntoBatches(file.buffer); // Convert file to Buffer, then to string[][]
-      const batchFile: CreatedFileObject = await this.openaiServ.batchGetFile(
-         wordList,
-         body.systemMessage,
-         undefined,
-         undefined,
-         WesternTranslationResponseObj,
-         undefined,
-         body.userMessagePrefix
-      );
-      return batchFile;
+
+      const createdFiles: CreatedFileObject[] = [];
+
+      for (const batch of wordList) {
+         const batchFile: CreatedFileObject = await this.openaiServ.batchGetFile(
+            batch,
+            body.systemMessage,
+            undefined,
+            undefined,
+            WesternTranslationResponseObj,
+            undefined,
+            body.userMessagePrefix
+         );
+
+         createdFiles.push(batchFile);
+      }
+      return createdFiles;
    }
 
    @Post('create-batch-process')

@@ -7,6 +7,7 @@ import { ZodSchema } from 'zod';
 import { v4 as uuidv4 } from 'uuid';
 import * as fs from 'fs';
 import * as path from 'path';
+import { OpenAIBatch } from './types/batch-query';
 
 @Injectable()
 export class BatchService {
@@ -55,7 +56,7 @@ export class BatchService {
     * Generates a BatchUnit[] representing the .jsonl
     */
    createJSONArrayFromWords(
-      inputWords: string[][],
+      inputWords: OpenAIBatch['arrays'],
       userMsgPrefix: string = DEFAULT_USER_MESSAGE_PREFIX,
       sysMsg: string,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
@@ -78,7 +79,7 @@ export class BatchService {
     * Generates a BatchUnit[] (with structured return) representing the .jsonl
     */
    createJSONArrayFromWordsWithStruct<T>(
-      inputWords: string[][],
+      inputWords: OpenAIBatch['arrays'],
       userMsgPrefix: string = DEFAULT_USER_MESSAGE_PREFIX,
       sysMsg: string,
       model: string,

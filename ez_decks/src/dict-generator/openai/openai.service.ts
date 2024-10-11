@@ -14,6 +14,7 @@ import { GenericTranslationShape, ProcessedTranslationResponse } from '../struct
 import { mapStringToGrammarType } from '../../prisma/utils/grammar-type-conversion';
 import { PrismaService } from '../../prisma/prisma.service';
 import { Language } from '../../prisma/language.enum';
+import { OpenAIBatch } from './types/batch-query';
 
 @Injectable()
 export class OpenaiService {
@@ -73,7 +74,7 @@ export class OpenaiService {
     * Upload file to OpenAI (we can use the id to batch process later)
     */
    async batchGetFile<T>(
-      inputWords: string[][],
+      inputWords: OpenAIBatch,
       sysMsg: string,
       model: string = this.configService.get<string>('OPENAI_MODEL', OPENAI_DEFAULT_FALLBACK_MODEL),
       maxTokens: number = DEFAULT_MAX_TOKEN_OUTPUT,
@@ -82,8 +83,16 @@ export class OpenaiService {
       userMsgPrefix?: string
    ): Promise<CreatedFileObject> {
       const batchUnits: BatchUnit[] = struct
-         ? this.batchService.createJSONArrayFromWordsWithStruct(inputWords, userMsgPrefix, sysMsg, model, maxTokens, struct, structName)
-         : this.batchService.createJSONArrayFromWords(inputWords, userMsgPrefix, sysMsg, model, maxTokens);
+         ? this.batchService.createJSONArrayFromWordsWithStruct(
+              inputWords.arrays,
+              userMsgPrefix,
+              sysMsg,
+              model,
+              maxTokens,
+              struct,
+              structName
+           )
+         : this.batchService.createJSONArrayFromWords(inputWords.arrays, userMsgPrefix, sysMsg, model, maxTokens);
 
       // Create the local JSONL file
       const tempFilePath = await this.batchService.createLocalJSONL(batchUnits);
