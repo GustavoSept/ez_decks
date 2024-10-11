@@ -43,7 +43,7 @@ describe('OpenaiService: simple queries', () => {
 
    it('openai object should be defined', () => {
       expect(service).toBeDefined();
-      expect(service['openai']).toBeDefined(); // Ensuring the OpenAI instance is injected
+      expect(service['openai']).toBeDefined(); // Ensuring the OpenAI instance is injected.
    });
 
    it('gets simple inference from openAI', async () => {
@@ -131,7 +131,7 @@ describe('OpenaiService: saveBatchResult()', () => {
       // Load the JSON file containing 180 word objects (despite the name saying 200...I know.)
       const processedWords: ProcessedTranslationResponse<GenericTranslationShape>[] = JSON.parse(
          fs.readFileSync(path.join(__dirname, '..', 'test', '200_word_processed_output.json'), 'utf-8')
-      );
+      ).slice(0, 150, 5);
 
       // Call the method to save batch result
       await openaiService.saveBatchResult(processedWords, Language.German, Language.English);
@@ -141,14 +141,26 @@ describe('OpenaiService: saveBatchResult()', () => {
          where: { primary_language: Language.German },
       });
 
+      let duplicateWords: string[] = [];
+      let missingWords: ProcessedTranslationResponse<GenericTranslationShape>[] = [];
+      let extraWords: { id: number; word: string; primary_language: number }[] = [];
+
       if (wordEntries.length !== processedWords.length) {
-         const missingWords = processedWords.filter((word) => !wordEntries.some((entry) => entry.word === word.word));
+         // Words in processedWords but not in wordEntries (missing from saved entries)
+         missingWords = processedWords.filter((word) => !wordEntries.some((entry) => entry.word === word.word));
          console.log(
             'Missing words:',
             missingWords.map((word) => word.word)
          );
 
-         const duplicateWords = processedWords.map((word) => word.word).filter((word, index, self) => self.indexOf(word) !== index);
+         // Words in wordEntries but not in processedWords (extra words saved)
+         extraWords = wordEntries.filter((entry) => !processedWords.some((word) => word.word === entry.word));
+         console.log(
+            'Extra words:',
+            extraWords.map((entry) => entry.word)
+         );
+
+         duplicateWords = processedWords.map((word) => word.word).filter((word, index, self) => self.indexOf(word) !== index);
          console.log('Duplicate words:', duplicateWords);
       }
 

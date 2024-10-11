@@ -403,8 +403,8 @@
     },
     "similar_words": [
       "Aalangeln",
-      "Aalfang",
-      "Aalfische"
+      "Aalfische",
+      "Aalfischerei"
     ],
     "grammar_categories": [
       "noun"
@@ -433,7 +433,6 @@
       "Aalangelns",
       "aalen",
       "aalenden",
-      "Aalfang",
       "Aalfische",
       "Aalfischen",
       "Aalfischerei"
@@ -1031,7 +1030,6 @@
       "Aalens",
       "Aales",
       "Aalfang",
-      "Aalfang",
       "Aalfischen"
     ],
     "grammar_categories": [
@@ -1071,7 +1069,6 @@
       "Aalener",
       "Aalens",
       "Aales",
-      "Aalfang",
       "Aalfang",
       "Aalfisch",
       "aalförmig",
@@ -1349,7 +1346,6 @@
       "aalendes",
       "Aalener",
       "Aales",
-      "Aalfang",
       "Aalfang"
     ],
     "grammar_categories": [
@@ -1459,8 +1455,7 @@
       "aalen",
       "aalend",
       "Aalens",
-      "Aalfänge",
-      "Aalfang"
+      "Aalfänge"
     ],
     "grammar_categories": [
       "noun"
@@ -1484,7 +1479,6 @@
     },
     "similar_words": [
       "aalende",
-      "Aalfang",
       "Aalfang"
     ],
     "grammar_categories": [
@@ -1509,8 +1503,7 @@
     },
     "similar_words": [
       "Aalfangergebnisse",
-      "Aalfangergebnissen",
-      "Aalfangergebnis"
+      "Aalfangergebnissen"
     ],
     "grammar_categories": [
       "noun"
@@ -1534,8 +1527,7 @@
     },
     "similar_words": [
       "Aalfangergebnis",
-      "Aalfangergebnissen",
-      "Aalfangergebnis"
+      "Aalfangergebnissen"
     ],
     "grammar_categories": [
       "noun"
@@ -1559,67 +1551,7 @@
     },
     "similar_words": [
       "Aalfangergebnis",
-      "Aalfangergebnisse",
-      "Aalfangergebnis"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangergebnis",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catch result"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangergebnis",
-      "Aalfangergebnisse",
-      "Aalfangergebnissen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfang",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catch",
-        "eel fishing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalangelfischerei",
-      "Aalangeln",
-      "Aalborg",
-      "aalen",
-      "aalend",
-      "Aalens",
-      "Aalfang",
-      "Aalfänge",
-      "Aalfische",
-      "Aalfischerei",
-      "Aalfisch"
+      "Aalfangergebnisse"
     ],
     "grammar_categories": [
       "noun"
@@ -1785,9 +1717,9 @@
       "Aalfischer",
       "Aalfischern",
       "Aalfischers",
-      "Aalfisch",
       "Aalkiste",
-      "Aalmolch"
+      "Aalmolch",
+      "Aalrutte"
     ],
     "grammar_categories": [
       "noun"
@@ -1812,7 +1744,6 @@
     "similar_words": [
       "Aalangelfischerei",
       "Aalangeln",
-      "Aalfang",
       "Aalfisch",
       "Aalfischen",
       "Aalfischer",
@@ -1820,9 +1751,9 @@
       "Aalfischerin",
       "Aalfischern",
       "Aalfischers",
-      "Aalfisch",
       "Aalkiste",
-      "Aalmolche"
+      "Aalmolche",
+      "Aalrutten"
     ],
     "grammar_categories": [
       "noun"
@@ -1854,7 +1785,6 @@
       "Aalfischerin",
       "Aalfischern",
       "Aalfischers",
-      "Aalfisch",
       "Aalkästchen",
       "Aalkisten",
       "Aalmolchen"
@@ -1887,8 +1817,7 @@
       "Aalfischerin",
       "Aalfischerinnen",
       "Aalfischern",
-      "Aalfischers",
-      "Aalfisch"
+      "Aalfischers"
     ],
     "grammar_categories": [
       "noun"
@@ -1911,15 +1840,14 @@
       "modal_verb": []
     },
     "similar_words": [
+      "Aalangelfischerei",
       "Aalangeln",
-      "Aalfang",
       "Aalfische",
       "Aalfischen",
       "Aalfischer",
       "Aalfischerin",
       "Aalfischern",
       "Aalfischers",
-      "Aalfisch",
       "Aalräucherei",
       "Aalrutten"
     ],
@@ -2005,8 +1933,7 @@
       "Aalfischerei",
       "Aalfischerin",
       "Aalfischerinnen",
-      "Aalfischers",
-      "Aalfisch"
+      "Aalfischers"
     ],
     "grammar_categories": [
       "noun"
@@ -2035,41 +1962,7 @@
       "Aalfischer",
       "Aalfischerei",
       "Aalfischerin",
-      "Aalfischern",
-      "Aalfisch"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfisch",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fish"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfang",
-      "Aalfisch",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischerei",
-      "Aalfischern",
-      "Aalfischers",
-      "Aalkiste",
-      "Aalmolch",
-      "Aalrutten"
+      "Aalfischern"
     ],
     "grammar_categories": [
       "noun"
@@ -2609,7 +2502,6 @@
     "similar_words": [
       "Aalfisch",
       "Aalfische",
-      "Aalfisch",
       "Aalkästchen",
       "Aalkästchens",
       "Aalkasten",
@@ -2838,7 +2730,6 @@
       "modal_verb": []
     },
     "similar_words": [
-      "Aalfisch",
       "Aalfisch",
       "Aalkästchen",
       "Aalkiste",
@@ -3070,7 +2961,7 @@
       "Aalrutte",
       "Aalsuppe",
       "Aarau",
-      "Aarau"
+      "Aarauer"
     ],
     "grammar_categories": [
       "noun"
@@ -3197,6 +3088,7 @@
       "modal_verb": []
     },
     "similar_words": [
+      "Aalfisch",
       "aalglatte",
       "Aalkiste",
       "Aalmutter",
@@ -3234,8 +3126,8 @@
       "modal_verb": []
     },
     "similar_words": [
+      "Aalfische",
       "Aalfischerei",
-      "Aalfisch",
       "aalglatten",
       "Aalkasten",
       "Aalkästen",
@@ -3285,7 +3177,6 @@
       "aalet",
       "Aalwels",
       "Aar",
-      "Aarau",
       "Aarau",
       "Aaraus",
       "Aare"
@@ -3472,7 +3363,6 @@
       "aaltest",
       "aalet",
       "Aar",
-      "Aarau",
       "Aarau",
       "Aare"
     ],
@@ -3899,7 +3789,6 @@
       "aalet",
       "Aar",
       "Aarau",
-      "Aarau",
       "Aare"
     ],
     "grammar_categories": [
@@ -3937,7 +3826,6 @@
       "aalet",
       "Aalwels",
       "Aar",
-      "Aarau",
       "Aarau",
       "Aare"
     ],
@@ -4381,7 +4269,6 @@
       "aalte",
       "aalet",
       "Aarau",
-      "Aarau",
       "Aaraus",
       "Aare",
       "Aargau",
@@ -4416,47 +4303,6 @@
       "aalte",
       "aalet",
       "Aar",
-      "Aarau",
-      "Aarauer",
-      "Aaraus",
-      "Aarburg",
-      "Aare",
-      "Aaretal",
-      "Aargau",
-      "Aargauer",
-      "Aargaus",
-      "Aarhus",
-      "Aaron"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aarau",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aarau (city name)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalraupe",
-      "Aals",
-      "aalst",
-      "aalt",
-      "aalte",
-      "aalet",
-      "Aar",
-      "Aarau",
       "Aarauer",
       "Aaraus",
       "Aarburg",
@@ -4491,8 +4337,8 @@
       "modal_verb": []
     },
     "similar_words": [
+      "Aalraupe",
       "Aalraupen",
-      "Aarau",
       "Aarau",
       "Aaraus",
       "Aarburg",
@@ -4528,7 +4374,6 @@
     },
     "similar_words": [
       "Aarau",
-      "Aarau",
       "Aarauer",
       "Aaraus",
       "Aarhus"
@@ -4561,7 +4406,6 @@
       "aalten",
       "aalet",
       "Aar",
-      "Aarau",
       "Aarau",
       "Aarauer",
       "Aaraus",
@@ -4829,7 +4673,6 @@
     "similar_words": [
       "aalet",
       "Aarau",
-      "Aarau",
       "Aare",
       "Aaretales",
       "Aaretals",
@@ -4908,7 +4751,6 @@
     "similar_words": [
       "Aar",
       "Aarau",
-      "Aarau",
       "Aarauer",
       "Aaraus",
       "Aare",
@@ -4944,7 +4786,6 @@
       "modal_verb": []
     },
     "similar_words": [
-      "Aarau",
       "Aarau",
       "Aarauer",
       "Aaraus",
@@ -5251,7 +5092,6 @@
       "modal_verb": []
     },
     "similar_words": [
-      "Aarau",
       "Aarau",
       "Aarauer",
       "Aaraus",

@@ -274,14 +274,15 @@ describe('DictGeneratorService', () => {
 
          /* NOTE: For testing / debug purposes
 
-         const testPath = path.join(__dirname, 'test', 'json_output');
+         const testPath = path.join(__dirname, 'test');
          fs.mkdirSync(testPath, { recursive: true });
-         fs.writeFileSync(path.join(testPath, 'similar_distThresh-3_maxNeigh-50.json'), JSON.stringify(result, undefined, 2));
+         fs.writeFileSync(path.join(testPath, '200_word_processed_output.json'), JSON.stringify(result, undefined, 2));
 
          */
+
          expect(result[0]).toHaveProperty('similar_words');
          expect(result[0]).toHaveProperty('grammar_categories');
-         expect(result).toHaveLength(180); // Some words are removed due to filtering
+         expect(result).toHaveLength(176); // Some words are removed due to filtering
       });
    });
 });

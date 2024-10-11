@@ -201,6 +201,8 @@ export class OpenaiService {
                   },
                },
             });
+         } else {
+            continue; // Skip already registered words [may happen due to LLM error]
          }
 
          const wordId = wordEntry.id;
