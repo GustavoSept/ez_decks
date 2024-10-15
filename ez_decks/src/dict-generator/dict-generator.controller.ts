@@ -3,20 +3,24 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { OpenaiService } from './openai/openai.service';
 import { CreateBatchFileDto } from './DTOs/create-batch-file.dto';
 import { LoadAndCreateBatchFileDto } from './DTOs/load-and-create-batch-file.dto';
-import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
 import { WesternTranslationResponseObj } from './structs/translation-response.structs';
 import { DictGeneratorService } from './dict-generator.service';
 import { CreatedFileObject } from './openai/types/batch-created-file';
 import { BatchProcess } from './openai/types/batch-process';
+import { SisyProducerService } from './sisyphus/sisy-producer.service';
 
 @Controller('dict-generator')
 export class DictGeneratorController {
    constructor(
       private readonly openaiServ: OpenaiService,
-      private readonly dictServ: DictGeneratorService
+      private readonly dictServ: DictGeneratorService,
+      private readonly sisyServ: SisyProducerService
    ) {}
 
+   /**
+    * Creates an 'OpenAI batch file' based on text input
+    */
    @Post('create-batch-file')
    async createBatchFile(@Body() body: CreateBatchFileDto): Promise<CreatedFileObject> {
       const file = await this.openaiServ.batchGetFile(
@@ -31,6 +35,9 @@ export class DictGeneratorController {
       return file;
    }
 
+   /**
+    * Creates an 'OpenAI batch file' based on the uploaded file
+    */
    @Post('load-and-create-batch-file')
    @UseInterceptors(FileInterceptor('wordFile'))
    async loadAndCreateBatchFile(
@@ -57,15 +64,39 @@ export class DictGeneratorController {
       return createdFiles;
    }
 
-   @Post('create-batch-process')
-   async createBatchProcess(@Body() body: CreateBatchProcessDto): Promise<BatchProcess> {
-      const batch = await this.openaiServ.batchCreateProcess(
-         body.inputFileId,
-         undefined,
-         undefined,
-         body.metadata
-      );
-      return batch;
+   /**
+    * Based on the uploaded file:
+    *
+    * - Creates batches
+    * - Waits for the results of each batch
+    * - Process and save results into db
+    */
+   @Post('load-and-process-file')
+   @UseInterceptors(FileInterceptor('wordFile'))
+   async loadAndProcessFile(
+      @UploadedFile() file: Express.Multer.File,
+      @Body() body: LoadAndCreateBatchFileDto
+   ): Promise<{ processingFileIds: string[] }> {
+      const batches = this.dictServ.splitFileIntoBatches(file.buffer, body.wordCapacity, body.maxBatchSize); // Convert file to Buffer, then to string[][]
+
+      const processingFileIds: string[] = [];
+
+      for (const batch of batches) {
+         const batchFile: CreatedFileObject = await this.openaiServ.batchGetFile(
+            batch,
+            body.systemMessage,
+            undefined,
+            undefined,
+            WesternTranslationResponseObj,
+            undefined,
+            body.userMessagePrefix
+         );
+
+         this.sisyServ.pollBatchProcess({ inputFileId: batchFile.id });
+
+         processingFileIds.push(batchFile.id);
+      }
+      return { processingFileIds: processingFileIds };
    }
 
    @Get('batch-status/:batchId')

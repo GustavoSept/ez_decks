@@ -1,10 +1,11 @@
-import { WorkerHost } from '@nestjs/bullmq';
+import { Processor, WorkerHost } from '@nestjs/bullmq';
 import { Injectable, Logger } from '@nestjs/common';
 import { Job } from 'bullmq';
 import { CreateBatchProcessDto } from '../DTOs/create-batch-process.dto';
 import { OpenaiService } from '../openai/openai.service';
 import { DictGeneratorService } from '../dict-generator.service';
 
+@Processor('poll')
 @Injectable()
 export class SisyConsumerService extends WorkerHost {
    private readonly logger = new Logger(SisyConsumerService.name);
