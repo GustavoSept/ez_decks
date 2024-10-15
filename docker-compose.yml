@@ -9,6 +9,7 @@ services:
       - '5555:5555' # For prisma studio
     depends_on:
       - db
+      - queue
     env_file:
       - ./ez_decks/.env
       - ./ez_decks/.env.${NODE_ENV}.local
@@ -44,6 +45,7 @@ services:
     volumes:
       - type: tmpfs
         target: /data
+    command: redis-server --port ${REDIS_PORT}
 
 volumes:
   postgres_data:
