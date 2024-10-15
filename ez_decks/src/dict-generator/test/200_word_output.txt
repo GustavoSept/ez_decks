@@ -1,0 +1,980 @@
+{
+    "results": [
+      {
+        "id": "batch_req_66ffbb7bb3d08190b0f9ebaed28cf7e0",
+        "custom_id": "request-0",
+        "response": {
+          "status_code": 200,
+          "request_id": "027d4a16a0df27d167a5d7ef5f3542d8",
+          "body": {
+            "id": "chatcmpl-AEZCc6vQ9m2u2ztfMqS2nUOOclbFK",
+            "object": "chat.completion",
+            "created": 1728035274,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n  \"response\": [\n    {\n      \"word\": \"Aachen\",\n      \"translations\": {\n        \"verb\": [],\n        \"noun\": [\"Aachen\"],\n        \"adjective\": [],\n        \"adverb\": [],\n        \"pronoun\": [],\n        \"preposition\": [],\n        \"conjunction\": [],\n        \"article\": [],\n        \"numeral\": [],\n        \"modal_verb\": []\n      }\n    },\n    {\n      \"word\": \"Aachener\",\n      \"translations\": {\n        \"verb\": [],\n        \"noun\": [\"native of Aachen\", \"Aachen resident\"],\n        \"adjective\": [\"Aachen\"],\n        \"adverb\": [],\n        \"pronoun\": [],\n        \"preposition\": [],\n        \"conjunction\": [],\n        \"article\": [],\n        \"numeral\": [],\n        \"modal_verb\": []\n      }\n    },\n    {\n      \"word\": \"Aachenerin\",\n      \"translations\": {\n        \"verb\": [],\n        \"noun\": [\"female native of Aachen\"],\n        \"adjective\": [\"Aachen\"],\n        \"adverb\": [],\n        \"pronoun\": [],\n        \"preposition\": [],\n        \"conjunction\": [],\n        \"article\": [],\n        \"numeral\": [],\n        \"modal_verb\": []\n      }\n    },\n    {\n      \"word\": \"Aachenerinnen\",\n      \"translations\": {\n        \"verb\": [],\n        \"noun\": [\"females from Aachen\"],\n        \"adjective\": [\"Aachen\"],\n        \"adverb\": [],\n        \"pronoun\": [],\n        \"preposition\": [],\n        \"conjunction\": [],\n        \"article\": [],\n        \"numeral\": [],\n        \"modal_verb\": []\n      }\n    },\n    {\n      \"word\": \"Aachenern\",\n      \"translations\": {\n        \"verb\": [],\n        \"noun\": [\"people from Aachen\"],\n        \"adjective\": [],\n        \"adverb\": [],\n        \"pronoun\": [],\n        \"preposition\": [],\n        \"conjunction\": [],\n        \"article\": [],\n        \"numeral\": [],\n        \"modal_verb\": []\n      }\n    },\n    {\n      \"word\": \"Aacheners\",\n      \"translations\": {\n        \"verb\": [],\n        \"noun\": [\"Aachener's (possessive)\"],\n        \"adjective\": [],\n        \"adverb\": [],\n        \"pronoun\": [],\n        \"preposition\": [],\n        \"conjunction\": [],\n        \"article\": [],\n        \"numeral\": [],\n        \"modal_verb\": []\n      }\n    }\n  ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 447,
+              "completion_tokens": 536,
+              "total_tokens": 983,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7bc2fc81909fe754bbf0fcea28",
+        "custom_id": "request-1",
+        "response": {
+          "status_code": 200,
+          "request_id": "8d22e4b95899fbbdb35ef10886b20879",
+          "body": {
+            "id": "chatcmpl-AEZBkUL2SWykITO9RGSS746DcUNnv",
+            "object": "chat.completion",
+            "created": 1728035220,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aachen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aachen\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aal\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalähnlich\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\", \"similar to an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalähnliche\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\", \"similar to an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalähnlichem\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\", \"similar to an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalähnlichen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\", \"similar to an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalähnlicher\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\", \"similar to an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalähnliches\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\", \"similar to an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 455,
+              "completion_tokens": 712,
+              "total_tokens": 1167,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7bd5b4819093af7886a769c93d",
+        "custom_id": "request-2",
+        "response": {
+          "status_code": 200,
+          "request_id": "0d35512b699d2ed52061e0c930e9a2ff",
+          "body": {
+            "id": "chatcmpl-AEZBWXnZhyXoITHUVh1BlknyKz4ra",
+            "object": "chat.completion",
+            "created": 1728035206,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalangelfischerei\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fishing\"],\n            \"adjective\": []\n        \n        \t,\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalangeln\",\n         \"translations\": {\n            \"verb\": [\"to fish for eels\"],\n            \"noun\": [\"eel fishing\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalangelns\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalartig\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalartige\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalartigem\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalartigen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalartiger\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-like\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 450,
+              "completion_tokens": 681,
+              "total_tokens": 1131,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7be7b08190a341fe7a9e48170c",
+        "custom_id": "request-3",
+        "response": {
+          "status_code": 200,
+          "request_id": "5dc832f875e07c89ef8efbc04557c496",
+          "body": {
+            "id": "chatcmpl-AEZD0ZnYLskd415ZbeJxZkxaWqqkU",
+            "object": "chat.completion",
+            "created": 1728035298,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalartiges\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel-like\"],\n            \"adjective\": []\n         \t\n     \t\t,\"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalbestand\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel population\", \"eel stock\"],\n            \"adjective\": []\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalbestände\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel populations\", \"eel stocks\"],\n            \"adjective\": []\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalbeständen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"in the eel populations\", \"in the eel stocks\"],\n            \"adjective\": []\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalbestandes\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the eel population\", \"of the eel stock\"],\n            \"adjective\": []\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalbestands\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel stock\", \"eel population\"],\n            \"adjective\": []\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalbezogen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-related\", \"related to eels\"]\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalbezogene\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-related\", \"related to eels\"]\n        \t  ,\"adverb\": [],\n              \"pronoun\": [],\n              \"preposition\": [],\n              \"conjunction\": [],\n              \"article\": [],\n              \"numeral\": [],\n              \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 450,
+              "completion_tokens": 730,
+              "total_tokens": 1180,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c0ae88190b48973fb355a6a35",
+        "custom_id": "request-4",
+        "response": {
+          "status_code": 200,
+          "request_id": "1309e7b52cf5c1932250e62135ff5dc4",
+          "body": {
+            "id": "chatcmpl-AEZBnjT2yjFjLN7wigGvIQR3mWW8O",
+            "object": "chat.completion",
+            "created": 1728035223,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalbezogenem\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-related\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalbezogenen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-related\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalbezogener\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-related\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalbezogenes\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-related\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalborg\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aalborg\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalborgs\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aalborg's\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aale\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eels\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalen\",\n         \"translations\": {\n            \"verb\": [\"to fish for eels\"],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 451,
+              "completion_tokens": 681,
+              "total_tokens": 1132,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c18988190bbd5e9f7ef587e14",
+        "custom_id": "request-5",
+        "response": {
+          "status_code": 200,
+          "request_id": "1cc154063c788df3d5ee31470f79afa2",
+          "body": {
+            "id": "chatcmpl-AEZDHEPVbND4XDTAuqK8hPbUg3S4f",
+            "object": "chat.completion",
+            "created": 1728035315,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalend\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"]\n         \t, \"noun\": []\n        \t, \"adjective\": [\"eeling\"]\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"aalende\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"]\n        \t, \"noun\": []\n        \t, \"adjective\": [\"eeling\"]\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"aalendem\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"]\n        \t, \"noun\": []\n        \t, \"adjective\": [\"eeling\"]\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"aalenden\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"]\n        \t, \"noun\": []\n        \t, \"adjective\": [\"eeling\"]\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"aalender\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"]\n        \t, \"noun\": []\n        \t, \"adjective\": [\"eeling\"]\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"aalendes\",\n         \"translations\": {\n            \"verb\": [\"eel-shaped\", \"relating to an eel\"]\n        \t, \"noun\": []\n        \t, \"adjective\": [\"eeling\"]\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"Aalener\",\n         \"translations\": {\n            \"verb\": []\n        \t, \"noun\": [\"eel person\", \"eel resident\"]\n        \t, \"adjective\": []\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      },\n      {\n         \"word\": \"Aalens\",\n         \"translations\": {\n            \"verb\": []\n        \t, \"noun\": [\"in the manner of eels\"]\n        \t, \"adjective\": []\n        \t, \"adverb\": []\n        \t, \"pronoun\": []\n        \t, \"preposition\": []\n        \t, \"conjunction\": []\n        \t, \"article\": []\n        \t, \"numeral\": []\n        \t, \"modal_verb\": []\n        \t}\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 443,
+              "completion_tokens": 888,
+              "total_tokens": 1331,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c27388190b63936d31e7d770f",
+        "custom_id": "request-6",
+        "response": {
+          "status_code": 200,
+          "request_id": "af6cfc30ac497718ee4baf2e6a1f7119",
+          "body": {
+            "id": "chatcmpl-AEZBTOLrdchg2xFEig12CKJCC5Ilf",
+            "object": "chat.completion",
+            "created": 1728035203,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalentnahme\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel removal\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalentnahmen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel removals\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aales\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfang\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catch\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfänge\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catches\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangergebnis\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catching result\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangergebnisse\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catching results\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangergebnissen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"in the eel catching results\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 454,
+              "completion_tokens": 681,
+              "total_tokens": 1135,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c33948190ab258eb648ad51ec",
+        "custom_id": "request-7",
+        "response": {
+          "status_code": 200,
+          "request_id": "aa787ebf5dbf5be89547637fe504f8d1",
+          "body": {
+            "id": "chatcmpl-AEZDJ4HHIZhI6GNMuRUtZp98Y9vYM",
+            "object": "chat.completion",
+            "created": 1728035317,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalfangverbot\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fishing ban\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangverbote\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fishing bans\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangverboten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"in the context of eel fishing bans\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangverbotes\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the eel fishing ban\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfangverbots\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the eel fishing ban\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfisch\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 465,
+              "completion_tokens": 702,
+              "total_tokens": 1167,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c408c8190a31635e282066c62",
+        "custom_id": "request-8",
+        "response": {
+          "status_code": 200,
+          "request_id": "00fe96af1316744eeb4ded96fa281cc3",
+          "body": {
+            "id": "chatcmpl-AEZBVCtEgqYDBXp9c9THmGBBNldJY",
+            "object": "chat.completion",
+            "created": 1728035205,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalfische\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fish\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischen\",\n         \"translations\": {\n            \"verb\": [\"to fish for eels\"],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischer\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fisherman\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischerei\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fishing\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischerin\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fisherwoman\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischerinnen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fisherwomen\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischern\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel fishermen\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfischers\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of eel fisherman\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 456,
+              "completion_tokens": 684,
+              "total_tokens": 1140,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c4f2c8190ac7aedf0059345d6",
+        "custom_id": "request-9",
+        "response": {
+          "status_code": 200,
+          "request_id": "d03a9c65bd641f1225739d5f80b66b02",
+          "body": {
+            "id": "chatcmpl-AEZCrzixgmniTqGhDXeNPnWhFf57G",
+            "object": "chat.completion",
+            "created": 1728035289,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalförmig\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-shaped\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfreund\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel friend\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 464,
+              "completion_tokens": 259,
+              "total_tokens": 723,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c5e5c8190ac397c2cba0808a5",
+        "custom_id": "request-10",
+        "response": {
+          "status_code": 200,
+          "request_id": "d59311d573592329e808955c10fcd175",
+          "body": {
+            "id": "chatcmpl-AEZBmB8xE1FL5WFjcDb0Xq3f3CB5d",
+            "object": "chat.completion",
+            "created": 1728035222,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalfreunde\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel friends\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfreunden\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel friends\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfreundes\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel friend's\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfreundin\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel friend (female)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalfreundinnen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel friends (female)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalglatt\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"slippery like an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalglatte\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"slippery like an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalglattem\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"slippery like an eel\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 459,
+              "completion_tokens": 699,
+              "total_tokens": 1158,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c6fe0819094123708ecd29362",
+        "custom_id": "request-11",
+        "response": {
+          "status_code": 200,
+          "request_id": "e75668256ef2d1786fb08b614e95f36f",
+          "body": {
+            "id": "chatcmpl-AEZC1el4SgsiEBbQTDykJJ1NbUtxu",
+            "object": "chat.completion",
+            "created": 1728035237,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalglatten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-smooth\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalglatter\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-smooth\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalglattes\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"eel-smooth\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkästchen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel box\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkästchens\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel box's\", \"of the eel box\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkasten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel boxes\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkästen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel boxes\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkastens\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel box's\", \"of the eel box\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 456,
+              "completion_tokens": 695,
+              "total_tokens": 1151,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c83188190b411d36695360466",
+        "custom_id": "request-12",
+        "response": {
+          "status_code": 200,
+          "request_id": "e947b65e14bd52b58b89bd1bc4a560b6",
+          "body": {
+            "id": "chatcmpl-AEZDJG5oSND4yGh2oo1iZT4QwBzWf",
+            "object": "chat.completion",
+            "created": 1728035317,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalkiste\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel box\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkisten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel boxes\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkorb\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel basket\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkörbchen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"small eel basket\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkörbchens\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the small eel basket\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkörbe\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel baskets\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkörben\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"in the eel baskets\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalkorbs\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the eel basket\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 459,
+              "completion_tokens": 689,
+              "total_tokens": 1148,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7c9418819082f3286aa7c9a146",
+        "custom_id": "request-13",
+        "response": {
+          "status_code": 200,
+          "request_id": "09c552789681cf17525f8f760ff7ea61",
+          "body": {
+            "id": "chatcmpl-AEZCKETzE5XDn5l1l6UFNZPWXr9M1",
+            "object": "chat.completion",
+            "created": 1728035256,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalmolch\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel pup\", \"eel larva\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalmolche\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel pups\", \"eel larvae\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalmolchen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalmolches\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalmolchs\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalmutter\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel mother\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalmuttern\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel mothers\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalquappe\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel pout\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 455,
+              "completion_tokens": 679,
+              "total_tokens": 1134,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7ca648819088ad8b5b8f994ea6",
+        "custom_id": "request-14",
+        "response": {
+          "status_code": 200,
+          "request_id": "91c9c19ef3216184cfcb77f0f78170fd",
+          "body": {
+            "id": "chatcmpl-AEZBU4nZ94QT4lDYJNPe4kBNftHjX",
+            "object": "chat.completion",
+            "created": 1728035204,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalquappen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel larvae\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalräucherei\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel smoking\", \"eel smoking house\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalräuchereien\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel smoking houses\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalraupe\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel caterpillar\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalraupen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel caterpillars\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalreuse\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel trap\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalreusen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel traps\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalrutte\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 455,
+              "completion_tokens": 692,
+              "total_tokens": 1147,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7cb7b08190add75638083909e2",
+        "custom_id": "request-15",
+        "response": {
+          "status_code": 200,
+          "request_id": "2f72a1656160b1c905380a84d91d6c6b",
+          "body": {
+            "id": "chatcmpl-AEZBk1WS682o2Av5RKVh8W8HNxVPH",
+            "object": "chat.completion",
+            "created": 1728035220,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalrutten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel\", \"eel fishing\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aals\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eels\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalschutzmaßnahme\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel protection measure\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalschutzmaßnahmen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel protection measures\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalspeer\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel spear\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalspeere\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel spears\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalspeeren\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel spearing\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalspeers\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of eel spear\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 457,
+              "completion_tokens": 687,
+              "total_tokens": 1144,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7cc9c48190942f79e802c752b7",
+        "custom_id": "request-16",
+        "response": {
+          "status_code": 200,
+          "request_id": "74a4a6ed4b437861e3061f74a746ec6a",
+          "body": {
+            "id": "chatcmpl-AEZChmtgypFNjcj9vBUmSnDle4IrC",
+            "object": "chat.completion",
+            "created": 1728035279,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalst\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel\", \"eel specimen\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstechen\",\n         \"translations\": {\n            \"verb\": [\"to eel\", \"to fish for eels\"],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstechens\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstreif\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel stripe\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstreifen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel stripes\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstreifs\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstrich\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel stripe\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstriche\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel stripes\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 451,
+              "completion_tokens": 684,
+              "total_tokens": 1135,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7cd7788190a4c345e6a92db746",
+        "custom_id": "request-17",
+        "response": {
+          "status_code": 200,
+          "request_id": "5b14a328e615315eab73ad5c8f812000",
+          "body": {
+            "id": "chatcmpl-AEZCxIANSLzEgetUrZh7npL8XodxU",
+            "object": "chat.completion",
+            "created": 1728035295,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalstrichen\",\n         \"translations\": {\n            \"verb\": [\"eel stroke\"],\n            \"noun\": [\"eel strokes\"]\n           \t,\n            \"adjective\": []\n        \t,\n            \"adverb\": []\n        \t,\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstriches\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the eel stroke\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstrichs\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the eel stroke\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalstrichschmerle\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel stroke loach\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalsüppchen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"little eel soup\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalsüppchens\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"of the little eel soup\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalsuppe\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel soup\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalsuppen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel soups\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 461,
+              "completion_tokens": 710,
+              "total_tokens": 1171,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7ce4dc819099018aa471406922",
+        "custom_id": "request-18",
+        "response": {
+          "status_code": 200,
+          "request_id": "bcc36edc35fd381a968fe1d7dfceb8d2",
+          "body": {
+            "id": "chatcmpl-AEZCNXkKU4ZcLdeNBJADIvAHi9Azc",
+            "object": "chat.completion",
+            "created": 1728035259,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aalt\",\n         \"translations\": {\n            \"verb\": [\"eel\", \"fishing for eels\"]\n        \n        \t,\n            \"noun\": [\"eel\", \"fishing\"]\n        \t,\n            \"adjective\": []\n        \t,\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalte\",\n         \"translations\": {\n            \"verb\": [\"eel\", \"fishing for eels\"],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalten\",\n         \"translations\": {\n            \"verb\": [\"eel\", \"fishing for eels\"],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aaltest\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aalet\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaltierchen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"little eel\", \"baby eel\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaltierchens\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"little eel\", \"baby eel\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalwels\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"catfish\", \"eel catfish\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 449,
+              "completion_tokens": 714,
+              "total_tokens": 1163,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7d047c819089475e53b0aee910",
+        "custom_id": "request-19",
+        "response": {
+          "status_code": 200,
+          "request_id": "3e7a011f2b8b0ff4b7a5e1494522b283",
+          "body": {
+            "id": "chatcmpl-AEZCifgfinKb1V8gDRpefkZIkSzld",
+            "object": "chat.completion",
+            "created": 1728035280,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalwelse\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catfish\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalwelsen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catfish (plural)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalwelses\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel catfish (genitive)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalzucht\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breeding\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalzuchten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breedings\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalzüchter\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breeder\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalzüchterin\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breeder (female)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalzüchtern\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breeders\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 454,
+              "completion_tokens": 695,
+              "total_tokens": 1149,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7d14188190861c3bb812a90b0f",
+        "custom_id": "request-20",
+        "response": {
+          "status_code": 200,
+          "request_id": "577551aba80d6b942d7e1882ed82bb3e",
+          "body": {
+            "id": "chatcmpl-AEZBVWEbws2hFCOSQVdBfNVjmKis8",
+            "object": "chat.completion",
+            "created": 1728035205,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aalzüchters\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breeder\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aalzüchtung\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"eel breeding\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"ÄAppO\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Public Administration Act (specific to a region)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aar\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"river Aar\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aarau\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aarau (city name)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aarauer\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aarau inhabitant\"],\n            \"adjective\": [\"of Aarau\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaraus\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aarburg\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aarburg (city name)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 448,
+              "completion_tokens": 779,
+              "total_tokens": 1227,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7d269c8190bb74d2ff1a119024",
+        "custom_id": "request-21",
+        "response": {
+          "status_code": 200,
+          "request_id": "36de186fcda0372cac3189cb46e86eca",
+          "body": {
+            "id": "chatcmpl-AEZBUm6ttafLQlTkl0YBMz2VwtoPm",
+            "object": "chat.completion",
+            "created": 1728035204,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aare\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare\", \"river\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aareabschnitt\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"section of the Aare\", \"segment of the Aare\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aareabschnitte\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"sections of the Aare\", \"segments of the Aare\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aareabschnitten\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"sections of the Aare (dative)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aareabschnitts\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"section of the Aare (genitive)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aareabwärts\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [\"downstream\"],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aareaufwärts\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [],\n            \"adverb\": [\"upstream\"],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaregletscher\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare glacier\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 459,
+              "completion_tokens": 719,
+              "total_tokens": 1178,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7d37c88190bb4ff07542fa6663",
+        "custom_id": "request-22",
+        "response": {
+          "status_code": 200,
+          "request_id": "c4588f57092ce506a8135b638d01cf4d",
+          "body": {
+            "id": "chatcmpl-AEZBxIZZA27QYuziKbvWcMNwyRaID",
+            "object": "chat.completion",
+            "created": 1728035233,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aaregletschers\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare glacier\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aareschlaufe\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare loop\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aareschlucht\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare gorge\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaretal\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare valley\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaretales\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare valley's\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaretals\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aare valley's\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aargau\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aargau (a canton in Switzerland)\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aargauer\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aargau resident\", \"Aargauer (male)\"],\n            \"adjective\": [\"from Aargau\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 456,
+              "completion_tokens": 708,
+              "total_tokens": 1164,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7d491881908c28bc2dbae82acb",
+        "custom_id": "request-23",
+        "response": {
+          "status_code": 200,
+          "request_id": "2fdfb314c85bcb6192da8d8020a13117",
+          "body": {
+            "id": "chatcmpl-AEZCF9fK7kNEcB5NqWjlGYcH5pLNq",
+            "object": "chat.completion",
+            "created": 1728035251,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"Aargauerin\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"female inhabitant of Aargau\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aargauerinnen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"female inhabitants of Aargau\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aargauern\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"inhabitants of Aargau\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aargauers\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"inhabitant of Aargau\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aargauisch\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aargauian\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aargauische\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aargauian\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aargauischem\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aargauian\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aargauischen\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aargauian\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 459,
+              "completion_tokens": 708,
+              "total_tokens": 1167,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      },
+      {
+        "id": "batch_req_66ffbb7d5ac481909f8b0ce3b309c830",
+        "custom_id": "request-24",
+        "response": {
+          "status_code": 200,
+          "request_id": "2a7d7702d982035e31ab0c4595934415",
+          "body": {
+            "id": "chatcmpl-AEZCPVGynVtFNNg7JpjPWHffWoGhl",
+            "object": "chat.completion",
+            "created": 1728035261,
+            "model": "gpt-4o-mini-2024-07-18",
+            "choices": [
+              {
+                "index": 0,
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n   \"response\": [\n      {\n         \"word\": \"aargauischer\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aargauese\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aargauisches\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aargauese\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aargaus\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aargau\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aarhus\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aarhus\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aarhusbucht\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aarhus Bay\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"Aaron\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [\"Aaron\"],\n            \"adjective\": [],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aaronitisch\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aaronic\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      },\n      {\n         \"word\": \"aaronitische\",\n         \"translations\": {\n            \"verb\": [],\n            \"noun\": [],\n            \"adjective\": [\"Aaronic\"],\n            \"adverb\": [],\n            \"pronoun\": [],\n            \"preposition\": [],\n            \"conjunction\": [],\n            \"article\": [],\n            \"numeral\": [],\n            \"modal_verb\": []\n         }\n      }\n   ]\n}",
+                  "refusal": null
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 453,
+              "completion_tokens": 684,
+              "total_tokens": 1137,
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0
+              }
+            },
+            "system_fingerprint": "fp_74ba47b4ac"
+          }
+        },
+        "error": null
+      }
+    ],
+    "errors": []
+  }

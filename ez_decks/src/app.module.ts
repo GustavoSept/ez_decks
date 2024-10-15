@@ -1,20 +1,14 @@
-import { Module } from '@nestjs/common';
+import { Module, ValidationPipe } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
-import { PrismaService } from './prisma/prisma.service';
 import { WordEngineModule } from './word_engine/word_engine.module';
-import { ConfigModule } from '@nestjs/config';
+import { PrismaService } from './prisma/prisma.service';
+import { DatabaseInterceptor } from './common/errors/interceptors/database.interceptor';
 import { DictGeneratorModule } from './dict-generator/dict-generator.module';
-
-const nodeEnvValues = ['development', 'test', 'production'] as const;
-type node_env_choices = (typeof nodeEnvValues)[number];
-
-const isValidNodeEnv = (env: any): env is node_env_choices => {
-   return nodeEnvValues.includes(env);
-};
-
-const node_env: node_env_choices = isValidNodeEnv(process.env.NODE_ENV) ? (process.env.NODE_ENV as node_env_choices) : 'development';
+import { node_env } from './common/config/constants';
 
 @Module({
    imports: [
@@ -28,6 +22,21 @@ const node_env: node_env_choices = isValidNodeEnv(process.env.NODE_ENV) ? (proce
       }),
    ],
    controllers: [AppController],
-   providers: [AppService, PrismaService],
+   providers: [
+      AppService,
+      PrismaService,
+      {
+         provide: APP_PIPE,
+         useValue: new ValidationPipe({
+            whitelist: true,
+            forbidNonWhitelisted: true,
+            transform: true,
+         }),
+      },
+      {
+         provide: APP_INTERCEPTOR,
+         useClass: DatabaseInterceptor,
+      },
+   ],
 })
 export class AppModule {}

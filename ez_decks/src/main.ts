@@ -1,11 +1,10 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
-import { DatabaseInterceptor } from './common/errors/interceptors/database.interceptor';
 import { ConfigService } from '@nestjs/config';
+import { AppModule } from './app.module';
+import { node_env } from './common/config/constants';
 
 async function bootstrap() {
-   // TODO: add logic to activate DictGenerator instead of creating the app from AppModule.
+   console.log(`\n\nRunning on ${node_env} environment!\n\n`);
    // Create the app from AppModule
    const app = await NestFactory.create(AppModule);
 
@@ -14,16 +13,6 @@ async function bootstrap() {
 
    // Retrieve the port from ConfigService (with a fallback to 4000)
    const appPort = configService.get<string>('NODEAPP_PORT', '4000');
-
-   app.useGlobalPipes(
-      new ValidationPipe({
-         whitelist: true,
-         forbidNonWhitelisted: true,
-         transform: true,
-      })
-   );
-
-   app.useGlobalInterceptors(new DatabaseInterceptor());
 
    await app.listen(appPort);
 }

@@ -19,3 +19,87 @@ model User {
    name    String
    isAdmin Boolean @default(false)
 }
+
+enum GrammarTypes {
+   verb
+   noun
+   adjective
+   adverb
+   pronoun
+   preposition
+   conjunction
+   article
+   numeral
+   modal_verb
+}
+
+model Language {
+   id   Int    @id @default(autoincrement())
+   name String @unique // e.g., "English", "German". Implemented as an enum (name to id mapping) in TypeScript code.
+
+   // Relations to other models
+   primaryWords               Word[]            @relation("PrimaryLanguageWords")
+   primarySimilarWords        SimilarWord[]     @relation("PrimaryLanguageSimilarWords")
+   primaryTranslations        Translation[]     @relation("PrimaryLanguageTranslations")
+   secondaryTranslations      Translation[]     @relation("SecondaryLanguageTranslations")
+   primaryGrammarCategories   GrammarCategory[] @relation("PrimaryLanguageGrammarCategories")
+   secondaryGrammarCategories GrammarCategory[] @relation("SecondaryLanguageGrammarCategories")
+}
+
+model Word {
+   id               Int      @id @default(autoincrement())
+   word             String
+   primary_language Int
+   language         Language @relation("PrimaryLanguageWords", fields: [primary_language], references: [id])
+
+   // Relations
+   translations      Translation[]
+   similarWords      SimilarWord[]
+   grammarCategories GrammarCategory[]
+
+   @@index([primary_language])
+}
+
+model Translation {
+   id     Int  @id @default(autoincrement())
+   wordId Int
+   word   Word @relation(fields: [wordId], references: [id])
+
+   primary_language   Int
+   secondary_language Int
+   primaryLanguage    Language @relation("PrimaryLanguageTranslations", fields: [primary_language], references: [id])
+   secondaryLanguage  Language @relation("SecondaryLanguageTranslations", fields: [secondary_language], references: [id])
+
+   type        GrammarTypes
+   translation String
+
+   @@index([primary_language, secondary_language])
+}
+
+model SimilarWord {
+   id     Int  @id @default(autoincrement())
+   wordId Int
+   word   Word @relation(fields: [wordId], references: [id])
+
+   primary_language Int
+   language         Language @relation("PrimaryLanguageSimilarWords", fields: [primary_language], references: [id])
+
+   similarWord String
+
+   @@index([primary_language])
+}
+
+model GrammarCategory {
+   id     Int  @id @default(autoincrement())
+   wordId Int
+   word   Word @relation(fields: [wordId], references: [id])
+
+   primary_language   Int
+   secondary_language Int
+   primaryLanguage    Language @relation("PrimaryLanguageGrammarCategories", fields: [primary_language], references: [id])
+   secondaryLanguage  Language @relation("SecondaryLanguageGrammarCategories", fields: [secondary_language], references: [id])
+
+   category GrammarTypes
+
+   @@index([primary_language, secondary_language])
+}

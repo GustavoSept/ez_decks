@@ -14,11 +14,13 @@ services:
       - ./ez_decks/.env.${NODE_ENV}.local
     volumes:
       - ./ez_decks:/usr/src/app
-    deploy:
-      resources:
-        limits:
-          memory: 1G
-          cpus: '0.5'
+      - type: tmpfs
+        target: ${NODE_TEMP_PATH:-/tmp}
+   #  deploy:
+   #    resources:
+   #      limits:
+   #        memory: 1G
+   #        cpus: '0.5'
 
   db:
     image: postgres:16-bookworm
@@ -33,4 +35,3 @@ services:
 
 volumes:
   postgres_data:
-    driver: local
