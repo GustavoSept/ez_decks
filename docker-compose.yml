@@ -15,6 +15,7 @@ services:
       - ./ez_decks/.env.${NODE_ENV}.local
     volumes:
       - ./ez_decks:/usr/src/app
+      - ./ez_decks/logs:/usr/src/app/logs
       - type: tmpfs
         target: ${NODE_TEMP_PATH:-/tmp}
    #  deploy:
@@ -45,7 +46,7 @@ services:
     volumes:
       - type: tmpfs
         target: /data
-    command: redis-server --port ${REDIS_PORT}
+    command: redis-server --port ${REDIS_PORT} --loglevel debug
 
 volumes:
   postgres_data:

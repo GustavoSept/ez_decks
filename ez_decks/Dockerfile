@@ -14,6 +14,9 @@ COPY . .
 # Build the NestJS application
 RUN npm run build
 
+# Logs directory
+RUN mkdir -p /usr/src/app/logs
+
 # Default command to be overridden based on environment
 ARG NODE_ENV
 ENV NODE_ENV=${NODE_ENV}
