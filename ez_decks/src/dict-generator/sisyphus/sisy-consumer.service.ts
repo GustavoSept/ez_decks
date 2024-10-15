@@ -17,7 +17,7 @@ export class SisyConsumerService extends WorkerHost {
       super();
    }
 
-   async process(job: Job<CreateBatchProcessDto, any, string>): Promise<any> {
+   async process(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
       const batch = await this.openaiServ.batchCreateProcess(
          job.data.inputFileId,
          undefined,
@@ -28,31 +28,44 @@ export class SisyConsumerService extends WorkerHost {
       const batchId = batch.id;
       this.logger.log(`Batch created with ID: ${batchId}`);
 
-      await this.pollBatchStatus(batchId);
+      await this.pollBatchStatus(batchId, undefined);
    }
 
    /**
     * Start polling for the batch status every minute
     */
-   private async pollBatchStatus(batchId: string): Promise<void> {
+   private async pollBatchStatus(batchId: string, retry: number = 5): Promise<void> {
+      if (retry === 0) {
+         return;
+      }
+
       try {
          const status = await this.openaiServ.batchCheckStatus(batchId);
          this.logger.log(`Polling batch status: ${status.status}`);
 
-         if (
-            status.status === 'fail' ||
-            status.status === 'failed' ||
-            status.status === 'error' ||
-            status.status === 'cancelled'
-         ) {
-            this.logger.error(`Batch ${batchId} failed with status: ${status.status}`);
-            // Let the worker die
-         } else if (status.status === 'completed') {
-            this.logger.log(`Batch ${batchId} completed successfully.`);
-            await this.storeBatchResults(batchId);
-         } else {
-            // Re-poll after 1 minute
-            setTimeout(() => this.pollBatchStatus(batchId), 60000);
+         switch (status.status) {
+            case 'failed':
+            case 'error':
+            case 'expired':
+            case 'cancelled':
+            case 'cancelling':
+               this.logger.error(`Batch ${batchId} failed with status: ${status.status}`);
+               // Let the worker die
+               break;
+            case 'completed':
+               this.logger.log(`Batch ${batchId} completed successfully.`);
+               await this.storeBatchResults(batchId);
+               break;
+            case 'validating':
+            case 'in_progress':
+            case 'finalizing':
+               // Re-poll after 30 seconds
+               setTimeout(() => this.pollBatchStatus(batchId, retry), 30000);
+               break;
+            default:
+               this.logger.warn(`Batch ${batchId} has an unknown status: ${status.status}`);
+               // Re-poll after 30 seconds
+               setTimeout(() => this.pollBatchStatus(batchId, retry - 1), 5000);
          }
       } catch (error) {
          const e = error as Error;
@@ -73,7 +86,8 @@ export class SisyConsumerService extends WorkerHost {
 
          this.openaiServ.saveBatchResult(processedWords);
 
-         if (errors) this.logger.error(`Batch ${batchId} produced the following errors:\n${errors}.`);
+         if (errors && errors.length > 0)
+            this.logger.error(`Batch ${batchId} produced the following errors:\n${errors}.`);
          this.logger.log(`Batch ${batchId} results stored successfully.`);
       } catch (error) {
          const e = error as Error;
