@@ -37,7 +37,7 @@ export class DictGeneratorController {
       @UploadedFile() file: Express.Multer.File,
       @Body() body: LoadAndCreateBatchFileDto
    ): Promise<CreatedFileObject[]> {
-      const wordList = this.dictServ.splitFileIntoBatches(file.buffer); // Convert file to Buffer, then to string[][]
+      const wordList = this.dictServ.splitFileIntoBatches(file.buffer, body.wordCapacity, body.maxBatchSize); // Convert file to Buffer, then to string[][]
 
       const createdFiles: CreatedFileObject[] = [];
 
