@@ -6,7 +6,7 @@ services:
     container_name: nest_app
     ports:
       - '${NODEAPP_PORT}:${NODEAPP_PORT}'
-      - '5555:5555'
+      - '5555:5555' # For prisma studio
     depends_on:
       - db
     env_file:
@@ -32,6 +32,18 @@ services:
       - '${POSTGRES_PORT}:${POSTGRES_PORT}'
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+  queue:
+    image: redis:7.4.1-bookworm
+    container_name: redis_queue
+    env_file:
+      - ./ez_decks/.env
+      - ./ez_decks/.env.${NODE_ENV}.local
+    ports:
+      - '${REDIS_PORT}:${REDIS_PORT}'
+    volumes:
+      - type: tmpfs
+        target: /data
 
 volumes:
   postgres_data:
