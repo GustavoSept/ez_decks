@@ -41,7 +41,14 @@ export class SisyConsumerService extends WorkerHost {
 
       try {
          const status = await this.openaiServ.batchCheckStatus(batchId);
-         this.logger.log(`Polling batch status: ${status.status}`);
+         this.logger.log(
+            `Polling batch status: ${status.status}. Requests - Total: ${status.request_counts.total}, Completed: ${status.request_counts.completed}, Failed: ${status.request_counts.failed} | Batch_id: ${status.id}`
+         );
+
+         if (status.errors && status.errors !== '') {
+            this.logger.error(`An error occurred when processing batch (). Error: ${status.errors}`);
+            return;
+         }
 
          switch (status.status) {
             case 'failed':
