@@ -58,7 +58,9 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
       case 'P1013':
          return new BadRequestException(`The provided database string is invalid. ${meta?.details || ''}`);
       case 'P1014':
-         return new NotFoundException(`The underlying ${meta?.kind} for model ${meta?.model} does not exist.`);
+         return new NotFoundException(
+            `The underlying ${meta?.kind} for model ${meta?.model} does not exist.`
+         );
       case 'P1015':
          return new BadRequestException(
             `Your Prisma schema is using features that are not supported for the version of the database.
@@ -79,7 +81,9 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
       case 'P2000':
          return new BadRequestException(`Value too long for column type. Column: ${meta?.column_name}`);
       case 'P2001':
-         return new NotFoundException(`Record not found: ${meta?.model_name}.${meta?.argument_name} = ${meta?.argument_value}`);
+         return new NotFoundException(
+            `Record not found: ${meta?.model_name}.${meta?.argument_name} = ${meta?.argument_value}`
+         );
       case 'P2002':
          return new ConflictException(`Unique constraint failed on the fields: (${meta?.target}).`);
       case 'P2003':
@@ -91,7 +95,9 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
             `Invalid value ${meta?.field_value} stored in the database for field ${meta?.field_name}.`
          );
       case 'P2006':
-         return new BadRequestException(`Invalid value ${meta?.field_value} for ${meta?.model_name} field ${meta?.field_name}.`);
+         return new BadRequestException(
+            `Invalid value ${meta?.field_value} for ${meta?.model_name} field ${meta?.field_name}.`
+         );
       case 'P2007':
          return new BadRequestException(`Data validation error: ${meta?.database_error}`);
       case 'P2008':
@@ -132,19 +138,27 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
       case 'P2020':
          return new BadRequestException(`Value out of range for the type. ${meta?.details}`);
       case 'P2021':
-         return new InternalServerErrorException(`The table ${meta?.table} does not exist in the current database.`);
+         return new InternalServerErrorException(
+            `The table ${meta?.table} does not exist in the current database.`
+         );
       case 'P2022':
-         return new InternalServerErrorException(`The column ${meta?.column} does not exist in the current database.`);
+         return new InternalServerErrorException(
+            `The column ${meta?.column} does not exist in the current database.`
+         );
       case 'P2023':
          return new InternalServerErrorException(`Inconsistent column data: ${meta?.message}`);
       case 'P2024':
-         return new ServiceUnavailableException(`Timed out fetching a new connection from the connection pool.`);
+         return new ServiceUnavailableException(
+            `Timed out fetching a new connection from the connection pool.`
+         );
       case 'P2025':
          return new NotFoundException(
             `An operation failed because it depends on one or more records that were required but not found. ${meta?.cause}`
          );
       case 'P2034':
-         return new ConflictException('Transaction failed due to a write conflict or deadlock. Please retry.');
+         return new ConflictException(
+            'Transaction failed due to a write conflict or deadlock. Please retry.'
+         );
       case 'P2037':
          return new ServiceUnavailableException(`Too many database connections opened: ${meta?.message}`);
 
@@ -160,13 +174,17 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
             `Migration possible with destructive changes and possible data loss: ${meta?.migration_engine_destructive_details}`
          );
       case 'P3002':
-         return new InternalServerErrorException(`The attempted migration was rolled back: ${meta?.database_error}`);
+         return new InternalServerErrorException(
+            `The attempted migration was rolled back: ${meta?.database_error}`
+         );
       case 'P3003':
          return new InternalServerErrorException(
             `The format of migrations changed, and the saved migrations are no longer valid. Please follow the steps at: https://pris.ly/d/migrate`
          );
       case 'P3004':
-         return new BadRequestException(`The ${meta?.database_name} database is a system database and should not be altered.`);
+         return new BadRequestException(
+            `The ${meta?.database_name} database is a system database and should not be altered.`
+         );
       case 'P3005':
          return new BadRequestException(
             `The database schema is not empty. Read more about how to baseline an existing production database: https://pris.ly/d/migrate-baseline`
@@ -180,19 +198,25 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
             `Some of the requested preview features are not yet allowed in the schema engine. Please remove them from your data model before using migrations. (blocked: ${meta?.list_of_blocked_features})`
          );
       case 'P3008':
-         return new ConflictException(`The migration ${meta?.migration_name} is already recorded as applied in the database.`);
+         return new ConflictException(
+            `The migration ${meta?.migration_name} is already recorded as applied in the database.`
+         );
       case 'P3009':
          return new InternalServerErrorException(
             `Migrate found failed migrations in the target database, new migrations will not be applied. Read more about how to resolve migration issues in a production database: https://pris.ly/d/migrate-resolve\n\n${meta?.details}`
          );
       case 'P3010':
-         return new BadRequestException(`The name of the migration is too long. It must not be longer than 200 characters (bytes).`);
+         return new BadRequestException(
+            `The name of the migration is too long. It must not be longer than 200 characters (bytes).`
+         );
       case 'P3011':
          return new BadRequestException(
             `Migration ${meta?.migration_name} cannot be rolled back because it was never applied to the database.`
          );
       case 'P3012':
-         return new BadRequestException(`Migration ${meta?.migration_name} cannot be rolled back because it is not in a failed state.`);
+         return new BadRequestException(
+            `Migration ${meta?.migration_name} cannot be rolled back because it is not in a failed state.`
+         );
       case 'P3013':
          return new BadRequestException(
             `Datasource provider arrays are no longer supported in migrate. Please change your datasource to use a single provider. Read more at https://pris.ly/multi-provider-deprecation`
@@ -238,11 +262,15 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
        * prisma db pull errors (P4000 - P4002)
        */
       case 'P4000':
-         return new InternalServerErrorException(`Introspection operation failed to produce a schema file: ${meta?.introspection_error}`);
+         return new InternalServerErrorException(
+            `Introspection operation failed to produce a schema file: ${meta?.introspection_error}`
+         );
       case 'P4001':
          return new NotFoundException(`The introspected database was empty.`);
       case 'P4002':
-         return new BadRequestException(`The schema of the introspected database was inconsistent: ${meta?.explanation}`);
+         return new BadRequestException(
+            `The schema of the introspected database was inconsistent: ${meta?.explanation}`
+         );
 
       /**
        * Prisma Accelerate errors (P6000 - P6010)
@@ -251,7 +279,9 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
       case 'P6100': // Prisma Pulse ServerError
          return new InternalServerErrorException(`An unexpected server error occurred.`);
       case 'P6001': // InvalidDataSource
-         return new BadRequestException(`Invalid data source: The URL is malformed; it does not use the prisma:// protocol.`);
+         return new BadRequestException(
+            `Invalid data source: The URL is malformed; it does not use the prisma:// protocol.`
+         );
       case 'P6002': // Unauthorized
       case 'P6102': // Prisma Pulse Unauthorized
          return new UnauthorizedException(`Invalid API Key in the connection string.`);
@@ -268,9 +298,13 @@ export const handleDatabaseErrors = (e: PrismaClientError): Error => {
       case 'P6105': // Prisma Pulse VersionNotSupported
          return new BadRequestException(`The Prisma version of the project is not compatible.`);
       case 'P6008': // ConnectionError | EngineStartError
-         return new InternalServerErrorException(`The engine failed to start. Could not establish a connection to the database.`);
+         return new InternalServerErrorException(
+            `The engine failed to start. Could not establish a connection to the database.`
+         );
       case 'P6009': // ResponseSizeLimitExceeded
-         return new PayloadTooLargeException(`The global response size limit of Accelerate has been exceeded.`);
+         return new PayloadTooLargeException(
+            `The global response size limit of Accelerate has been exceeded.`
+         );
 
       /**
        * Prisma Pulse errors (P6100 - P6105)

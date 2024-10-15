@@ -59,7 +59,12 @@ export class DictGeneratorController {
 
    @Post('create-batch-process')
    async createBatchProcess(@Body() body: CreateBatchProcessDto): Promise<BatchProcess> {
-      const batch = await this.openaiServ.batchCreateProcess(body.inputFileId, undefined, undefined, body.metadata);
+      const batch = await this.openaiServ.batchCreateProcess(
+         body.inputFileId,
+         undefined,
+         undefined,
+         body.metadata
+      );
       return batch;
    }
 

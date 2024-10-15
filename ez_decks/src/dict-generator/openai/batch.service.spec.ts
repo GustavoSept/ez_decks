@@ -112,7 +112,16 @@ describe('BatchService', () => {
             text: z.string(),
          });
 
-         const batchUnit = service.createBatchUnit(id, userMsg, systemMsg, model, maxTokens, false, responseSchema, 'custom_response');
+         const batchUnit = service.createBatchUnit(
+            id,
+            userMsg,
+            systemMsg,
+            model,
+            maxTokens,
+            false,
+            responseSchema,
+            'custom_response'
+         );
 
          expect(batchUnit.body).toHaveProperty('response_format');
          expect(batchUnit.body.response_format).toMatchObject({
@@ -157,7 +166,16 @@ describe('BatchService', () => {
 
          const customStructName = 'custom_response';
 
-         const batchUnit = service.createBatchUnit(id, userMsg, systemMsg, model, maxTokens, false, responseSchema, customStructName);
+         const batchUnit = service.createBatchUnit(
+            id,
+            userMsg,
+            systemMsg,
+            model,
+            maxTokens,
+            false,
+            responseSchema,
+            customStructName
+         );
 
          expect(batchUnit.body.response_format.json_schema.name).toBe(customStructName);
       });

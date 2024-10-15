@@ -4,13 +4,21 @@ import OpenAI from 'openai';
 import { ZodSchema } from 'zod';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import * as fs from 'fs';
-import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, OPENAI_DEFAULT_FALLBACK_MODEL, OPENAI_SDK } from './constants';
+import {
+   DEFAULT_MAX_TOKEN_OUTPUT,
+   DEFAULT_SYS_MESSAGE,
+   OPENAI_DEFAULT_FALLBACK_MODEL,
+   OPENAI_SDK,
+} from './constants';
 import { BatchService } from './batch.service';
 import { BatchUnit } from './types/batch-unit';
 import { BatchResponse, BatchResult } from './types/batch-result';
 import { CreatedFileObject } from './types/batch-created-file';
 import { BatchProcess } from './types/batch-process';
-import { GenericTranslationShape, ProcessedTranslationResponse } from '../structs/translation-response.structs';
+import {
+   GenericTranslationShape,
+   ProcessedTranslationResponse,
+} from '../structs/translation-response.structs';
 import { mapStringToGrammarType } from '../../prisma/utils/grammar-type-conversion';
 import { PrismaService } from '../../prisma/prisma.service';
 import { Language } from '../../prisma/language.enum';
@@ -92,7 +100,13 @@ export class OpenaiService {
               struct,
               structName
            )
-         : this.batchService.createJSONArrayFromWords(inputWords.arrays, userMsgPrefix, sysMsg, model, maxTokens);
+         : this.batchService.createJSONArrayFromWords(
+              inputWords.arrays,
+              userMsgPrefix,
+              sysMsg,
+              model,
+              maxTokens
+           );
 
       // Create the local JSONL file
       const tempFilePath = await this.batchService.createLocalJSONL(batchUnits);

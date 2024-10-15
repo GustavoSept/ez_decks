@@ -211,7 +211,11 @@ describe('WordEngineService', () => {
    });
 
    it('processes the .srt file multiple times fast enough', async () => {
-      const filePath = path.join(__dirname, 'test_files', 'How.to.Sell.Drugs.Online.Fast.S01E01.German.NetflixSD.x264-4SJ-de.srt');
+      const filePath = path.join(
+         __dirname,
+         'test_files',
+         'How.to.Sell.Drugs.Online.Fast.S01E01.German.NetflixSD.x264-4SJ-de.srt'
+      );
 
       let fileContent: string;
 

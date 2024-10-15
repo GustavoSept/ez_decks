@@ -52,7 +52,9 @@ describe('OpenaiService: simple queries', () => {
          return;
       }
 
-      const response: ChatCompletionMessage = await service.query('Who is the president of the United States?');
+      const response: ChatCompletionMessage = await service.query(
+         'Who is the president of the United States?'
+      );
       expect(response.content).toBeTruthy();
       expect((response?.content ?? '').length > 0).toBe(true);
       console.log(response.content);
@@ -68,7 +70,12 @@ describe('OpenaiService: simple queries', () => {
       const prompt = `Translate these words: "gehen", "Haus", "schön"`;
       const sysMsg = DEFAULT_SYS_MESSAGE;
 
-      const response = await service.structuredQuery(prompt, WesternTranslationResponseObj, 'germanTranslation', sysMsg);
+      const response = await service.structuredQuery(
+         prompt,
+         WesternTranslationResponseObj,
+         'germanTranslation',
+         sysMsg
+      );
 
       expect(response).toBeTruthy();
       expect(response.response).toBeInstanceOf(Array);
@@ -147,7 +154,9 @@ describe('OpenaiService: saveBatchResult()', () => {
 
       if (wordEntries.length !== processedWords.length) {
          // Words in processedWords but not in wordEntries (missing from saved entries)
-         missingWords = processedWords.filter((word) => !wordEntries.some((entry) => entry.word === word.word));
+         missingWords = processedWords.filter(
+            (word) => !wordEntries.some((entry) => entry.word === word.word)
+         );
          console.log(
             'Missing words:',
             missingWords.map((word) => word.word)
@@ -160,7 +169,9 @@ describe('OpenaiService: saveBatchResult()', () => {
             extraWords.map((entry) => entry.word)
          );
 
-         duplicateWords = processedWords.map((word) => word.word).filter((word, index, self) => self.indexOf(word) !== index);
+         duplicateWords = processedWords
+            .map((word) => word.word)
+            .filter((word, index, self) => self.indexOf(word) !== index);
          console.log('Duplicate words:', duplicateWords);
       }
 
@@ -168,7 +179,13 @@ describe('OpenaiService: saveBatchResult()', () => {
 
       // Verify the total number of Translations saved
       const totalTranslations = processedWords.reduce((acc, word) => {
-         return acc + Object.values(word.translations).reduce((sum, translationArray) => sum + translationArray.length, 0);
+         return (
+            acc +
+            Object.values(word.translations).reduce(
+               (sum, translationArray) => sum + translationArray.length,
+               0
+            )
+         );
       }, 0);
 
       const translationEntries = await prismaService.translation.findMany({
@@ -185,7 +202,10 @@ describe('OpenaiService: saveBatchResult()', () => {
       expect(similarWordEntries.length).toBe(totalSimilarWords);
 
       // Verify the total number of GrammarCategories saved
-      const totalGrammarCategories = processedWords.reduce((acc, word) => acc + word.grammar_categories.length, 0);
+      const totalGrammarCategories = processedWords.reduce(
+         (acc, word) => acc + word.grammar_categories.length,
+         0
+      );
 
       const grammarCategoryEntries = await prismaService.grammarCategory.findMany({
          where: { primary_language: Language.German },

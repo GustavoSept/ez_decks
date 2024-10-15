@@ -47,7 +47,10 @@ export class MockUserRepository {
       return this.users.find((user) => user.id === where.id || user.email === where.email) || null;
    }
 
-   async update(params: { where: Prisma.UserWhereUniqueInput; data: Prisma.UserUpdateInput }): Promise<User | null> {
+   async update(params: {
+      where: Prisma.UserWhereUniqueInput;
+      data: Prisma.UserUpdateInput;
+   }): Promise<User | null> {
       const index = this.users.findIndex((user) => user.id === params.where.id);
       if (index !== -1) {
          const currentUser = this.users[index];

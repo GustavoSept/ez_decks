@@ -1,5185 +1,3970 @@
 [
-  {
-    "word": "Aachener",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "native of Aachen",
-        "Aachen resident"
-      ],
-      "adjective": [
-        "Aachen"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachenerin",
-      "Aachenerinnen",
-      "Aachenern",
-      "Aacheners",
-      "Aachen",
-      "aalender",
-      "Aalener"
-    ],
-    "grammar_categories": [
-      "noun",
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aachenerin",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "female native of Aachen"
-      ],
-      "adjective": [
-        "Aachen"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachener",
-      "Aachenerinnen",
-      "Aachenern",
-      "Aacheners",
-      "Aachen"
-    ],
-    "grammar_categories": [
-      "noun",
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aachenerinnen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "females from Aachen"
-      ],
-      "adjective": [
-        "Aachen"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachener",
-      "Aachenerin",
-      "Aachen"
-    ],
-    "grammar_categories": [
-      "noun",
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aachenern",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "people from Aachen"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachener",
-      "Aachenerin",
-      "Aacheners",
-      "Aachen",
-      "Aalener"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aacheners",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aachener's (possessive)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachener",
-      "Aachenerin",
-      "Aachenern",
-      "Aachen",
-      "Aalener"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aal",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalens",
-      "Aales"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalähnlich",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like",
-        "similar to an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalähnliche",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like",
-        "similar to an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalähnlichem",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like",
-        "similar to an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalähnlichen",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like",
-        "similar to an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalähnlicher",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like",
-        "similar to an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalähnliches",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like",
-        "similar to an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aalangelfischerei",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fishing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalangeln",
-      "Aalfische",
-      "Aalfischerei"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalangeln",
-    "translations": {
-      "verb": [
-        "to fish for eels"
-      ],
-      "noun": [
-        "eel fishing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalangelfischerei",
-      "Aalangelns",
-      "aalen",
-      "aalenden",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischerei"
-    ],
-    "grammar_categories": [
-      "verb",
-      "noun"
-    ]
-  },
-  {
-    "word": "aalartig",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalartige",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalartigem",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigen",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalartigen",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartiger",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalartiger",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-like"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiges"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalartiges",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel-like"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalähnlich",
-      "aalähnliche",
-      "aalähnlichem",
-      "aalähnlichen",
-      "aalähnlicher",
-      "aalähnliches",
-      "aalartig",
-      "aalartige",
-      "aalartigem",
-      "aalartigen",
-      "aalartiger"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalbestand",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel population",
-        "eel stock"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalbestände",
-      "Aalbeständen",
-      "Aalbestandes",
-      "Aalbestands"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalbestände",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel populations",
-        "eel stocks"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalbestand",
-      "Aalbeständen",
-      "Aalbestandes",
-      "Aalbestands"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalbeständen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "in the eel populations",
-        "in the eel stocks"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalbestand",
-      "Aalbestände",
-      "Aalbestandes",
-      "Aalbestands"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalbestandes",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the eel population",
-        "of the eel stock"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalbestand",
-      "Aalbestände",
-      "Aalbeständen",
-      "Aalbestands"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalbestands",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel stock",
-        "eel population"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalbestand",
-      "Aalbestände",
-      "Aalbeständen",
-      "Aalbestandes"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalbezogen",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-related",
-        "related to eels"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalbezogene",
-      "aalbezogenem",
-      "aalbezogenen",
-      "aalbezogener",
-      "aalbezogenes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalbezogene",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-related",
-        "related to eels"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalbezogen",
-      "aalbezogenem",
-      "aalbezogenen",
-      "aalbezogener",
-      "aalbezogenes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalbezogenem",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-related"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalbezogen",
-      "aalbezogene",
-      "aalbezogenen",
-      "aalbezogener",
-      "aalbezogenes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalbezogenen",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-related"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalbezogen",
-      "aalbezogene",
-      "aalbezogenem",
-      "aalbezogener",
-      "aalbezogenes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalbezogener",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-related"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalbezogen",
-      "aalbezogene",
-      "aalbezogenem",
-      "aalbezogenen",
-      "aalbezogenes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalbezogenes",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-related"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalbezogen",
-      "aalbezogene",
-      "aalbezogenem",
-      "aalbezogenen",
-      "aalbezogener"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aalborgs",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aalborg's"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalborg"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aale",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eels"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachen",
-      "Aal",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfisch"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalen",
-    "translations": {
-      "verb": [
-        "to fish for eels"
-      ],
-      "noun": [],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachen",
-      "Aal",
-      "Aalangeln",
-      "Aale",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfang",
-      "Aalfischen"
-    ],
-    "grammar_categories": [
-      "verb"
-    ]
-  },
-  {
-    "word": "aalend",
-    "translations": {
-      "verb": [
-        "eel-shaped",
-        "relating to an eel"
-      ],
-      "noun": [],
-      "adjective": [
-        "eeling"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachen",
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfang",
-      "Aalfisch",
-      "aalförmig",
-      "Aalfreund"
-    ],
-    "grammar_categories": [
-      "verb",
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalende",
-    "translations": {
-      "verb": [
-        "eel-shaped",
-        "relating to an eel"
-      ],
-      "noun": [],
-      "adjective": [
-        "eeling"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfänge",
-      "Aalfisch",
-      "aalförmig",
-      "Aalfreunde"
-    ],
-    "grammar_categories": [
-      "verb",
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalendem",
-    "translations": {
-      "verb": [
-        "eel-shaped",
-        "relating to an eel"
-      ],
-      "noun": [],
-      "adjective": [
-        "eeling"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfisch",
-      "aalförmig"
-    ],
-    "grammar_categories": [
-      "verb",
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalenden",
-    "translations": {
-      "verb": [
-        "eel-shaped",
-        "relating to an eel"
-      ],
-      "noun": [],
-      "adjective": [
-        "eeling"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aal",
-      "Aalangeln",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfisch",
-      "aalförmig",
-      "Aalfreunden"
-    ],
-    "grammar_categories": [
-      "verb",
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalender",
-    "translations": {
-      "verb": [
-        "eel-shaped",
-        "relating to an eel"
-      ],
-      "noun": [],
-      "adjective": [
-        "eeling"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachener",
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfisch",
-      "aalförmig"
-    ],
-    "grammar_categories": [
-      "verb",
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalendes",
-    "translations": {
-      "verb": [
-        "eel-shaped",
-        "relating to an eel"
-      ],
-      "noun": [],
-      "adjective": [
-        "eeling"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "Aalener",
-      "Aalens",
-      "Aales",
-      "Aalfisch",
-      "aalförmig",
-      "Aalfreundes"
-    ],
-    "grammar_categories": [
-      "verb",
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aalener",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel person",
-        "eel resident"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachener",
-      "Aachenern",
-      "Aacheners",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalens",
-      "Aales"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalens",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "in the manner of eels"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachen",
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aales",
-      "Aalfang"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalentnahme",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel removal"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalentnahmen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalentnahmen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel removals"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalentnahme"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aales",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aachen",
-      "Aachen",
-      "Aal",
-      "Aale",
-      "aalen",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aalener",
-      "Aalens",
-      "Aalfisch"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfang",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catch"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalborg",
-      "aalen",
-      "aalend",
-      "Aalens",
-      "Aalfänge"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfänge",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catches"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalende",
-      "Aalfang"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangergebnis",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catching result"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangergebnisse",
-      "Aalfangergebnissen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangergebnisse",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catching results"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangergebnis",
-      "Aalfangergebnissen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangergebnissen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "in the eel catching results"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangergebnis",
-      "Aalfangergebnisse"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangverbot",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fishing ban"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangverbote",
-      "Aalfangverboten",
-      "Aalfangverbotes",
-      "Aalfangverbots"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangverbote",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fishing bans"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangverbot",
-      "Aalfangverboten",
-      "Aalfangverbotes",
-      "Aalfangverbots"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangverboten",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "in the context of eel fishing bans"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangverbot",
-      "Aalfangverbote",
-      "Aalfangverbotes",
-      "Aalfangverbots"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangverbotes",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the eel fishing ban"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangverbot",
-      "Aalfangverbote",
-      "Aalfangverboten",
-      "Aalfangverbots"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfangverbots",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the eel fishing ban"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfangverbot",
-      "Aalfangverbote",
-      "Aalfangverboten",
-      "Aalfangverbotes"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfisch",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aale",
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes",
-      "Aales",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischern",
-      "Aalfischers",
-      "Aalkiste",
-      "Aalmolch",
-      "Aalrutte"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfische",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fish"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalangelfischerei",
-      "Aalangeln",
-      "Aalfisch",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischerei",
-      "Aalfischerin",
-      "Aalfischern",
-      "Aalfischers",
-      "Aalkiste",
-      "Aalmolche",
-      "Aalrutten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfischen",
-    "translations": {
-      "verb": [
-        "to fish for eels"
-      ],
-      "noun": [],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalangeln",
-      "aalen",
-      "Aalfisch",
-      "Aalfische",
-      "Aalfischer",
-      "Aalfischerei",
-      "Aalfischerin",
-      "Aalfischern",
-      "Aalfischers",
-      "Aalkästchen",
-      "Aalkisten",
-      "Aalmolchen"
-    ],
-    "grammar_categories": [
-      "verb"
-    ]
-  },
-  {
-    "word": "Aalfischer",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fisherman"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfisch",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischerei",
-      "Aalfischerin",
-      "Aalfischerinnen",
-      "Aalfischern",
-      "Aalfischers"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfischerei",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fishing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalangelfischerei",
-      "Aalangeln",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischerin",
-      "Aalfischern",
-      "Aalfischers",
-      "Aalräucherei",
-      "Aalrutten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfischerin",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fisherwoman"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischerei",
-      "Aalfischerinnen",
-      "Aalfischern",
-      "Aalfischers"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfischerinnen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fisherwomen"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfischer",
-      "Aalfischerin",
-      "Aalfischern"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfischern",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel fishermen"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfisch",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischerei",
-      "Aalfischerin",
-      "Aalfischerinnen",
-      "Aalfischers"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfischers",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of eel fisherman"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfisch",
-      "Aalfische",
-      "Aalfischen",
-      "Aalfischer",
-      "Aalfischerei",
-      "Aalfischerin",
-      "Aalfischern"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalförmig",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-shaped"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalend",
-      "aalende",
-      "aalendem",
-      "aalenden",
-      "aalender",
-      "aalendes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aalfreund",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel friend"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalend",
-      "Aalfreunde",
-      "Aalfreunden",
-      "Aalfreundes",
-      "Aalfreundin",
-      "Aalreuse"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfreunde",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel friends"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalende",
-      "Aalfreund",
-      "Aalfreunden",
-      "Aalfreundes",
-      "Aalfreundin",
-      "Aalreuse"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfreunden",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel friends"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalenden",
-      "Aalfreund",
-      "Aalfreunde",
-      "Aalfreundes",
-      "Aalfreundin",
-      "Aalfreundinnen",
-      "Aalreusen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfreundes",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel friend's"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalendes",
-      "Aalfreund",
-      "Aalfreunde",
-      "Aalfreunden",
-      "Aalfreundin"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfreundin",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel friend (female)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfreund",
-      "Aalfreunde",
-      "Aalfreunden",
-      "Aalfreundes",
-      "Aalfreundinnen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalfreundinnen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel friends (female)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfreunden",
-      "Aalfreundin"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalglatt",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "slippery like an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatte",
-      "aalglattem",
-      "aalglatten",
-      "aalglatter",
-      "aalglattes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalglatte",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "slippery like an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatt",
-      "aalglattem",
-      "aalglatten",
-      "aalglatter",
-      "aalglattes",
-      "Aalrutte"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalglattem",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "slippery like an eel"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatt",
-      "aalglatte",
-      "aalglatten",
-      "aalglatter",
-      "aalglattes"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalglatten",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-smooth"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatt",
-      "aalglatte",
-      "aalglattem",
-      "aalglatter",
-      "aalglattes",
-      "Aalkasten",
-      "Aalrutten"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalglatter",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-smooth"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatt",
-      "aalglatte",
-      "aalglattem",
-      "aalglatten",
-      "aalglattes",
-      "Aalmutter"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aalglattes",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "eel-smooth"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatt",
-      "aalglatte",
-      "aalglattem",
-      "aalglatten",
-      "aalglatter"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aalkästchen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel box"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfischen",
-      "Aalkästchens",
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkastens",
-      "Aalkiste",
-      "Aalkisten",
-      "Aalkörbchen",
-      "Aalmolch",
-      "Aalquappe",
-      "Aalstechen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkästchens",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel box's",
-        "of the eel box"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchen",
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkastens",
-      "Aalkiste",
-      "Aalkisten",
-      "Aalkörbchens",
-      "Aalstechens"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkasten",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel boxes"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatten",
-      "Aalkästchen",
-      "Aalkästchens",
-      "Aalkästen",
-      "Aalkastens",
-      "Aalkiste",
-      "Aalkisten",
-      "Aalkörben",
-      "Aalraupen",
-      "Aalrutten",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkästen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel boxes"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchen",
-      "Aalkästchens",
-      "Aalkasten",
-      "Aalkastens",
-      "Aalkiste",
-      "Aalkisten",
-      "Aalkörben",
-      "Aalrutten",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkastens",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel box's",
-        "of the eel box"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchen",
-      "Aalkästchens",
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkiste",
-      "Aalkisten",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkiste",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel box"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfisch",
-      "Aalfische",
-      "Aalkästchen",
-      "Aalkästchens",
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkastens",
-      "Aalkisten",
-      "Aalkörbe",
-      "Aalmolch",
-      "Aalquappe",
-      "Aalrutte",
-      "aalst",
-      "Aalsuppe",
-      "aalte"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkisten",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel boxes"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfischen",
-      "Aalkästchen",
-      "Aalkästchens",
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkastens",
-      "Aalkiste",
-      "Aalkörben",
-      "Aalrutten",
-      "Aalsuppen",
-      "aalten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkorb",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel basket"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkörbe",
-      "Aalkörben",
-      "Aalkorbs"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkörbchen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "small eel basket"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchen",
-      "Aalkörbchens",
-      "Aalkörbe",
-      "Aalkörben",
-      "Aalstrichen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkörbchens",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the small eel basket"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchens",
-      "Aalkörbchen",
-      "Aalkörben"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkörbe",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel baskets"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkiste",
-      "Aalkorb",
-      "Aalkörbchen",
-      "Aalkörben",
-      "Aalkorbs"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkörben",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "in the eel baskets"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkisten",
-      "Aalkorb",
-      "Aalkörbchen",
-      "Aalkörbchens",
-      "Aalkörbe",
-      "Aalkorbs"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalkorbs",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the eel basket"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkorb",
-      "Aalkörbe",
-      "Aalkörben"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalmolch",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel pup",
-        "eel larva"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfisch",
-      "Aalkästchen",
-      "Aalkiste",
-      "Aalmolche",
-      "Aalmolchen",
-      "Aalmolches",
-      "Aalmolchs",
-      "Aalquappe",
-      "Aalquappen",
-      "Aalreuse",
-      "Aalsuppe",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalmolche",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel pups",
-        "eel larvae"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfische",
-      "Aalmolch",
-      "Aalmolchen",
-      "Aalmolches",
-      "Aalmolchs",
-      "Aalquappe",
-      "Aalquappen",
-      "Aalreusen",
-      "Aalsuppe",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalmutter",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel mother"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalglatter",
-      "Aalmuttern",
-      "Aalrutte",
-      "Aalrutten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalmuttern",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel mothers"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalmutter",
-      "Aalrutte",
-      "Aalrutten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalquappe",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel pout"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchen",
-      "Aalkiste",
-      "Aalmolch",
-      "Aalmolche",
-      "Aalquappen",
-      "Aalraupe",
-      "Aalsuppe",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalquappen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel larvae"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalmolch",
-      "Aalmolche",
-      "Aalquappe",
-      "Aalraupen",
-      "Aalsuppe",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalräucherei",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel smoking",
-        "eel smoking house"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfischerei",
-      "Aalräuchereien"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalräuchereien",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel smoking houses"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalräucherei"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalraupe",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel caterpillar"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalquappe",
-      "Aalraupen",
-      "Aalreuse",
-      "Aalreusen",
-      "Aalrutte",
-      "Aalsuppe",
-      "Aarau",
-      "Aarauer"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalraupen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel caterpillars"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkasten",
-      "Aalquappen",
-      "Aalraupe",
-      "Aalreuse",
-      "Aalreusen",
-      "Aalrutten",
-      "Aalsuppen",
-      "Aarauer"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalreuse",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel trap"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfreund",
-      "Aalfreunde",
-      "Aalmolch",
-      "Aalraupe",
-      "Aalraupen",
-      "Aalreusen",
-      "Aalrutte",
-      "Aalstreif",
-      "Aalstrich",
-      "Aalsuppe",
-      "aaltest",
-      "Aalwels",
-      "Aalwelse",
-      "Aalwelsen",
-      "Aalwelses",
-      "Aaraus"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalreusen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel traps"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfreunden",
-      "Aalmolche",
-      "Aalraupe",
-      "Aalraupen",
-      "Aalreuse",
-      "Aalrutten",
-      "Aalstreif",
-      "Aalstreifen",
-      "Aalstrich",
-      "Aalstriche",
-      "Aalsuppen",
-      "Aalwelse",
-      "Aalwelsen",
-      "Aalwelses"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalrutte",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfisch",
-      "aalglatte",
-      "Aalkiste",
-      "Aalmutter",
-      "Aalmuttern",
-      "Aalraupe",
-      "Aalreuse",
-      "Aalrutten",
-      "Aals",
-      "aalst",
-      "Aalstechen",
-      "Aalsuppe",
-      "aalt",
-      "aalte",
-      "aalten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalrutten",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel",
-        "eel fishing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalfische",
-      "Aalfischerei",
-      "aalglatten",
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkisten",
-      "Aalmutter",
-      "Aalmuttern",
-      "Aalraupen",
-      "Aalreusen",
-      "Aalrutte",
-      "Aals",
-      "aalst",
-      "Aalstechen",
-      "Aalsuppen",
-      "aalt",
-      "aalte",
-      "aalten",
-      "Aalzuchten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aals",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eels"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalrutte",
-      "Aalrutten",
-      "aalst",
-      "aalt",
-      "aalte",
-      "aalten",
-      "aaltest",
-      "aalet",
-      "Aalwels",
-      "Aar",
-      "Aarau",
-      "Aaraus",
-      "Aare"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalschutzmaßnahme",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel protection measure"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalschutzmaßnahmen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalschutzmaßnahmen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel protection measures"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalschutzmaßnahme"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalspeer",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel spear"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalspeere",
-      "Aalspeeren",
-      "Aalspeers",
-      "Aalsuppe",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalspeere",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel spears"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalspeer",
-      "Aalspeeren",
-      "Aalspeers"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalspeeren",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel spearing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalspeer",
-      "Aalspeere",
-      "Aalspeers",
-      "Aalstechen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalspeers",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of eel spear"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalspeer",
-      "Aalspeere",
-      "Aalspeeren"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalst",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel",
-        "eel specimen"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkiste",
-      "Aalrutte",
-      "Aalrutten",
-      "Aals",
-      "Aalstechen",
-      "aalt",
-      "aalte",
-      "aalten",
-      "aaltest",
-      "aalet",
-      "Aar",
-      "Aarau",
-      "Aare"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstechen",
-    "translations": {
-      "verb": [
-        "to eel",
-        "to fish for eels"
-      ],
-      "noun": [],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkästchen",
-      "Aalmolchen",
-      "Aalrutte",
-      "Aalrutten",
-      "Aalspeeren",
-      "aalst",
-      "Aalstechens",
-      "Aalstreifen",
-      "Aalstriche",
-      "Aalstrichen",
-      "Aalstriches",
-      "Aalsüppchen",
-      "aalt",
-      "aalte",
-      "aalten",
-      "Aaltierchen"
-    ],
-    "grammar_categories": [
-      "verb"
-    ]
-  },
-  {
-    "word": "Aalstreif",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel stripe"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreuse",
-      "Aalreusen",
-      "Aalstreifen",
-      "Aalstreifs",
-      "Aalstrich",
-      "Aalstriche",
-      "Aalstrichen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstreifen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel stripes"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreusen",
-      "Aalstechen",
-      "Aalstreif",
-      "Aalstreifs",
-      "Aalstrich",
-      "Aalstriche",
-      "Aalstrichen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstrich",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel stripe"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreuse",
-      "Aalreusen",
-      "Aalstreif",
-      "Aalstreifen",
-      "Aalstreifs",
-      "Aalstriche",
-      "Aalstrichen",
-      "Aalstriches",
-      "Aalstrichs"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstriche",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel stripes"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreusen",
-      "Aalstechen",
-      "Aalstreif",
-      "Aalstreifen",
-      "Aalstrich",
-      "Aalstrichen",
-      "Aalstriches",
-      "Aalstrichs"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstrichen",
-    "translations": {
-      "verb": [
-        "eel stroke"
-      ],
-      "noun": [
-        "eel strokes"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkörbchen",
-      "Aalstechen",
-      "Aalstechens",
-      "Aalstreif",
-      "Aalstreifen",
-      "Aalstrich",
-      "Aalstriche",
-      "Aalstriches",
-      "Aalstrichs",
-      "Aalsüppchen"
-    ],
-    "grammar_categories": [
-      "verb",
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstriches",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the eel stroke"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalstechen",
-      "Aalstechens",
-      "Aalstrich",
-      "Aalstriche",
-      "Aalstrichen",
-      "Aalstrichs"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstrichs",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the eel stroke"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalstreifs",
-      "Aalstrich",
-      "Aalstriche",
-      "Aalstrichen",
-      "Aalstriches"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalstrichschmerle",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel stroke loach"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalsüppchen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "little eel soup"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalstechen",
-      "Aalstrichen",
-      "Aalsüppchens",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalsüppchens",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "of the little eel soup"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalstechens",
-      "Aalsüppchen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalsuppe",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel soup"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkiste",
-      "Aalmolch",
-      "Aalmolche",
-      "Aalquappe",
-      "Aalquappen",
-      "Aalraupe",
-      "Aalreuse",
-      "Aalrutte",
-      "Aalspeer",
-      "Aalsuppen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalsuppen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel soups"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkasten",
-      "Aalkästen",
-      "Aalkastens",
-      "Aalkisten",
-      "Aalmolch",
-      "Aalmolche",
-      "Aalquappe",
-      "Aalquappen",
-      "Aalraupen",
-      "Aalreusen",
-      "Aalrutten",
-      "Aalspeer",
-      "Aalsüppchen",
-      "Aalsuppe"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aalt",
-    "translations": {
-      "verb": [
-        "eel",
-        "fishing for eels"
-      ],
-      "noun": [
-        "eel",
-        "fishing"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalrutte",
-      "Aalrutten",
-      "Aals",
-      "aalst",
-      "Aalstechen",
-      "aalte",
-      "aalten",
-      "aaltest",
-      "aalet",
-      "Aar",
-      "Aarau",
-      "Aare"
-    ],
-    "grammar_categories": [
-      "verb",
-      "noun"
-    ]
-  },
-  {
-    "word": "aalte",
-    "translations": {
-      "verb": [
-        "eel",
-        "fishing for eels"
-      ],
-      "noun": [],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkiste",
-      "Aalrutte",
-      "Aalrutten",
-      "Aals",
-      "aalst",
-      "Aalstechen",
-      "aalt",
-      "aalten",
-      "aaltest",
-      "aalet",
-      "Aalwels",
-      "Aar",
-      "Aarau",
-      "Aare"
-    ],
-    "grammar_categories": [
-      "verb"
-    ]
-  },
-  {
-    "word": "aalten",
-    "translations": {
-      "verb": [
-        "eel",
-        "fishing for eels"
-      ],
-      "noun": [],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalkisten",
-      "Aalrutte",
-      "Aalrutten",
-      "Aals",
-      "aalst",
-      "Aalstechen",
-      "aalt",
-      "aalte",
-      "aaltest",
-      "aalet",
-      "Aalwels",
-      "Aare"
-    ],
-    "grammar_categories": [
-      "verb"
-    ]
-  },
-  {
-    "word": "Aaltierchen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "little eel",
-        "baby eel"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalstechen",
-      "Aaltierchens"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aaltierchens",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "little eel",
-        "baby eel"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalstechens",
-      "Aaltierchen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalwels",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "catfish",
-        "eel catfish"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreuse",
-      "Aals",
-      "aalte",
-      "aalten",
-      "aaltest",
-      "aalet",
-      "Aalwelse",
-      "Aalwelsen",
-      "Aalwelses"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalwelse",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catfish"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreuse",
-      "Aalreusen",
-      "aaltest",
-      "Aalwels",
-      "Aalwelsen",
-      "Aalwelses"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalwelsen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catfish (plural)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreuse",
-      "Aalreusen",
-      "Aalwels",
-      "Aalwelse",
-      "Aalwelses"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalwelses",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel catfish (genitive)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalreuse",
-      "Aalreusen",
-      "Aalwels",
-      "Aalwelse",
-      "Aalwelsen"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzucht",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breeding"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalzuchten",
-      "Aalzüchter",
-      "Aalzüchtern",
-      "Aalzüchters",
-      "Aalzüchtung"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzuchten",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breedings"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalrutten",
-      "Aalzucht",
-      "Aalzüchter",
-      "Aalzüchterin",
-      "Aalzüchtern",
-      "Aalzüchters",
-      "Aalzüchtung"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzüchter",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breeder"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalzucht",
-      "Aalzuchten",
-      "Aalzüchterin",
-      "Aalzüchtern",
-      "Aalzüchters",
-      "Aalzüchtung"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzüchterin",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breeder (female)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalzuchten",
-      "Aalzüchter",
-      "Aalzüchtern",
-      "Aalzüchters"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzüchtern",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breeders"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalzucht",
-      "Aalzuchten",
-      "Aalzüchter",
-      "Aalzüchterin",
-      "Aalzüchters",
-      "Aalzüchtung"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzüchters",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breeder"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalzucht",
-      "Aalzuchten",
-      "Aalzüchter",
-      "Aalzüchterin",
-      "Aalzüchtern",
-      "Aalzüchtung"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aalzüchtung",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "eel breeding"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalzucht",
-      "Aalzuchten",
-      "Aalzüchter",
-      "Aalzüchtern",
-      "Aalzüchters"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "ÄAppO",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Public Administration Act (specific to a region)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aar",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "river Aar"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aals",
-      "aalst",
-      "aalt",
-      "aalte",
-      "aalet",
-      "Aarau",
-      "Aaraus",
-      "Aare",
-      "Aargau",
-      "Aarhus",
-      "Aaron"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aarau",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aarau (city name)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalraupe",
-      "Aals",
-      "aalst",
-      "aalt",
-      "aalte",
-      "aalet",
-      "Aar",
-      "Aarauer",
-      "Aaraus",
-      "Aarburg",
-      "Aare",
-      "Aaretal",
-      "Aargau",
-      "Aargauer",
-      "Aargaus",
-      "Aarhus",
-      "Aaron"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aarauer",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aarau inhabitant"
-      ],
-      "adjective": [
-        "of Aarau"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aalraupe",
-      "Aalraupen",
-      "Aarau",
-      "Aaraus",
-      "Aarburg",
-      "Aare",
-      "Aargau",
-      "Aargauer",
-      "Aargauerin",
-      "Aargauern",
-      "Aargauers",
-      "Aargaus",
-      "Aarhus"
-    ],
-    "grammar_categories": [
-      "noun",
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aarburg",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aarburg (city name)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aarau",
-      "Aarauer",
-      "Aaraus",
-      "Aarhus"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aare",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare, river"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aals",
-      "aalst",
-      "aalt",
-      "aalte",
-      "aalten",
-      "aalet",
-      "Aar",
-      "Aarau",
-      "Aarauer",
-      "Aaraus",
-      "Aaretal",
-      "Aargau",
-      "Aarhus",
-      "Aaron"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aareabschnitt",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "section of the Aare",
-        "segment of the Aare"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aareabschnitte",
-      "Aareabschnitten",
-      "Aareabschnitts"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aareabschnitte",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "sections of the Aare",
-        "segments of the Aare"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aareabschnitt",
-      "Aareabschnitten",
-      "Aareabschnitts"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aareabschnitten",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "sections of the Aare (dative)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aareabschnitt",
-      "Aareabschnitte",
-      "Aareabschnitts"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aareabschnitts",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "section of the Aare (genitive)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aareabschnitt",
-      "Aareabschnitte",
-      "Aareabschnitten"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aareabwärts",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [],
-      "adverb": [
-        "downstream"
-      ],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aareaufwärts"
-    ],
-    "grammar_categories": [
-      "adverb"
-    ]
-  },
-  {
-    "word": "aareaufwärts",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [],
-      "adverb": [
-        "upstream"
-      ],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aareabwärts"
-    ],
-    "grammar_categories": [
-      "adverb"
-    ]
-  },
-  {
-    "word": "Aaregletscher",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare glacier"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aaregletschers"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aaregletschers",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare glacier"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aaregletscher"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aareschlaufe",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare loop"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aareschlucht",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare gorge"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aaretal",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare valley"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aalet",
-      "Aarau",
-      "Aare",
-      "Aaretales",
-      "Aaretals",
-      "Aargau"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aaretales",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare valley's"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aaretal",
-      "Aaretals"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aaretals",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aare valley's"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aaraus",
-      "Aaretal",
-      "Aaretales",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aargau",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aargau (a canton in Switzerland)"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aar",
-      "Aarau",
-      "Aarauer",
-      "Aaraus",
-      "Aare",
-      "Aaretal",
-      "Aargauer",
-      "Aargauern",
-      "Aargauers",
-      "Aargaus",
-      "Aarhus",
-      "Aaron"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aargauer",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aargau resident",
-        "Aargauer (male)"
-      ],
-      "adjective": [
-        "from Aargau"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aarau",
-      "Aarauer",
-      "Aaraus",
-      "Aargau",
-      "Aargauerin",
-      "Aargauern",
-      "Aargauers",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "noun",
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aargauerin",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "female inhabitant of Aargau"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aarauer",
-      "Aargauer",
-      "Aargauerinnen",
-      "Aargauern",
-      "Aargauers"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aargauerinnen",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "female inhabitants of Aargau"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aargauerin"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aargauern",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "inhabitants of Aargau"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aarauer",
-      "Aargau",
-      "Aargauer",
-      "Aargauerin",
-      "Aargauers",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aargauers",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "inhabitant of Aargau"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aarauer",
-      "Aaraus",
-      "Aargau",
-      "Aargauer",
-      "Aargauerin",
-      "Aargauern",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aargauisch",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aargauian"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aargauische",
-      "aargauischem",
-      "aargauischen",
-      "aargauischer",
-      "aargauisches",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aargauische",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aargauian"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aargauisch",
-      "aargauischem",
-      "aargauischen",
-      "aargauischer",
-      "aargauisches",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aargauischem",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aargauian"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aargauisch",
-      "aargauische",
-      "aargauischen",
-      "aargauischer",
-      "aargauisches",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aargauischen",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aargauian"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aargauisch",
-      "aargauische",
-      "aargauischem",
-      "aargauischer",
-      "aargauisches",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aargauischer",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aargauese"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aargauisch",
-      "aargauische",
-      "aargauischem",
-      "aargauischen",
-      "aargauisches",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aargauisches",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aargauese"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "aargauisch",
-      "aargauische",
-      "aargauischem",
-      "aargauischen",
-      "aargauischer",
-      "Aargaus"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "Aargaus",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aargau"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aarau",
-      "Aarauer",
-      "Aaraus",
-      "Aaretals",
-      "Aargau",
-      "Aargauer",
-      "Aargauern",
-      "Aargauers",
-      "aargauisch",
-      "aargauische",
-      "aargauischem",
-      "aargauischen",
-      "aargauischer",
-      "aargauisches",
-      "Aarhus",
-      "Aaron"
-    ],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "Aarhusbucht",
-    "translations": {
-      "verb": [],
-      "noun": [
-        "Aarhus Bay"
-      ],
-      "adjective": [],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [],
-    "grammar_categories": [
-      "noun"
-    ]
-  },
-  {
-    "word": "aaronitisch",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aaronic"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aaron",
-      "aaronitische"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  },
-  {
-    "word": "aaronitische",
-    "translations": {
-      "verb": [],
-      "noun": [],
-      "adjective": [
-        "Aaronic"
-      ],
-      "adverb": [],
-      "pronoun": [],
-      "preposition": [],
-      "conjunction": [],
-      "article": [],
-      "numeral": [],
-      "modal_verb": []
-    },
-    "similar_words": [
-      "Aaron",
-      "aaronitisch"
-    ],
-    "grammar_categories": [
-      "adjective"
-    ]
-  }
+   {
+      "word": "Aachener",
+      "translations": {
+         "verb": [],
+         "noun": ["native of Aachen", "Aachen resident"],
+         "adjective": ["Aachen"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachen",
+         "Aachenerin",
+         "Aachenerinnen",
+         "Aachenern",
+         "Aacheners",
+         "Aachen",
+         "aalender",
+         "Aalener"
+      ],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aachenerin",
+      "translations": {
+         "verb": [],
+         "noun": ["female native of Aachen"],
+         "adjective": ["Aachen"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aachen", "Aachener", "Aachenerinnen", "Aachenern", "Aacheners", "Aachen"],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aachenerinnen",
+      "translations": {
+         "verb": [],
+         "noun": ["females from Aachen"],
+         "adjective": ["Aachen"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aachen", "Aachener", "Aachenerin", "Aachen"],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aachenern",
+      "translations": {
+         "verb": [],
+         "noun": ["people from Aachen"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aachen", "Aachener", "Aachenerin", "Aacheners", "Aachen", "Aalener"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aacheners",
+      "translations": {
+         "verb": [],
+         "noun": ["Aachener's (possessive)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aachen", "Aachener", "Aachenerin", "Aachenern", "Aachen", "Aalener"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aal",
+      "translations": {
+         "verb": [],
+         "noun": ["eel"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalens",
+         "Aales"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalähnlich",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like", "similar to an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalähnliche",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like", "similar to an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalähnlichem",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like", "similar to an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalähnlichen",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like", "similar to an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalähnlicher",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like", "similar to an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalähnliches",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like", "similar to an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Aalangelfischerei",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fishing"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalangeln", "Aalfische", "Aalfischerei"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalangeln",
+      "translations": {
+         "verb": ["to fish for eels"],
+         "noun": ["eel fishing"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalangelfischerei",
+         "Aalangelns",
+         "aalen",
+         "aalenden",
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischerei"
+      ],
+      "grammar_categories": ["verb", "noun"]
+   },
+   {
+      "word": "aalartig",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalartige",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalartigem",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigen",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalartigen",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartiger",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalartiger",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-like"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiges"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalartiges",
+      "translations": {
+         "verb": [],
+         "noun": ["eel-like"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalähnlich",
+         "aalähnliche",
+         "aalähnlichem",
+         "aalähnlichen",
+         "aalähnlicher",
+         "aalähnliches",
+         "aalartig",
+         "aalartige",
+         "aalartigem",
+         "aalartigen",
+         "aalartiger"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalbestand",
+      "translations": {
+         "verb": [],
+         "noun": ["eel population", "eel stock"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalbestände", "Aalbeständen", "Aalbestandes", "Aalbestands"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalbestände",
+      "translations": {
+         "verb": [],
+         "noun": ["eel populations", "eel stocks"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalbestand", "Aalbeständen", "Aalbestandes", "Aalbestands"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalbeständen",
+      "translations": {
+         "verb": [],
+         "noun": ["in the eel populations", "in the eel stocks"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalbestand", "Aalbestände", "Aalbestandes", "Aalbestands"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalbestandes",
+      "translations": {
+         "verb": [],
+         "noun": ["of the eel population", "of the eel stock"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalbestand", "Aalbestände", "Aalbeständen", "Aalbestands"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalbestands",
+      "translations": {
+         "verb": [],
+         "noun": ["eel stock", "eel population"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalbestand", "Aalbestände", "Aalbeständen", "Aalbestandes"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalbezogen",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-related", "related to eels"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalbezogene", "aalbezogenem", "aalbezogenen", "aalbezogener", "aalbezogenes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalbezogene",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-related", "related to eels"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalbezogen", "aalbezogenem", "aalbezogenen", "aalbezogener", "aalbezogenes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalbezogenem",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-related"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalbezogen", "aalbezogene", "aalbezogenen", "aalbezogener", "aalbezogenes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalbezogenen",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-related"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalbezogen", "aalbezogene", "aalbezogenem", "aalbezogener", "aalbezogenes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalbezogener",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-related"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalbezogen", "aalbezogene", "aalbezogenem", "aalbezogenen", "aalbezogenes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalbezogenes",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-related"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalbezogen", "aalbezogene", "aalbezogenem", "aalbezogenen", "aalbezogener"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Aalborgs",
+      "translations": {
+         "verb": [],
+         "noun": ["Aalborg's"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalborg"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aale",
+      "translations": {
+         "verb": [],
+         "noun": ["eels"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachen",
+         "Aachen",
+         "Aal",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfisch"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalen",
+      "translations": {
+         "verb": ["to fish for eels"],
+         "noun": [],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachen",
+         "Aachen",
+         "Aal",
+         "Aalangeln",
+         "Aale",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfang",
+         "Aalfischen"
+      ],
+      "grammar_categories": ["verb"]
+   },
+   {
+      "word": "aalend",
+      "translations": {
+         "verb": ["eel-shaped", "relating to an eel"],
+         "noun": [],
+         "adjective": ["eeling"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachen",
+         "Aachen",
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfang",
+         "Aalfisch",
+         "aalförmig",
+         "Aalfreund"
+      ],
+      "grammar_categories": ["verb", "adjective"]
+   },
+   {
+      "word": "aalende",
+      "translations": {
+         "verb": ["eel-shaped", "relating to an eel"],
+         "noun": [],
+         "adjective": ["eeling"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfänge",
+         "Aalfisch",
+         "aalförmig",
+         "Aalfreunde"
+      ],
+      "grammar_categories": ["verb", "adjective"]
+   },
+   {
+      "word": "aalendem",
+      "translations": {
+         "verb": ["eel-shaped", "relating to an eel"],
+         "noun": [],
+         "adjective": ["eeling"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfisch",
+         "aalförmig"
+      ],
+      "grammar_categories": ["verb", "adjective"]
+   },
+   {
+      "word": "aalenden",
+      "translations": {
+         "verb": ["eel-shaped", "relating to an eel"],
+         "noun": [],
+         "adjective": ["eeling"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aal",
+         "Aalangeln",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfisch",
+         "aalförmig",
+         "Aalfreunden"
+      ],
+      "grammar_categories": ["verb", "adjective"]
+   },
+   {
+      "word": "aalender",
+      "translations": {
+         "verb": ["eel-shaped", "relating to an eel"],
+         "noun": [],
+         "adjective": ["eeling"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachener",
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfisch",
+         "aalförmig"
+      ],
+      "grammar_categories": ["verb", "adjective"]
+   },
+   {
+      "word": "aalendes",
+      "translations": {
+         "verb": ["eel-shaped", "relating to an eel"],
+         "noun": [],
+         "adjective": ["eeling"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "Aalener",
+         "Aalens",
+         "Aales",
+         "Aalfisch",
+         "aalförmig",
+         "Aalfreundes"
+      ],
+      "grammar_categories": ["verb", "adjective"]
+   },
+   {
+      "word": "Aalener",
+      "translations": {
+         "verb": [],
+         "noun": ["eel person", "eel resident"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachener",
+         "Aachenern",
+         "Aacheners",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalens",
+         "Aales"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalens",
+      "translations": {
+         "verb": [],
+         "noun": ["in the manner of eels"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachen",
+         "Aachen",
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aales",
+         "Aalfang"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalentnahme",
+      "translations": {
+         "verb": [],
+         "noun": ["eel removal"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalentnahmen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalentnahmen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel removals"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalentnahme"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aales",
+      "translations": {
+         "verb": [],
+         "noun": ["eel"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachen",
+         "Aachen",
+         "Aal",
+         "Aale",
+         "aalen",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aalener",
+         "Aalens",
+         "Aalfisch"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfang",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catch"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalborg", "aalen", "aalend", "Aalens", "Aalfänge"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfänge",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catches"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalende", "Aalfang"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangergebnis",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catching result"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangergebnisse", "Aalfangergebnissen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangergebnisse",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catching results"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangergebnis", "Aalfangergebnissen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangergebnissen",
+      "translations": {
+         "verb": [],
+         "noun": ["in the eel catching results"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangergebnis", "Aalfangergebnisse"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangverbot",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fishing ban"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangverbote", "Aalfangverboten", "Aalfangverbotes", "Aalfangverbots"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangverbote",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fishing bans"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangverbot", "Aalfangverboten", "Aalfangverbotes", "Aalfangverbots"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangverboten",
+      "translations": {
+         "verb": [],
+         "noun": ["in the context of eel fishing bans"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangverbot", "Aalfangverbote", "Aalfangverbotes", "Aalfangverbots"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangverbotes",
+      "translations": {
+         "verb": [],
+         "noun": ["of the eel fishing ban"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangverbot", "Aalfangverbote", "Aalfangverboten", "Aalfangverbots"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfangverbots",
+      "translations": {
+         "verb": [],
+         "noun": ["of the eel fishing ban"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfangverbot", "Aalfangverbote", "Aalfangverboten", "Aalfangverbotes"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfisch",
+      "translations": {
+         "verb": [],
+         "noun": ["eel"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aale",
+         "aalend",
+         "aalende",
+         "aalendem",
+         "aalenden",
+         "aalender",
+         "aalendes",
+         "Aales",
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischer",
+         "Aalfischern",
+         "Aalfischers",
+         "Aalkiste",
+         "Aalmolch",
+         "Aalrutte"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfische",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fish"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalangelfischerei",
+         "Aalangeln",
+         "Aalfisch",
+         "Aalfischen",
+         "Aalfischer",
+         "Aalfischerei",
+         "Aalfischerin",
+         "Aalfischern",
+         "Aalfischers",
+         "Aalkiste",
+         "Aalmolche",
+         "Aalrutten"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfischen",
+      "translations": {
+         "verb": ["to fish for eels"],
+         "noun": [],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalangeln",
+         "aalen",
+         "Aalfisch",
+         "Aalfische",
+         "Aalfischer",
+         "Aalfischerei",
+         "Aalfischerin",
+         "Aalfischern",
+         "Aalfischers",
+         "Aalkästchen",
+         "Aalkisten",
+         "Aalmolchen"
+      ],
+      "grammar_categories": ["verb"]
+   },
+   {
+      "word": "Aalfischer",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fisherman"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfisch",
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischerei",
+         "Aalfischerin",
+         "Aalfischerinnen",
+         "Aalfischern",
+         "Aalfischers"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfischerei",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fishing"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalangelfischerei",
+         "Aalangeln",
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischer",
+         "Aalfischerin",
+         "Aalfischern",
+         "Aalfischers",
+         "Aalräucherei",
+         "Aalrutten"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfischerin",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fisherwoman"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischer",
+         "Aalfischerei",
+         "Aalfischerinnen",
+         "Aalfischern",
+         "Aalfischers"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfischerinnen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fisherwomen"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfischer", "Aalfischerin", "Aalfischern"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfischern",
+      "translations": {
+         "verb": [],
+         "noun": ["eel fishermen"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfisch",
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischer",
+         "Aalfischerei",
+         "Aalfischerin",
+         "Aalfischerinnen",
+         "Aalfischers"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfischers",
+      "translations": {
+         "verb": [],
+         "noun": ["of eel fisherman"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfisch",
+         "Aalfische",
+         "Aalfischen",
+         "Aalfischer",
+         "Aalfischerei",
+         "Aalfischerin",
+         "Aalfischern"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalförmig",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-shaped"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalend", "aalende", "aalendem", "aalenden", "aalender", "aalendes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Aalfreund",
+      "translations": {
+         "verb": [],
+         "noun": ["eel friend"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalend", "Aalfreunde", "Aalfreunden", "Aalfreundes", "Aalfreundin", "Aalreuse"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfreunde",
+      "translations": {
+         "verb": [],
+         "noun": ["eel friends"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalende", "Aalfreund", "Aalfreunden", "Aalfreundes", "Aalfreundin", "Aalreuse"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfreunden",
+      "translations": {
+         "verb": [],
+         "noun": ["eel friends"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalenden",
+         "Aalfreund",
+         "Aalfreunde",
+         "Aalfreundes",
+         "Aalfreundin",
+         "Aalfreundinnen",
+         "Aalreusen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfreundes",
+      "translations": {
+         "verb": [],
+         "noun": ["eel friend's"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalendes", "Aalfreund", "Aalfreunde", "Aalfreunden", "Aalfreundin"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfreundin",
+      "translations": {
+         "verb": [],
+         "noun": ["eel friend (female)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfreund", "Aalfreunde", "Aalfreunden", "Aalfreundes", "Aalfreundinnen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalfreundinnen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel friends (female)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfreunden", "Aalfreundin"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalglatt",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["slippery like an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalglatte", "aalglattem", "aalglatten", "aalglatter", "aalglattes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalglatte",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["slippery like an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalglatt", "aalglattem", "aalglatten", "aalglatter", "aalglattes", "Aalrutte"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalglattem",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["slippery like an eel"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalglatt", "aalglatte", "aalglatten", "aalglatter", "aalglattes"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalglatten",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-smooth"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalglatt",
+         "aalglatte",
+         "aalglattem",
+         "aalglatter",
+         "aalglattes",
+         "Aalkasten",
+         "Aalrutten"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalglatter",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-smooth"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalglatt", "aalglatte", "aalglattem", "aalglatten", "aalglattes", "Aalmutter"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aalglattes",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["eel-smooth"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalglatt", "aalglatte", "aalglattem", "aalglatten", "aalglatter"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Aalkästchen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel box"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfischen",
+         "Aalkästchens",
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkastens",
+         "Aalkiste",
+         "Aalkisten",
+         "Aalkörbchen",
+         "Aalmolch",
+         "Aalquappe",
+         "Aalstechen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkästchens",
+      "translations": {
+         "verb": [],
+         "noun": ["eel box's", "of the eel box"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkästchen",
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkastens",
+         "Aalkiste",
+         "Aalkisten",
+         "Aalkörbchens",
+         "Aalstechens"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkasten",
+      "translations": {
+         "verb": [],
+         "noun": ["eel boxes"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aalglatten",
+         "Aalkästchen",
+         "Aalkästchens",
+         "Aalkästen",
+         "Aalkastens",
+         "Aalkiste",
+         "Aalkisten",
+         "Aalkörben",
+         "Aalraupen",
+         "Aalrutten",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkästen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel boxes"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkästchen",
+         "Aalkästchens",
+         "Aalkasten",
+         "Aalkastens",
+         "Aalkiste",
+         "Aalkisten",
+         "Aalkörben",
+         "Aalrutten",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkastens",
+      "translations": {
+         "verb": [],
+         "noun": ["eel box's", "of the eel box"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkästchen",
+         "Aalkästchens",
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkiste",
+         "Aalkisten",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkiste",
+      "translations": {
+         "verb": [],
+         "noun": ["eel box"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfisch",
+         "Aalfische",
+         "Aalkästchen",
+         "Aalkästchens",
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkastens",
+         "Aalkisten",
+         "Aalkörbe",
+         "Aalmolch",
+         "Aalquappe",
+         "Aalrutte",
+         "aalst",
+         "Aalsuppe",
+         "aalte"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkisten",
+      "translations": {
+         "verb": [],
+         "noun": ["eel boxes"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfischen",
+         "Aalkästchen",
+         "Aalkästchens",
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkastens",
+         "Aalkiste",
+         "Aalkörben",
+         "Aalrutten",
+         "Aalsuppen",
+         "aalten"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkorb",
+      "translations": {
+         "verb": [],
+         "noun": ["eel basket"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalkörbe", "Aalkörben", "Aalkorbs"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkörbchen",
+      "translations": {
+         "verb": [],
+         "noun": ["small eel basket"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalkästchen", "Aalkörbchens", "Aalkörbe", "Aalkörben", "Aalstrichen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkörbchens",
+      "translations": {
+         "verb": [],
+         "noun": ["of the small eel basket"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalkästchens", "Aalkörbchen", "Aalkörben"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkörbe",
+      "translations": {
+         "verb": [],
+         "noun": ["eel baskets"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalkiste", "Aalkorb", "Aalkörbchen", "Aalkörben", "Aalkorbs"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkörben",
+      "translations": {
+         "verb": [],
+         "noun": ["in the eel baskets"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkisten",
+         "Aalkorb",
+         "Aalkörbchen",
+         "Aalkörbchens",
+         "Aalkörbe",
+         "Aalkorbs"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalkorbs",
+      "translations": {
+         "verb": [],
+         "noun": ["of the eel basket"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalkorb", "Aalkörbe", "Aalkörben"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalmolch",
+      "translations": {
+         "verb": [],
+         "noun": ["eel pup", "eel larva"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfisch",
+         "Aalkästchen",
+         "Aalkiste",
+         "Aalmolche",
+         "Aalmolchen",
+         "Aalmolches",
+         "Aalmolchs",
+         "Aalquappe",
+         "Aalquappen",
+         "Aalreuse",
+         "Aalsuppe",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalmolche",
+      "translations": {
+         "verb": [],
+         "noun": ["eel pups", "eel larvae"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfische",
+         "Aalmolch",
+         "Aalmolchen",
+         "Aalmolches",
+         "Aalmolchs",
+         "Aalquappe",
+         "Aalquappen",
+         "Aalreusen",
+         "Aalsuppe",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalmutter",
+      "translations": {
+         "verb": [],
+         "noun": ["eel mother"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalglatter", "Aalmuttern", "Aalrutte", "Aalrutten"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalmuttern",
+      "translations": {
+         "verb": [],
+         "noun": ["eel mothers"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalmutter", "Aalrutte", "Aalrutten"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalquappe",
+      "translations": {
+         "verb": [],
+         "noun": ["eel pout"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkästchen",
+         "Aalkiste",
+         "Aalmolch",
+         "Aalmolche",
+         "Aalquappen",
+         "Aalraupe",
+         "Aalsuppe",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalquappen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel larvae"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalmolch", "Aalmolche", "Aalquappe", "Aalraupen", "Aalsuppe", "Aalsuppen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalräucherei",
+      "translations": {
+         "verb": [],
+         "noun": ["eel smoking", "eel smoking house"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalfischerei", "Aalräuchereien"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalräuchereien",
+      "translations": {
+         "verb": [],
+         "noun": ["eel smoking houses"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalräucherei"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalraupe",
+      "translations": {
+         "verb": [],
+         "noun": ["eel caterpillar"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalquappe",
+         "Aalraupen",
+         "Aalreuse",
+         "Aalreusen",
+         "Aalrutte",
+         "Aalsuppe",
+         "Aarau",
+         "Aarauer"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalraupen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel caterpillars"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkasten",
+         "Aalquappen",
+         "Aalraupe",
+         "Aalreuse",
+         "Aalreusen",
+         "Aalrutten",
+         "Aalsuppen",
+         "Aarauer"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalreuse",
+      "translations": {
+         "verb": [],
+         "noun": ["eel trap"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfreund",
+         "Aalfreunde",
+         "Aalmolch",
+         "Aalraupe",
+         "Aalraupen",
+         "Aalreusen",
+         "Aalrutte",
+         "Aalstreif",
+         "Aalstrich",
+         "Aalsuppe",
+         "aaltest",
+         "Aalwels",
+         "Aalwelse",
+         "Aalwelsen",
+         "Aalwelses",
+         "Aaraus"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalreusen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel traps"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfreunden",
+         "Aalmolche",
+         "Aalraupe",
+         "Aalraupen",
+         "Aalreuse",
+         "Aalrutten",
+         "Aalstreif",
+         "Aalstreifen",
+         "Aalstrich",
+         "Aalstriche",
+         "Aalsuppen",
+         "Aalwelse",
+         "Aalwelsen",
+         "Aalwelses"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalrutte",
+      "translations": {
+         "verb": [],
+         "noun": ["eel"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfisch",
+         "aalglatte",
+         "Aalkiste",
+         "Aalmutter",
+         "Aalmuttern",
+         "Aalraupe",
+         "Aalreuse",
+         "Aalrutten",
+         "Aals",
+         "aalst",
+         "Aalstechen",
+         "Aalsuppe",
+         "aalt",
+         "aalte",
+         "aalten"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalrutten",
+      "translations": {
+         "verb": [],
+         "noun": ["eel", "eel fishing"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalfische",
+         "Aalfischerei",
+         "aalglatten",
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkisten",
+         "Aalmutter",
+         "Aalmuttern",
+         "Aalraupen",
+         "Aalreusen",
+         "Aalrutte",
+         "Aals",
+         "aalst",
+         "Aalstechen",
+         "Aalsuppen",
+         "aalt",
+         "aalte",
+         "aalten",
+         "Aalzuchten"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aals",
+      "translations": {
+         "verb": [],
+         "noun": ["eels"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalrutte",
+         "Aalrutten",
+         "aalst",
+         "aalt",
+         "aalte",
+         "aalten",
+         "aaltest",
+         "aalet",
+         "Aalwels",
+         "Aar",
+         "Aarau",
+         "Aaraus",
+         "Aare"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalschutzmaßnahme",
+      "translations": {
+         "verb": [],
+         "noun": ["eel protection measure"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalschutzmaßnahmen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalschutzmaßnahmen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel protection measures"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalschutzmaßnahme"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalspeer",
+      "translations": {
+         "verb": [],
+         "noun": ["eel spear"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalspeere", "Aalspeeren", "Aalspeers", "Aalsuppe", "Aalsuppen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalspeere",
+      "translations": {
+         "verb": [],
+         "noun": ["eel spears"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalspeer", "Aalspeeren", "Aalspeers"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalspeeren",
+      "translations": {
+         "verb": [],
+         "noun": ["eel spearing"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalspeer", "Aalspeere", "Aalspeers", "Aalstechen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalspeers",
+      "translations": {
+         "verb": [],
+         "noun": ["of eel spear"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalspeer", "Aalspeere", "Aalspeeren"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalst",
+      "translations": {
+         "verb": [],
+         "noun": ["eel", "eel specimen"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkiste",
+         "Aalrutte",
+         "Aalrutten",
+         "Aals",
+         "Aalstechen",
+         "aalt",
+         "aalte",
+         "aalten",
+         "aaltest",
+         "aalet",
+         "Aar",
+         "Aarau",
+         "Aare"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstechen",
+      "translations": {
+         "verb": ["to eel", "to fish for eels"],
+         "noun": [],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkästchen",
+         "Aalmolchen",
+         "Aalrutte",
+         "Aalrutten",
+         "Aalspeeren",
+         "aalst",
+         "Aalstechens",
+         "Aalstreifen",
+         "Aalstriche",
+         "Aalstrichen",
+         "Aalstriches",
+         "Aalsüppchen",
+         "aalt",
+         "aalte",
+         "aalten",
+         "Aaltierchen"
+      ],
+      "grammar_categories": ["verb"]
+   },
+   {
+      "word": "Aalstreif",
+      "translations": {
+         "verb": [],
+         "noun": ["eel stripe"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalreuse",
+         "Aalreusen",
+         "Aalstreifen",
+         "Aalstreifs",
+         "Aalstrich",
+         "Aalstriche",
+         "Aalstrichen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstreifen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel stripes"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalreusen",
+         "Aalstechen",
+         "Aalstreif",
+         "Aalstreifs",
+         "Aalstrich",
+         "Aalstriche",
+         "Aalstrichen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstrich",
+      "translations": {
+         "verb": [],
+         "noun": ["eel stripe"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalreuse",
+         "Aalreusen",
+         "Aalstreif",
+         "Aalstreifen",
+         "Aalstreifs",
+         "Aalstriche",
+         "Aalstrichen",
+         "Aalstriches",
+         "Aalstrichs"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstriche",
+      "translations": {
+         "verb": [],
+         "noun": ["eel stripes"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalreusen",
+         "Aalstechen",
+         "Aalstreif",
+         "Aalstreifen",
+         "Aalstrich",
+         "Aalstrichen",
+         "Aalstriches",
+         "Aalstrichs"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstrichen",
+      "translations": {
+         "verb": ["eel stroke"],
+         "noun": ["eel strokes"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkörbchen",
+         "Aalstechen",
+         "Aalstechens",
+         "Aalstreif",
+         "Aalstreifen",
+         "Aalstrich",
+         "Aalstriche",
+         "Aalstriches",
+         "Aalstrichs",
+         "Aalsüppchen"
+      ],
+      "grammar_categories": ["verb", "noun"]
+   },
+   {
+      "word": "Aalstriches",
+      "translations": {
+         "verb": [],
+         "noun": ["of the eel stroke"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalstechen", "Aalstechens", "Aalstrich", "Aalstriche", "Aalstrichen", "Aalstrichs"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstrichs",
+      "translations": {
+         "verb": [],
+         "noun": ["of the eel stroke"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalstreifs", "Aalstrich", "Aalstriche", "Aalstrichen", "Aalstriches"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalstrichschmerle",
+      "translations": {
+         "verb": [],
+         "noun": ["eel stroke loach"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalsüppchen",
+      "translations": {
+         "verb": [],
+         "noun": ["little eel soup"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalstechen", "Aalstrichen", "Aalsüppchens", "Aalsuppen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalsüppchens",
+      "translations": {
+         "verb": [],
+         "noun": ["of the little eel soup"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalstechens", "Aalsüppchen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalsuppe",
+      "translations": {
+         "verb": [],
+         "noun": ["eel soup"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkiste",
+         "Aalmolch",
+         "Aalmolche",
+         "Aalquappe",
+         "Aalquappen",
+         "Aalraupe",
+         "Aalreuse",
+         "Aalrutte",
+         "Aalspeer",
+         "Aalsuppen"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalsuppen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel soups"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkasten",
+         "Aalkästen",
+         "Aalkastens",
+         "Aalkisten",
+         "Aalmolch",
+         "Aalmolche",
+         "Aalquappe",
+         "Aalquappen",
+         "Aalraupen",
+         "Aalreusen",
+         "Aalrutten",
+         "Aalspeer",
+         "Aalsüppchen",
+         "Aalsuppe"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aalt",
+      "translations": {
+         "verb": ["eel", "fishing for eels"],
+         "noun": ["eel", "fishing"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalrutte",
+         "Aalrutten",
+         "Aals",
+         "aalst",
+         "Aalstechen",
+         "aalte",
+         "aalten",
+         "aaltest",
+         "aalet",
+         "Aar",
+         "Aarau",
+         "Aare"
+      ],
+      "grammar_categories": ["verb", "noun"]
+   },
+   {
+      "word": "aalte",
+      "translations": {
+         "verb": ["eel", "fishing for eels"],
+         "noun": [],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkiste",
+         "Aalrutte",
+         "Aalrutten",
+         "Aals",
+         "aalst",
+         "Aalstechen",
+         "aalt",
+         "aalten",
+         "aaltest",
+         "aalet",
+         "Aalwels",
+         "Aar",
+         "Aarau",
+         "Aare"
+      ],
+      "grammar_categories": ["verb"]
+   },
+   {
+      "word": "aalten",
+      "translations": {
+         "verb": ["eel", "fishing for eels"],
+         "noun": [],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalkisten",
+         "Aalrutte",
+         "Aalrutten",
+         "Aals",
+         "aalst",
+         "Aalstechen",
+         "aalt",
+         "aalte",
+         "aaltest",
+         "aalet",
+         "Aalwels",
+         "Aare"
+      ],
+      "grammar_categories": ["verb"]
+   },
+   {
+      "word": "Aaltierchen",
+      "translations": {
+         "verb": [],
+         "noun": ["little eel", "baby eel"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalstechen", "Aaltierchens"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aaltierchens",
+      "translations": {
+         "verb": [],
+         "noun": ["little eel", "baby eel"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalstechens", "Aaltierchen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalwels",
+      "translations": {
+         "verb": [],
+         "noun": ["catfish", "eel catfish"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalreuse",
+         "Aals",
+         "aalte",
+         "aalten",
+         "aaltest",
+         "aalet",
+         "Aalwelse",
+         "Aalwelsen",
+         "Aalwelses"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalwelse",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catfish"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalreuse", "Aalreusen", "aaltest", "Aalwels", "Aalwelsen", "Aalwelses"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalwelsen",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catfish (plural)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalreuse", "Aalreusen", "Aalwels", "Aalwelse", "Aalwelses"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalwelses",
+      "translations": {
+         "verb": [],
+         "noun": ["eel catfish (genitive)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalreuse", "Aalreusen", "Aalwels", "Aalwelse", "Aalwelsen"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzucht",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breeding"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalzuchten", "Aalzüchter", "Aalzüchtern", "Aalzüchters", "Aalzüchtung"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzuchten",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breedings"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalrutten",
+         "Aalzucht",
+         "Aalzüchter",
+         "Aalzüchterin",
+         "Aalzüchtern",
+         "Aalzüchters",
+         "Aalzüchtung"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzüchter",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breeder"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalzucht",
+         "Aalzuchten",
+         "Aalzüchterin",
+         "Aalzüchtern",
+         "Aalzüchters",
+         "Aalzüchtung"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzüchterin",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breeder (female)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalzuchten", "Aalzüchter", "Aalzüchtern", "Aalzüchters"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzüchtern",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breeders"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalzucht", "Aalzuchten", "Aalzüchter", "Aalzüchterin", "Aalzüchters", "Aalzüchtung"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzüchters",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breeder"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalzucht", "Aalzuchten", "Aalzüchter", "Aalzüchterin", "Aalzüchtern", "Aalzüchtung"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aalzüchtung",
+      "translations": {
+         "verb": [],
+         "noun": ["eel breeding"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aalzucht", "Aalzuchten", "Aalzüchter", "Aalzüchtern", "Aalzüchters"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "ÄAppO",
+      "translations": {
+         "verb": [],
+         "noun": ["Public Administration Act (specific to a region)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aar",
+      "translations": {
+         "verb": [],
+         "noun": ["river Aar"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aals",
+         "aalst",
+         "aalt",
+         "aalte",
+         "aalet",
+         "Aarau",
+         "Aaraus",
+         "Aare",
+         "Aargau",
+         "Aarhus",
+         "Aaron"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aarau",
+      "translations": {
+         "verb": [],
+         "noun": ["Aarau (city name)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalraupe",
+         "Aals",
+         "aalst",
+         "aalt",
+         "aalte",
+         "aalet",
+         "Aar",
+         "Aarauer",
+         "Aaraus",
+         "Aarburg",
+         "Aare",
+         "Aaretal",
+         "Aargau",
+         "Aargauer",
+         "Aargaus",
+         "Aarhus",
+         "Aaron"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aarauer",
+      "translations": {
+         "verb": [],
+         "noun": ["Aarau inhabitant"],
+         "adjective": ["of Aarau"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aalraupe",
+         "Aalraupen",
+         "Aarau",
+         "Aaraus",
+         "Aarburg",
+         "Aare",
+         "Aargau",
+         "Aargauer",
+         "Aargauerin",
+         "Aargauern",
+         "Aargauers",
+         "Aargaus",
+         "Aarhus"
+      ],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aarburg",
+      "translations": {
+         "verb": [],
+         "noun": ["Aarburg (city name)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aarau", "Aarauer", "Aaraus", "Aarhus"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aare",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare, river"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aals",
+         "aalst",
+         "aalt",
+         "aalte",
+         "aalten",
+         "aalet",
+         "Aar",
+         "Aarau",
+         "Aarauer",
+         "Aaraus",
+         "Aaretal",
+         "Aargau",
+         "Aarhus",
+         "Aaron"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aareabschnitt",
+      "translations": {
+         "verb": [],
+         "noun": ["section of the Aare", "segment of the Aare"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aareabschnitte", "Aareabschnitten", "Aareabschnitts"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aareabschnitte",
+      "translations": {
+         "verb": [],
+         "noun": ["sections of the Aare", "segments of the Aare"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aareabschnitt", "Aareabschnitten", "Aareabschnitts"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aareabschnitten",
+      "translations": {
+         "verb": [],
+         "noun": ["sections of the Aare (dative)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aareabschnitt", "Aareabschnitte", "Aareabschnitts"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aareabschnitts",
+      "translations": {
+         "verb": [],
+         "noun": ["section of the Aare (genitive)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aareabschnitt", "Aareabschnitte", "Aareabschnitten"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aareabwärts",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": [],
+         "adverb": ["downstream"],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aareaufwärts"],
+      "grammar_categories": ["adverb"]
+   },
+   {
+      "word": "aareaufwärts",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": [],
+         "adverb": ["upstream"],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aareabwärts"],
+      "grammar_categories": ["adverb"]
+   },
+   {
+      "word": "Aaregletscher",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare glacier"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aaregletschers"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aaregletschers",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare glacier"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aaregletscher"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aareschlaufe",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare loop"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aareschlucht",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare gorge"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aaretal",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare valley"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["aalet", "Aarau", "Aare", "Aaretales", "Aaretals", "Aargau"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aaretales",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare valley's"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aaretal", "Aaretals"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aaretals",
+      "translations": {
+         "verb": [],
+         "noun": ["Aare valley's"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aaraus", "Aaretal", "Aaretales", "Aargaus"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aargau",
+      "translations": {
+         "verb": [],
+         "noun": ["Aargau (a canton in Switzerland)"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aar",
+         "Aarau",
+         "Aarauer",
+         "Aaraus",
+         "Aare",
+         "Aaretal",
+         "Aargauer",
+         "Aargauern",
+         "Aargauers",
+         "Aargaus",
+         "Aarhus",
+         "Aaron"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aargauer",
+      "translations": {
+         "verb": [],
+         "noun": ["Aargau resident", "Aargauer (male)"],
+         "adjective": ["from Aargau"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aarau",
+         "Aarauer",
+         "Aaraus",
+         "Aargau",
+         "Aargauerin",
+         "Aargauern",
+         "Aargauers",
+         "Aargaus"
+      ],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aargauerin",
+      "translations": {
+         "verb": [],
+         "noun": ["female inhabitant of Aargau"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aarauer", "Aargauer", "Aargauerinnen", "Aargauern", "Aargauers"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aargauerinnen",
+      "translations": {
+         "verb": [],
+         "noun": ["female inhabitants of Aargau"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aargauerin"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aargauern",
+      "translations": {
+         "verb": [],
+         "noun": ["inhabitants of Aargau"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aarauer", "Aargau", "Aargauer", "Aargauerin", "Aargauers", "Aargaus"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aargauers",
+      "translations": {
+         "verb": [],
+         "noun": ["inhabitant of Aargau"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aarauer", "Aaraus", "Aargau", "Aargauer", "Aargauerin", "Aargauern", "Aargaus"],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aargauisch",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aargauian"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aargauische",
+         "aargauischem",
+         "aargauischen",
+         "aargauischer",
+         "aargauisches",
+         "Aargaus"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aargauische",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aargauian"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aargauisch",
+         "aargauischem",
+         "aargauischen",
+         "aargauischer",
+         "aargauisches",
+         "Aargaus"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aargauischem",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aargauian"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aargauisch",
+         "aargauische",
+         "aargauischen",
+         "aargauischer",
+         "aargauisches",
+         "Aargaus"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aargauischen",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aargauian"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aargauisch",
+         "aargauische",
+         "aargauischem",
+         "aargauischer",
+         "aargauisches",
+         "Aargaus"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aargauischer",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aargauese"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aargauisch",
+         "aargauische",
+         "aargauischem",
+         "aargauischen",
+         "aargauisches",
+         "Aargaus"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aargauisches",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aargauese"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "aargauisch",
+         "aargauische",
+         "aargauischem",
+         "aargauischen",
+         "aargauischer",
+         "Aargaus"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Aargaus",
+      "translations": {
+         "verb": [],
+         "noun": ["Aargau"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aarau",
+         "Aarauer",
+         "Aaraus",
+         "Aaretals",
+         "Aargau",
+         "Aargauer",
+         "Aargauern",
+         "Aargauers",
+         "aargauisch",
+         "aargauische",
+         "aargauischem",
+         "aargauischen",
+         "aargauischer",
+         "aargauisches",
+         "Aarhus",
+         "Aaron"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Aarhusbucht",
+      "translations": {
+         "verb": [],
+         "noun": ["Aarhus Bay"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "aaronitisch",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aaronic"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aaron", "aaronitische"],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "aaronitische",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["Aaronic"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": ["Aaron", "aaronitisch"],
+      "grammar_categories": ["adjective"]
+   }
 ]

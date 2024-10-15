@@ -57,7 +57,9 @@ describe('DictGeneratorController (e2e)', () => {
          .send(invalidDto)
          .expect(400) // Expecting a 400 Bad Request due to validation failure
          .expect((res) => {
-            expect(res.body.message).toContain('wordList must be an array of non-empty arrays of non-empty strings');
+            expect(res.body.message).toContain(
+               'wordList must be an array of non-empty arrays of non-empty strings'
+            );
          });
    });
 });

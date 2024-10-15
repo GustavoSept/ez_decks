@@ -22,7 +22,9 @@ describe('DictGeneratorService', () => {
 
    describe('splitFileIntoBatches()', () => {
       it('should split file content into batches', () => {
-         const fileContent = Buffer.from('line1\nline2\nline3\nline4\nline5\nline6\nline7\nline8\nline9\nline10');
+         const fileContent = Buffer.from(
+            'line1\nline2\nline3\nline4\nline5\nline6\nline7\nline8\nline9\nline10'
+         );
          const batchSize = 8;
          const result = service.splitFileIntoBatches(fileContent, batchSize);
 
@@ -49,7 +51,9 @@ describe('DictGeneratorService', () => {
       });
 
       it('should handle malformed file content (empty lines, blank lines)', () => {
-         const fileContent = Buffer.from('line1\nline2\nline3\nline4\nline5\n\n\n   \nline6\nline7\nline8\nline9\nline10');
+         const fileContent = Buffer.from(
+            'line1\nline2\nline3\nline4\nline5\n\n\n   \nline6\nline7\nline8\nline9\nline10'
+         );
          const batchSize = 8;
          const result = service.splitFileIntoBatches(fileContent, batchSize);
 

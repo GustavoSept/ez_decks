@@ -1,6 +1,11 @@
 import { Injectable, PayloadTooLargeException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { DEFAULT_MAX_TOKEN_OUTPUT, DEFAULT_SYS_MESSAGE, DEFAULT_USER_MESSAGE_PREFIX, OPENAI_DEFAULT_FALLBACK_MODEL } from './constants';
+import {
+   DEFAULT_MAX_TOKEN_OUTPUT,
+   DEFAULT_SYS_MESSAGE,
+   DEFAULT_USER_MESSAGE_PREFIX,
+   OPENAI_DEFAULT_FALLBACK_MODEL,
+} from './constants';
 import { BatchUnit } from './types/batch-unit';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { ZodSchema } from 'zod';
@@ -27,7 +32,11 @@ export class BatchService {
       structName: string = 'response'
    ): BatchUnit {
       if (!Number.isInteger(id)) {
-         if (!suppressWarning) console.warn(`ID must be an integer, but received: ${id}. Truncating variable to get a valid id.`);
+         if (!suppressWarning) {
+            console.warn(
+               `ID must be an integer, but received: ${id}. Truncating variable to get a valid id.`
+            );
+         }
          id = Math.trunc(id);
       }
 
@@ -89,7 +98,16 @@ export class BatchService {
    ): BatchUnit[] {
       console.log('running createJSONArrayFromWordsWithStruct()');
       return inputWords.map((words, index) =>
-         this.createBatchUnit(index, `${userMsgPrefix}` + words.join(' '), sysMsg, model, maxTokens, false, struct, structName)
+         this.createBatchUnit(
+            index,
+            `${userMsgPrefix}` + words.join(' '),
+            sysMsg,
+            model,
+            maxTokens,
+            false,
+            struct,
+            structName
+         )
       );
    }
 
@@ -103,11 +121,16 @@ export class BatchService {
       // https://platform.openai.com/docs/guides/batch/rate-limits
       const MAX_BATCH_UNITS = 50_000;
       if (batchUnits.length > MAX_BATCH_UNITS) {
-         throw new PayloadTooLargeException(`Exceeded maximum batch units limit of ${MAX_BATCH_UNITS}. Received ${batchUnits.length}.`);
+         throw new PayloadTooLargeException(
+            `Exceeded maximum batch units limit of ${MAX_BATCH_UNITS}. Received ${batchUnits.length}.`
+         );
       }
 
       return new Promise((resolve, reject) => {
-         const tempFilePath = path.join(this.configService.get<string>('NODE_TEMP_PATH', '/tmp'), `${uuidv4()}.jsonl`);
+         const tempFilePath = path.join(
+            this.configService.get<string>('NODE_TEMP_PATH', '/tmp'),
+            `${uuidv4()}.jsonl`
+         );
          const writeStream = fs.createWriteStream(tempFilePath);
 
          let totalSizeInBytes = 0;

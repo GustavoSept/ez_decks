@@ -15,8 +15,14 @@ export function logSystemInfo() {
          const usedMemory = parseInt(fs.readFileSync('/sys/fs/cgroup/memory.current', 'utf8').trim(), 10);
          freeMemory = totalMemory - usedMemory;
       } else {
-         totalMemory = parseInt(fs.readFileSync('/sys/fs/cgroup/memory/memory.limit_in_bytes', 'utf8').trim(), 10);
-         const usedMemory = parseInt(fs.readFileSync('/sys/fs/cgroup/memory/memory.usage_in_bytes', 'utf8').trim(), 10);
+         totalMemory = parseInt(
+            fs.readFileSync('/sys/fs/cgroup/memory/memory.limit_in_bytes', 'utf8').trim(),
+            10
+         );
+         const usedMemory = parseInt(
+            fs.readFileSync('/sys/fs/cgroup/memory/memory.usage_in_bytes', 'utf8').trim(),
+            10
+         );
          freeMemory = totalMemory - usedMemory;
       }
    } catch (error) {
@@ -42,7 +48,10 @@ export function logSystemInfo() {
          }
       } else {
          const cpuQuota = parseInt(fs.readFileSync('/sys/fs/cgroup/cpu/cpu.cfs_quota_us', 'utf8').trim(), 10);
-         const cpuPeriod = parseInt(fs.readFileSync('/sys/fs/cgroup/cpu/cpu.cfs_period_us', 'utf8').trim(), 10);
+         const cpuPeriod = parseInt(
+            fs.readFileSync('/sys/fs/cgroup/cpu/cpu.cfs_period_us', 'utf8').trim(),
+            10
+         );
 
          if (cpuQuota > 0 && cpuPeriod > 0) {
             cpuCount = cpuQuota / cpuPeriod;

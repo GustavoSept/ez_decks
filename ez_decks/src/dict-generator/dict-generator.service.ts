@@ -15,7 +15,11 @@ export class DictGeneratorService {
     * Splits the content of a .txt file into an array of `OpenAIBatch`.
     * Each `OpenAIBatch` contain an array of arrays, each containing up to wordCapacity elements.
     */
-   splitFileIntoBatches(fileContent: Buffer, wordCapacity: number = 8, maxBatchSize: number = 50_000): OpenAIBatch[] {
+   splitFileIntoBatches(
+      fileContent: Buffer,
+      wordCapacity: number = 8,
+      maxBatchSize: number = 50_000
+   ): OpenAIBatch[] {
       // Convert buffer to string and split by new lines
       const lines = fileContent
          .toString('utf-8')
@@ -47,7 +51,10 @@ export class DictGeneratorService {
    /**
     * Extracts the primary_language words and their translations from the batch response.
     */
-   extractWordsAndTranslations(batchResponse: BatchResponse): { words: WesternTranslationResponse; errors: ErrorInfo[] } {
+   extractWordsAndTranslations(batchResponse: BatchResponse): {
+      words: WesternTranslationResponse;
+      errors: ErrorInfo[];
+   } {
       const words: WesternTranslationResponse = [];
       const errors: ErrorInfo[] = [];
 
@@ -117,7 +124,9 @@ export class DictGeneratorService {
    ): ProcessedTranslationResponse<T>[] {
       return input.reduce<ProcessedTranslationResponse<T>[]>((acc, currentWord, index, arr) => {
          const currentTranslations = Object.values(currentWord.translations).flat();
-         const hasDifferentTranslation = currentTranslations.some((translation) => translation !== currentWord.word);
+         const hasDifferentTranslation = currentTranslations.some(
+            (translation) => translation !== currentWord.word
+         );
 
          if (!hasDifferentTranslation) {
             return acc; // Skip this word if all translations are identical to the word itself (acronyms, proper nouns), or there are no translations
@@ -149,7 +158,11 @@ export class DictGeneratorService {
 
             for (const currentTranslation of currentTranslations) {
                for (const neighborTranslation of neighborTranslations) {
-                  const translationDistance = levenshteinEditDistance(currentTranslation, neighborTranslation, true);
+                  const translationDistance = levenshteinEditDistance(
+                     currentTranslation,
+                     neighborTranslation,
+                     true
+                  );
                   if (translationDistance <= distanceThreshold) {
                      similarWords.push(neighbor.word);
                      foundSimilarTranslation = true;
