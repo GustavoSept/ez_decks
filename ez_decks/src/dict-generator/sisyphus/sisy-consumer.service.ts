@@ -5,7 +5,7 @@ import { CreateBatchProcessDto } from '../DTOs/create-batch-process.dto';
 import { OpenaiService } from '../openai/openai.service';
 import { DictGeneratorService } from '../dict-generator.service';
 
-@Processor('poll')
+@Processor('poll', { concurrency: 1 })
 @Injectable()
 export class SisyConsumerService extends WorkerHost {
    private readonly logger = new Logger(SisyConsumerService.name);
@@ -18,6 +18,10 @@ export class SisyConsumerService extends WorkerHost {
    }
 
    async process(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
+      await this.processBatch(job);
+   }
+
+   private async processBatch(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
       const batch = await this.openaiServ.batchCreateProcess(
          job.data.inputFileId,
          undefined,
