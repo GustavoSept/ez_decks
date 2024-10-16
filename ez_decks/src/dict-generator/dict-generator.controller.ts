@@ -129,7 +129,7 @@ export class DictGeneratorController {
 
       this.logger.log(`Request generated ${batches.length} batches. Starting to process...`);
 
-      for (const batch of batches) {
+      for (const [index, batch] of batches.entries()) {
          const batchFile: CreatedFileObject = await this.openaiServ.batchGetFile(
             batch,
             body.systemMessage,
@@ -149,7 +149,7 @@ export class DictGeneratorController {
 
          // Wait for batch processing to complete synchronously
          const batchId = batchProcess.id;
-         this.logger.log(`Batch created with ID: ${batchId}`);
+         this.logger.log(`Batch ${index + 1}/${batches.length} created with ID: ${batchId}`);
 
          let status: BatchProcess;
          let retries: number = 5;
@@ -200,30 +200,11 @@ export class DictGeneratorController {
          }
 
          // Store results synchronously
-         await this.storeBatchResults(batchId);
+         const batchResponse = await this.openaiServ.batchRetrieveResults(batchId);
+         this.sisyServ.processBatchIntoDb(batchResponse, batchId);
          processingFileIds.push(batchId);
       }
       return { processingFileIds: processingFileIds };
-   }
-
-   /**
-    * Retrieve batch results and store them in the database
-    */
-   private async storeBatchResults(batchId: string): Promise<void> {
-      try {
-         const batchResponse = await this.openaiServ.batchRetrieveResults(batchId);
-         const { words, errors } = this.dictServ.extractWordsAndTranslations(batchResponse);
-         const processedWords = this.dictServ.processTranslationResponse(words);
-         await this.openaiServ.saveBatchResult(processedWords);
-
-         if (errors && errors.length > 0) {
-            this.logger.error(`Batch ${batchId} produced the following errors:\n${errors}`);
-         }
-         this.logger.log(`Batch ${batchId} results stored successfully.`);
-      } catch (error) {
-         const e = error as Error;
-         this.logger.error(`Error while storing results for batch ${batchId}: ${e.message}`);
-      }
    }
 
    @Post('create-batch-process')

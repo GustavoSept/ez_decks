@@ -5,6 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { SisyConsumerService } from './sisy-consumer.service';
 import { OpenaiModule } from '../openai/openai.module';
 import { DictGeneratorService } from '../dict-generator.service';
+import { BatchToDbConsumerService } from './batchtodb-consumer.service';
 
 /**
  * This module is used to long-poll openAI, get results, store on db, repeat.
@@ -22,12 +23,17 @@ import { DictGeneratorService } from '../dict-generator.service';
             },
          }),
       }),
-      BullModule.registerQueue({
-         name: 'poll',
-      }),
+      BullModule.registerQueue(
+         {
+            name: 'poll',
+         },
+         {
+            name: 'dict_to_db',
+         }
+      ),
       OpenaiModule,
    ],
-   providers: [SisyProducerService, SisyConsumerService, DictGeneratorService],
+   providers: [SisyProducerService, SisyConsumerService, BatchToDbConsumerService, DictGeneratorService],
    exports: [SisyProducerService],
 })
 export class SisyphusModule {}
