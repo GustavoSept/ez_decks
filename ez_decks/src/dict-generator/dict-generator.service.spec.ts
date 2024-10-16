@@ -74,7 +74,25 @@ describe('DictGeneratorService', () => {
 
    describe('extractWordsAndTranslations()', () => {
       it('should extract words and translations from batch response', () => {
-         const fileContent = fs.readFileSync(path.join(__dirname, 'test', '200_word_output.txt'), 'utf8');
+         const fileContent = fs.readFileSync(
+            path.join(__dirname, 'test', 'batchResponse_25_objs.json'),
+            'utf8'
+         );
+
+         const batchResponse: BatchResponse = JSON.parse(fileContent);
+         const result = service.extractWordsAndTranslations(batchResponse);
+
+         expect(result.words.length).toBeGreaterThan(0);
+         expect(result.errors.length).toBe(0);
+         expect(result.words[0]).toHaveProperty('word');
+         expect(result.words[0]).toHaveProperty('translations');
+      });
+
+      it('should extract words and translations from LARGE batch response (800 objects)', () => {
+         const fileContent = fs.readFileSync(
+            path.join(__dirname, 'test', 'batchResponse_800_objs.json'),
+            'utf8'
+         );
 
          const batchResponse: BatchResponse = JSON.parse(fileContent);
          const result = service.extractWordsAndTranslations(batchResponse);

@@ -59,24 +59,34 @@ export class DictGeneratorService {
       const errors: ErrorInfo[] = [];
 
       batchResponse.results.forEach((result) => {
-         if (result.error) {
-            errors.push(this.extractErrorInfo(result));
-         } else if (result.response.body.choices[0].message.refusal) {
-            errors.push(this.extractRefusalInfo(result));
-         } else {
-            words.push(...this.extractValidWords(result));
-         }
+         try {
+            if (result.error) {
+               errors.push(this.extractErrorInfo(result));
+            } else if (result.response.body.choices[0].message.refusal) {
+               errors.push(this.extractRefusalInfo(result));
+            } else {
+               words.push(...this.extractValidWords(result));
+            }
+         } catch {} // Skip problematic strings, if parsing fails
       });
 
       return { words, errors };
    }
 
    /**
-    * Extracts valid German words and translations from a batch result.
+    * Extracts valid primary_language words and translations from a batch result.
     */
    private extractValidWords(result: BatchResult): WesternTranslationResponse {
       const messageContent = result.response.body.choices[0].message.content;
-      const parsedContent: { response: WesternTranslationResponse } = JSON.parse(messageContent);
+      let parsedContent: { response: WesternTranslationResponse };
+
+      try {
+         parsedContent = JSON.parse(messageContent);
+      } catch (error: any) {
+         console.error(`Error parsing messageContent: ${messageContent}. Error: ${error.message}`);
+         throw new Error('Error parsing BatchResult');
+      }
+
       return parsedContent.response;
    }
 
