@@ -171,6 +171,10 @@ export class OpenaiService {
                } catch (error: any) {
                   const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
                   console.info('Failed to parse error line:', sanitizedLine, error.message);
+
+                  // TODO: make a more scalable solution to automatically reprocess missed words
+                  fs.writeFileSync('missed_words.txt', sanitizedLine, { flag: 'a+' });
+
                   return null;
                }
             })
@@ -190,6 +194,10 @@ export class OpenaiService {
                } catch (error: any) {
                   const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
                   console.info('Failed to parse error line:', sanitizedLine, error.message);
+
+                  // TODO: make a more scalable solution to automatically reprocess missed words
+                  fs.writeFileSync('missed_words.txt', sanitizedLine, { flag: 'a+' });
+
                   return null;
                }
             })

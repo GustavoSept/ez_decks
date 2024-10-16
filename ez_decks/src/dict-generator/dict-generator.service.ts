@@ -8,6 +8,7 @@ import {
    GenericTranslationShape,
    WesternTranslationResponse,
 } from './structs/translation-response.structs';
+import fs from 'node:fs';
 
 @Injectable()
 export class DictGeneratorService {
@@ -85,6 +86,10 @@ export class DictGeneratorService {
       } catch (error: any) {
          const sanitizedMessageContent = messageContent.replace(/[\n\t\r\v\f\u0009 ]/g, '');
          console.info(`Error parsing messageContent: ${sanitizedMessageContent}. Error: ${error.message}`);
+
+         // TODO: make a more scalable solution to automatically reprocess missed words
+         fs.writeFileSync('missed_words.txt', sanitizedMessageContent, { flag: 'a+' });
+
          throw new Error('Error parsing BatchResult');
       }
 
