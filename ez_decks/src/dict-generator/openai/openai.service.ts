@@ -164,7 +164,16 @@ export class OpenaiService {
          const fileContents = await fileResponse.text();
 
          const lines = fileContents.trim().split('\n');
-         results = lines.map((line) => JSON.parse(line)) as BatchResult[];
+         results = lines
+            .map((line) => {
+               try {
+                  return JSON.parse(line) as BatchResult;
+               } catch (error) {
+                  console.error('Failed to parse result line:', line, error);
+                  return null;
+               }
+            })
+            .filter((result) => result !== null); // Remove any lines that couldn't be parsed
       }
 
       let errors: object[] = [];
@@ -173,7 +182,16 @@ export class OpenaiService {
          const errorFileContents = await errorFileResponse.text();
 
          const errorLines = errorFileContents.trim().split('\n');
-         errors = errorLines.map((line) => JSON.parse(line));
+         errors = errorLines
+            .map((line) => {
+               try {
+                  return JSON.parse(line);
+               } catch (error) {
+                  console.error('Failed to parse error line:', line, error);
+                  return null;
+               }
+            })
+            .filter((error) => error !== null); // Remove any lines that couldn't be parsed
       }
 
       return { results, errors };
