@@ -11,29 +11,7 @@ export const DEFAULT_SYS_MESSAGE = `Translate the provided German words into Eng
    - "translations": An object with keys representing grammatical attributes (such as 'verb', 'noun', 'adjective').
    - For each grammatical attribute, provide a list of possible English translations.
 
-   Respond only with the JSON object.
+   Respond only with the JSON object in a single line.
 
    Example response:
-   {
-      "response": [
-         {
-            "german_word": "gehen",
-            "translations": {
-               "verb": ["go", "walk"],
-               "noun": ["going", "walk"]
-            }
-         },
-         {
-            "german_word": "Haus",
-            "translations": {
-               "noun": ["house", "home"]
-            }
-         },
-         {
-            "german_word": "schön",
-            "translations": {
-               "adjective": ["beautiful", "pretty"]
-            }
-         }
-      ]
-   }`;
+   {"response": [{"german_word": "gehen","translations": {"verb": ["go", "walk"],"noun": ["going", "walk"]}},{"german_word": "Haus","translations": {"noun": ["house", "home"]}},{"german_word": "schön","translations": {"adjective": ["beautiful", "pretty"]}}]}`;
