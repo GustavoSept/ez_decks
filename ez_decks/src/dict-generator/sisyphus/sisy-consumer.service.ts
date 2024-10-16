@@ -18,7 +18,14 @@ export class SisyConsumerService extends WorkerHost {
    }
 
    async process(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
-      const batchId = job.data.inputFileId;
+      const batch = await this.openaiServ.batchCreateProcess(
+         job.data.inputFileId,
+         undefined,
+         undefined,
+         job.data.metadata
+      );
+
+      const batchId = batch.id;
       this.logger.log(`Batch created with ID: ${batchId}`);
 
       await this.pollBatchStatus(batchId, undefined);
@@ -38,7 +45,11 @@ export class SisyConsumerService extends WorkerHost {
             `Polling batch status: ${status.status}. Requests - Total: ${status.request_counts.total}, Completed: ${status.request_counts.completed}, Failed: ${status.request_counts.failed} | Batch_id: ${status.id}`
          );
 
-         if (status.errors && status.errors !== '') {
+         if (
+            status.errors && // If there's an error
+            !(Array.isArray(status.errors.object) && status.errors.object.length === 0) && // and it's not an empty array
+            !(status.errors.object.constructor === Object && Object.keys(status.errors.object).length === 0) // nor is it an empty object
+         ) {
             this.logger.error(`An error occurred when processing batch (). Error: ${status.errors}`);
             return;
          }

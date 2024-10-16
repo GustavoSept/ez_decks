@@ -93,14 +93,7 @@ export class DictGeneratorController {
             body.userMessagePrefix
          );
 
-         const batchProcess = await this.openaiServ.batchCreateProcess(
-            batchFile.id,
-            undefined,
-            undefined,
-            undefined
-         );
-
-         this.sisyServ.pollBatchProcess({ inputFileId: batchProcess.id });
+         this.sisyServ.pollBatchProcess({ inputFileId: batchFile.id });
 
          processingFileIds.push(batchFile.id);
       }

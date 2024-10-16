@@ -6,7 +6,7 @@ export interface BatchProcess {
    id: string;
    object: string;
    endpoint: string;
-   errors: string | null;
+   errors: { object: string; data: object[] | object } | null;
    input_file_id: string;
    completion_window: string;
    status: string;
