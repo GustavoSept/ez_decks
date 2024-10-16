@@ -169,8 +169,8 @@ export class OpenaiService {
                try {
                   return JSON.parse(line) as BatchResult;
                } catch (error: any) {
-                  const sanitizedLine = line.replace(/[\n\t]/g, '');
-                  console.error('Failed to parse error line:', sanitizedLine, error.message);
+                  const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
+                  console.info('Failed to parse error line:', sanitizedLine, error.message);
                   return null;
                }
             })
@@ -188,8 +188,8 @@ export class OpenaiService {
                try {
                   return JSON.parse(line);
                } catch (error: any) {
-                  const sanitizedLine = line.replace(/[\n\t]/g, '');
-                  console.error('Failed to parse error line:', sanitizedLine, error.message);
+                  const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
+                  console.info('Failed to parse error line:', sanitizedLine, error.message);
                   return null;
                }
             })

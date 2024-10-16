@@ -179,7 +179,9 @@ export class DictGeneratorController {
                case 'validating':
                case 'in_progress':
                case 'finalizing':
-                  this.logger.log(`Polling batch status: ${status.status} for Batch ID: ${batchId}`);
+                  this.logger.log(
+                     `Polling batch status: ${status.status}. Requests - Total: ${status.request_counts.total}, Completed: ${status.request_counts.completed}, Failed: ${status.request_counts.failed} | Batch_id: ${status.id}`
+                  );
                   break;
                default:
                   this.logger.warn(`Batch ${batchId} has an unknown status: ${status.status}`);
