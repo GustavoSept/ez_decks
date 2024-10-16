@@ -9,6 +9,7 @@ import { DictGeneratorService } from './dict-generator.service';
 import { CreatedFileObject } from './openai/types/batch-created-file';
 import { BatchProcess } from './openai/types/batch-process';
 import { SisyProducerService } from './sisyphus/sisy-producer.service';
+import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 
 @Controller('dict-generator')
 export class DictGeneratorController {
@@ -92,11 +93,29 @@ export class DictGeneratorController {
             body.userMessagePrefix
          );
 
-         this.sisyServ.pollBatchProcess({ inputFileId: batchFile.id });
+         const batchProcess = await this.openaiServ.batchCreateProcess(
+            batchFile.id,
+            undefined,
+            undefined,
+            undefined
+         );
+
+         this.sisyServ.pollBatchProcess({ inputFileId: batchProcess.id });
 
          processingFileIds.push(batchFile.id);
       }
       return { processingFileIds: processingFileIds };
+   }
+
+   @Post('create-batch-process')
+   async createBatchProcess(@Body() body: CreateBatchProcessDto): Promise<BatchProcess> {
+      const batch = await this.openaiServ.batchCreateProcess(
+         body.inputFileId,
+         undefined,
+         undefined,
+         body.metadata
+      );
+      return batch;
    }
 
    @Get('batch-status/:batchId')

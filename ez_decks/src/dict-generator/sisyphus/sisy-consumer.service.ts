@@ -18,14 +18,7 @@ export class SisyConsumerService extends WorkerHost {
    }
 
    async process(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
-      const batch = await this.openaiServ.batchCreateProcess(
-         job.data.inputFileId,
-         undefined,
-         undefined,
-         job.data.metadata
-      );
-
-      const batchId = batch.id;
+      const batchId = job.data.inputFileId;
       this.logger.log(`Batch created with ID: ${batchId}`);
 
       await this.pollBatchStatus(batchId, undefined);
