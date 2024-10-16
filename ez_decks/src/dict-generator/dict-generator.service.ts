@@ -83,7 +83,8 @@ export class DictGeneratorService {
       try {
          parsedContent = JSON.parse(messageContent);
       } catch (error: any) {
-         console.error(`Error parsing messageContent: ${messageContent}. Error: ${error.message}`);
+         const sanitizedMessageContent = messageContent.replace(/[\n\t]/g, '');
+         console.error(`Error parsing messageContent: ${sanitizedMessageContent}. Error: ${error.message}`);
          throw new Error('Error parsing BatchResult');
       }
 
