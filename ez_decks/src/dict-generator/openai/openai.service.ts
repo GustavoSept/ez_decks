@@ -173,7 +173,7 @@ export class OpenaiService {
                   console.info('Failed to parse error line:', sanitizedLine, error.message);
 
                   // TODO: make a more scalable solution to automatically reprocess missed words
-                  fs.writeFileSync('missed_words.txt', sanitizedLine, { flag: 'a+' });
+                  fs.writeFileSync('missed_words.txt', sanitizedLine + '\n', { flag: 'a+' });
 
                   return null;
                }
@@ -196,7 +196,7 @@ export class OpenaiService {
                   console.info('Failed to parse error line:', sanitizedLine, error.message);
 
                   // TODO: make a more scalable solution to automatically reprocess missed words
-                  fs.writeFileSync('missed_words.txt', sanitizedLine, { flag: 'a+' });
+                  fs.writeFileSync('missed_words.txt', sanitizedLine + '\n', { flag: 'a+' });
 
                   return null;
                }

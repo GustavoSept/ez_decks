@@ -88,7 +88,7 @@ export class DictGeneratorService {
          console.info(`Error parsing messageContent: ${sanitizedMessageContent}. Error: ${error.message}`);
 
          // TODO: make a more scalable solution to automatically reprocess missed words
-         fs.writeFileSync('missed_words.txt', sanitizedMessageContent, { flag: 'a+' });
+         fs.writeFileSync('missed_words.txt', sanitizedMessageContent + '\n', { flag: 'a+' });
 
          throw new Error('Error parsing BatchResult');
       }
