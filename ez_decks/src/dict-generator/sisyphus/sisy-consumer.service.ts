@@ -5,7 +5,7 @@ import { CreateBatchProcessDto } from '../DTOs/create-batch-process.dto';
 import { OpenaiService } from '../openai/openai.service';
 import { DictGeneratorService } from '../dict-generator.service';
 
-@Processor('poll', { concurrency: 1 })
+@Processor('poll', { concurrency: 1, lockDuration: 60_000 * 61 * 24 /* 24 hours and 24 minutes */ })
 @Injectable()
 export class SisyConsumerService extends WorkerHost {
    private readonly logger = new Logger(SisyConsumerService.name);

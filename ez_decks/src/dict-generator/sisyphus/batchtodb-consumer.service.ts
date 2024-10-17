@@ -8,7 +8,10 @@ import { BatchResponse } from '../openai/types/batch-result';
 /**
  * This consumer transforms data from `BatchResponse`, and stores it into the db
  */
-@Processor('dict_to_db', { concurrency: 1 })
+@Processor('dict_to_db', {
+   concurrency: 1,
+   lockDuration: 60_000 * 20 /* 20 minutes */,
+})
 @Injectable()
 export class BatchToDbConsumerService extends WorkerHost {
    private readonly logger = new Logger(BatchToDbConsumerService.name);
