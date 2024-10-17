@@ -107,6 +107,7 @@ export class SisyConsumerService extends WorkerHost {
       } catch (error) {
          const e = error as Error;
          this.logger.error(`Error while storing results for batch ${batchId}: ${e.message}`);
+         throw error;
       }
    }
 }
