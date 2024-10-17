@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { SisyProducerService } from './sisy-producer.service';
 import { BullModule } from '@nestjs/bullmq';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { SisyConsumerService } from './sisy-consumer.service';
+import { SisyConsumerService } from './sequential-batch-processing.consumer';
 import { OpenaiModule } from '../openai/openai.module';
 import { DictGeneratorService } from '../dict-generator.service';
 import { BatchToDbConsumerService } from './batchtodb-consumer.service';
