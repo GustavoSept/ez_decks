@@ -23,6 +23,7 @@ import { mapStringToGrammarType } from '../../prisma/utils/grammar-type-conversi
 import { PrismaService } from '../../prisma/prisma.service';
 import { Language } from '../../prisma/language.enum';
 import { OpenAIBatch } from './types/batch-query';
+import { Prisma } from '@prisma/client';
 
 @Injectable()
 export class OpenaiService {
@@ -232,71 +233,109 @@ export class OpenaiService {
       primary_language: Language = Language.German,
       secondary_language: Language = Language.English
    ) {
-      for (const processedWord of processedWords) {
-         const { word, translations, similar_words, grammar_categories } = processedWord;
+      // Step 1: Collect all unique words
+      const wordsToProcess = processedWords.map((pw) => ({
+         word: pw.word,
+         primary_language: primary_language,
+      }));
 
-         // Step 1: Save or find the Word
-         let wordEntry = await this.prisma.word.findFirst({
-            where: {
-               word: word,
-               primary_language: primary_language,
-            },
+      // Step 2: Fetch existing words
+      const existingWords = await this.prisma.word.findMany({
+         where: {
+            word: { in: wordsToProcess.map((w) => w.word) },
+            primary_language: primary_language,
+         },
+      });
+
+      const existingWordsMap = new Map<string, number>(); // Map of word to wordId
+      for (const word of existingWords) {
+         existingWordsMap.set(word.word, word.id);
+      }
+
+      // Step 3: Identify new words to insert
+      const newWords = wordsToProcess.filter((w) => !existingWordsMap.has(w.word));
+
+      // Step 4: Insert new words
+      if (newWords.length > 0) {
+         await this.prisma.word.createMany({
+            data: newWords,
          });
+      }
 
-         if (!wordEntry) {
-            wordEntry = await this.prisma.word.create({
-               data: {
-                  word: word,
-                  language: {
-                     connect: { id: primary_language },
-                  },
-               },
-            });
-         } else {
-            continue; // Skip already registered words [may happen due to LLM error]
-         }
+      // Step 5: Fetch all words to get complete wordId mapping
+      const allWords = await this.prisma.word.findMany({
+         where: {
+            word: { in: wordsToProcess.map((w) => w.word) },
+            primary_language: primary_language,
+         },
+      });
 
-         const wordId = wordEntry.id;
+      const wordIdMap = new Map<string, number>();
+      for (const word of allWords) {
+         wordIdMap.set(word.word, word.id);
+      }
 
-         // Step 2: Save translations
-         for (const [type, translationList] of Object.entries(translations)) {
-            const grammarType = mapStringToGrammarType(type);
-            for (const translation of translationList) {
-               await this.prisma.translation.create({
-                  data: {
+      // Step 6: Prepare batch data for translations, similar words, and grammar categories
+      const translationsToInsert: Prisma.TranslationCreateManyInput[] = [];
+      const similarWordsToInsert: Prisma.SimilarWordCreateManyInput[] = [];
+      const grammarCategoriesToInsert: Prisma.GrammarCategoryCreateManyInput[] = [];
+
+      for (const processedWord of processedWords) {
+         const wordId = wordIdMap.get(processedWord.word);
+         if (wordId) {
+            // Translations
+            for (const [type, translationList] of Object.entries(processedWord.translations)) {
+               const grammarType = mapStringToGrammarType(type);
+               for (const translation of translationList) {
+                  translationsToInsert.push({
                      wordId: wordId,
                      primary_language: primary_language,
                      secondary_language: secondary_language,
                      type: grammarType,
                      translation: translation,
-                  },
-               });
+                  });
+               }
             }
-         }
 
-         // Step 3: Save similar words
-         for (const similarWord of similar_words) {
-            await this.prisma.similarWord.create({
-               data: {
+            // Similar Words
+            for (const similarWord of processedWord.similar_words) {
+               similarWordsToInsert.push({
                   wordId: wordId,
                   primary_language: primary_language,
                   similarWord: similarWord,
-               },
-            });
-         }
+               });
+            }
 
-         // Step 4: Save grammar categories
-         for (const grammarCategory of grammar_categories) {
-            const grammarType = mapStringToGrammarType(grammarCategory);
-            await this.prisma.grammarCategory.create({
-               data: {
+            // Grammar Categories
+            for (const grammarCategory of processedWord.grammar_categories) {
+               const grammarType = mapStringToGrammarType(grammarCategory);
+               grammarCategoriesToInsert.push({
                   wordId: wordId,
                   primary_language: primary_language,
                   secondary_language: secondary_language,
                   category: grammarType,
-               },
-            });
+               });
+            }
          }
+      }
+
+      // Step 7: Batch insert translations, similar words, and grammar categories
+      if (translationsToInsert.length > 0) {
+         await this.prisma.translation.createMany({
+            data: translationsToInsert,
+         });
+      }
+
+      if (similarWordsToInsert.length > 0) {
+         await this.prisma.similarWord.createMany({
+            data: similarWordsToInsert,
+         });
+      }
+
+      if (grammarCategoriesToInsert.length > 0) {
+         await this.prisma.grammarCategory.createMany({
+            data: grammarCategoriesToInsert,
+         });
       }
    }
 }
