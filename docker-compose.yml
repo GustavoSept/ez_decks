@@ -34,6 +34,11 @@ services:
       - '${POSTGRES_PORT}:${POSTGRES_PORT}'
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+          cpus: '6'
 
   queue:
     image: redis:7.4.1-bookworm
@@ -47,6 +52,11 @@ services:
       - type: tmpfs
         target: /data
     command: redis-server --port ${REDIS_PORT} --loglevel debug
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2'
 
 volumes:
   postgres_data:
