@@ -28,7 +28,7 @@ import { chunkArray } from '../../common/utils/array/chunk-array';
 
 @Injectable()
 export class OpenaiService {
-   logger = new Logger(OpenaiService.name);
+   private readonly logger = new Logger(OpenaiService.name);
    constructor(
       @Inject(OPENAI_SDK) private readonly openai: OpenAI,
       private readonly configService: ConfigService,

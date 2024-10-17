@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { SisyProducerService } from './sisy-producer.service';
 import { BullModule } from '@nestjs/bullmq';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { SisyConsumerService } from './sequential-batch-processing.consumer';
+import { SequentialBatchProcessingConsumer } from './sequential-batch-processing.consumer';
 import { OpenaiModule } from '../openai/openai.module';
 import { DictGeneratorService } from '../dict-generator.service';
 import { BatchToDbConsumerService } from './batchtodb-consumer.service';
@@ -25,7 +25,7 @@ import { BatchToDbConsumerService } from './batchtodb-consumer.service';
       }),
       BullModule.registerQueue(
          {
-            name: 'poll',
+            name: 'sequential_batch_processing',
          },
          {
             name: 'dict_to_db',
@@ -33,7 +33,12 @@ import { BatchToDbConsumerService } from './batchtodb-consumer.service';
       ),
       OpenaiModule,
    ],
-   providers: [SisyProducerService, SisyConsumerService, BatchToDbConsumerService, DictGeneratorService],
+   providers: [
+      SisyProducerService,
+      SequentialBatchProcessingConsumer,
+      BatchToDbConsumerService,
+      DictGeneratorService,
+   ],
    exports: [SisyProducerService],
 })
 export class SisyphusModule {}

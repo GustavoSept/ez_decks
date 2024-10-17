@@ -36,7 +36,7 @@ export class BatchToDbConsumerService extends WorkerHost {
 
          const processedWords = this.dictServ.processTranslationResponse(words);
 
-         this.openaiServ.saveBatchResult(processedWords);
+         await this.openaiServ.saveBatchResult(processedWords);
 
          if (errors && errors.length > 0)
             this.logger.error(`Batch ${batchId} produced the following errors:\n${errors}.`);

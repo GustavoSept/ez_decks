@@ -1,116 +1,97 @@
 import { Processor, WorkerHost } from '@nestjs/bullmq';
 import { Injectable, Logger } from '@nestjs/common';
 import { Job } from 'bullmq';
-import { CreateBatchProcessDto } from '../DTOs/create-batch-process.dto';
 import { OpenaiService } from '../openai/openai.service';
-import { DictGeneratorService } from '../dict-generator.service';
+import { SisyProducerService } from './sisy-producer.service';
+import { WesternTranslationResponseObj } from '../structs/translation-response.structs';
+import { BatchProcess } from '../openai/types/batch-process';
 
 @Processor('sequential_batch_processing', {
    concurrency: 1,
    lockDuration: 60_000 * 60 * 24 * 10 /* 10 days */,
 })
 @Injectable()
-export class SisyConsumerService extends WorkerHost {
-   private readonly logger = new Logger(SisyConsumerService.name);
+export class SequentialBatchProcessingConsumer extends WorkerHost {
+   private readonly logger = new Logger(SequentialBatchProcessingConsumer.name);
 
    constructor(
       private readonly openaiServ: OpenaiService,
-      private readonly dictServ: DictGeneratorService
+      private readonly sisyServ: SisyProducerService
    ) {
       super();
    }
 
-   async process(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
-      await this.processBatch(job);
-   }
+   async process(job: Job) {
+      const { batches, sysMsg, userMsgPrefix } = job.data;
 
-   private async processBatch(job: Job<CreateBatchProcessDto, any, string>): Promise<void> {
-      const batch = await this.openaiServ.batchCreateProcess(
-         job.data.inputFileId,
-         undefined,
-         undefined,
-         job.data.metadata
-      );
+      for (const [index, batch] of batches.entries()) {
+         try {
+            // Upload the batch file to OpenAI
+            const batchFile = await this.openaiServ.batchGetFile(
+               batch,
+               sysMsg,
+               undefined,
+               undefined,
+               WesternTranslationResponseObj,
+               undefined,
+               userMsgPrefix
+            );
 
-      const batchId = batch.id;
-      this.logger.log(`Batch created with ID: ${batchId}`);
+            // Create a batch process
+            const batchProcess = await this.openaiServ.batchCreateProcess(batchFile.id);
 
-      await this.pollBatchStatus(batchId, undefined);
-   }
+            // Poll the batch status until completion
+            const batchId = batchProcess.id;
+            this.logger.log(`Batch ${index + 1}/${batches.length} created with ID: ${batchId}`);
 
-   /**
-    * Start polling for the batch status every minute
-    */
-   private async pollBatchStatus(batchId: string, retry: number = 5): Promise<void> {
-      if (retry === 0) {
-         return;
-      }
+            await this.pollBatchUntilComplete(batchId);
 
-      try {
-         const status = await this.openaiServ.batchCheckStatus(batchId);
-         this.logger.log(
-            `Polling batch status: ${status.status}. Requests - Total: ${status.request_counts.total}, Completed: ${status.request_counts.completed}, Failed: ${status.request_counts.failed} | Batch_id: ${status.id}`
-         );
+            // Retrieve results
+            const batchResponse = await this.openaiServ.batchRetrieveResults(batchId);
 
-         if (
-            status.errors && // If there's an error
-            !(Array.isArray(status.errors.object) && status.errors.object.length === 0) && // and it's not an empty array
-            !(status.errors.object.constructor === Object && Object.keys(status.errors.object).length === 0) // nor is it an empty object
-         ) {
-            this.logger.error(`An error occurred when processing batch (). Error: ${status.errors}`);
-            return;
+            // Enqueue job to store results in the database
+            await this.sisyServ.enqueueProcessBatchIntoDb(batchResponse, batchId);
+
+            this.logger.log(`Batch ${batchId} enqueued for database insertion.`);
+
+            // Proceed to the next batch without waiting for the DB storage
+         } catch (error: any) {
+            this.logger.error(`Error processing batch ${index + 1}/${batches.length}: ${error.message}`);
+            throw error;
          }
-
-         switch (status.status) {
-            case 'failed':
-            case 'error':
-            case 'expired':
-            case 'cancelled':
-            case 'cancelling':
-               this.logger.error(`Batch ${batchId} failed with status: ${status.status}`);
-               // Let the worker die
-               break;
-            case 'completed':
-               this.logger.log(`Batch ${batchId} completed successfully.`);
-               await this.storeBatchResults(batchId);
-               break;
-            case 'validating':
-            case 'in_progress':
-            case 'finalizing':
-               // Re-poll after 30 seconds
-               setTimeout(() => this.pollBatchStatus(batchId, retry), 30000);
-               break;
-            default:
-               this.logger.warn(`Batch ${batchId} has an unknown status: ${status.status}`);
-               // Re-poll after 30 seconds
-               setTimeout(() => this.pollBatchStatus(batchId, retry - 1), 5000);
-         }
-      } catch (error) {
-         const e = error as Error;
-         this.logger.error(`Error while polling batch ${batchId}: ${e.message}`);
-         // Let the worker die on error
       }
    }
 
-   /**
-    * Retrieve batch results and store them in the database
-    */
-   private async storeBatchResults(batchId: string): Promise<void> {
-      try {
-         const batchResponse = await this.openaiServ.batchRetrieveResults(batchId);
-         const { words, errors } = this.dictServ.extractWordsAndTranslations(batchResponse);
+   private async pollBatchUntilComplete(batchId: string) {
+      let status: BatchProcess;
+      let retries = 5;
 
-         const processedWords = this.dictServ.processTranslationResponse(words);
+      while (true) {
+         try {
+            status = await this.openaiServ.batchCheckStatus(batchId);
+         } catch (error: any) {
+            this.logger.error(`Error checking status for batch ${batchId}: ${error.message}`);
+            retries--;
+            if (retries === 0) {
+               throw new Error(`Failed to get status for batch ${batchId} after retries.`);
+            }
+            await new Promise((resolve) => setTimeout(resolve, 30000));
+            continue;
+         }
 
-         this.openaiServ.saveBatchResult(processedWords);
-
-         if (errors && errors.length > 0)
-            this.logger.error(`Batch ${batchId} produced the following errors:\n${errors}.`);
-         this.logger.log(`Batch ${batchId} results stored successfully.`);
-      } catch (error) {
-         const e = error as Error;
-         this.logger.error(`Error while storing results for batch ${batchId}: ${e.message}`);
-         throw error;
+         if (['failed', 'error', 'expired', 'cancelled', 'cancelling'].includes(status.status)) {
+            this.logger.error(`Batch ${batchId} failed with status: ${status.status}`);
+            throw new Error(`Batch failed with status: ${status.status}`);
+         } else if (status.status === 'completed') {
+            this.logger.log(`Batch ${batchId} completed successfully.`);
+            break;
+         } else {
+            this.logger.log(
+               `Batch ${batchId} status: ${status.status}. ` +
+                  `Requests - Total: ${status.request_counts.total}, Completed: ${status.request_counts.completed}, Failed: ${status.request_counts.failed}`
+            );
+            await new Promise((resolve) => setTimeout(resolve, 30000));
+         }
       }
    }
 }
