@@ -29,8 +29,12 @@ describe('DictGeneratorService', () => {
          const result = service.splitFileIntoBatches(fileContent, batchSize);
 
          expect(result).toEqual([
-            ['line1', 'line2', 'line3', 'line4', 'line5', 'line6', 'line7', 'line8'],
-            ['line9', 'line10'],
+            {
+               arrays: [
+                  ['line1', 'line2', 'line3', 'line4', 'line5', 'line6', 'line7', 'line8'],
+                  ['line9', 'line10'],
+               ],
+            },
          ]);
       });
 
@@ -39,7 +43,7 @@ describe('DictGeneratorService', () => {
          const batchSize = 8;
          const result = service.splitFileIntoBatches(fileContent, batchSize);
 
-         expect(result).toEqual([['line1', 'line2', 'line3', 'line4']]);
+         expect(result).toEqual([{ arrays: [['line1', 'line2', 'line3', 'line4']] }]);
       });
 
       it('should handle empty file content', () => {
@@ -58,15 +62,37 @@ describe('DictGeneratorService', () => {
          const result = service.splitFileIntoBatches(fileContent, batchSize);
 
          expect(result).toEqual([
-            ['line1', 'line2', 'line3', 'line4', 'line5', 'line6', 'line7', 'line8'],
-            ['line9', 'line10'],
+            {
+               arrays: [
+                  ['line1', 'line2', 'line3', 'line4', 'line5', 'line6', 'line7', 'line8'],
+                  ['line9', 'line10'],
+               ],
+            },
          ]);
       });
    });
 
    describe('extractWordsAndTranslations()', () => {
       it('should extract words and translations from batch response', () => {
-         const fileContent = fs.readFileSync(path.join(__dirname, 'test', '200_word_output.txt'), 'utf8');
+         const fileContent = fs.readFileSync(
+            path.join(__dirname, 'test', 'batchResponse_25_objs.json'),
+            'utf8'
+         );
+
+         const batchResponse: BatchResponse = JSON.parse(fileContent);
+         const result = service.extractWordsAndTranslations(batchResponse);
+
+         expect(result.words.length).toBeGreaterThan(0);
+         expect(result.errors.length).toBe(0);
+         expect(result.words[0]).toHaveProperty('word');
+         expect(result.words[0]).toHaveProperty('translations');
+      });
+
+      it('should extract words and translations from LARGE batch response (800 objects)', () => {
+         const fileContent = fs.readFileSync(
+            path.join(__dirname, 'test', 'batchResponse_800_objs.json'),
+            'utf8'
+         );
 
          const batchResponse: BatchResponse = JSON.parse(fileContent);
          const result = service.extractWordsAndTranslations(batchResponse);

@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
 import { ZodSchema } from 'zod';
@@ -23,9 +23,12 @@ import { mapStringToGrammarType } from '../../prisma/utils/grammar-type-conversi
 import { PrismaService } from '../../prisma/prisma.service';
 import { Language } from '../../prisma/language.enum';
 import { OpenAIBatch } from './types/batch-query';
+import { Prisma } from '@prisma/client';
+import { chunkArray } from '../../common/utils/array/chunk-array';
 
 @Injectable()
 export class OpenaiService {
+   private readonly logger = new Logger(OpenaiService.name);
    constructor(
       @Inject(OPENAI_SDK) private readonly openai: OpenAI,
       private readonly configService: ConfigService,
@@ -164,7 +167,21 @@ export class OpenaiService {
          const fileContents = await fileResponse.text();
 
          const lines = fileContents.trim().split('\n');
-         results = lines.map((line) => JSON.parse(line)) as BatchResult[];
+         results = lines
+            .map((line) => {
+               try {
+                  return JSON.parse(line) as BatchResult;
+               } catch (error: any) {
+                  const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
+                  console.info('Failed to parse error line:', sanitizedLine, error.message);
+
+                  // TODO: make a more scalable solution to automatically reprocess missed words
+                  fs.writeFileSync('missed_words.txt', sanitizedLine + '\n', { flag: 'a+' });
+
+                  return null;
+               }
+            })
+            .filter((result) => result !== null); // Remove any lines that couldn't be parsed
       }
 
       let errors: object[] = [];
@@ -173,7 +190,21 @@ export class OpenaiService {
          const errorFileContents = await errorFileResponse.text();
 
          const errorLines = errorFileContents.trim().split('\n');
-         errors = errorLines.map((line) => JSON.parse(line));
+         errors = errorLines
+            .map((line) => {
+               try {
+                  return JSON.parse(line);
+               } catch (error: any) {
+                  const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
+                  console.info('Failed to parse error line:', sanitizedLine, error.message);
+
+                  // TODO: make a more scalable solution to automatically reprocess missed words
+                  fs.writeFileSync('missed_words.txt', sanitizedLine + '\n', { flag: 'a+' });
+
+                  return null;
+               }
+            })
+            .filter((error) => error !== null); // Remove any lines that couldn't be parsed
       }
 
       return { results, errors };
@@ -199,76 +230,149 @@ export class OpenaiService {
       return batches as unknown as Promise<BatchProcess[]>;
    }
 
+   /**
+    * Saves any `GenericTranslationShape` into the database.
+    * Internally, it saves words in chunks, to optimize performance.
+    * @param processedWords A `BatchResult` after it's processed.
+    * @param primary_language The language of each 'word' key
+    * @param secondary_language The language each 'word' is translated to
+    */
    async saveBatchResult<T extends GenericTranslationShape>(
       processedWords: ProcessedTranslationResponse<T>[],
       primary_language: Language = Language.German,
       secondary_language: Language = Language.English
    ) {
-      for (const processedWord of processedWords) {
-         const { word, translations, similar_words, grammar_categories } = processedWord;
+      const startTime = process.hrtime();
+      this.logger.debug('Starting to save batch result into database...');
 
-         // Step 1: Save or find the Word
-         let wordEntry = await this.prisma.word.findFirst({
+      // Step 1: Collect all unique words
+      const wordsToProcess = processedWords.map((pw) => ({
+         word: pw.word,
+         primary_language: primary_language,
+      }));
+
+      // NOTE: Needs to be below the limit of the db's bind variables
+      const chunkSize = 16384;
+
+      // Step 2: Fetch existing words in chunks
+      const existingWordsMap = new Map<string, number>();
+
+      const wordChunks = chunkArray(
+         wordsToProcess.map((w) => w.word),
+         chunkSize
+      );
+
+      for (const wordChunk of wordChunks) {
+         const existingWords = await this.prisma.word.findMany({
             where: {
-               word: word,
+               word: { in: wordChunk },
                primary_language: primary_language,
             },
          });
 
-         if (!wordEntry) {
-            wordEntry = await this.prisma.word.create({
-               data: {
-                  word: word,
-                  language: {
-                     connect: { id: primary_language },
-                  },
-               },
-            });
-         } else {
-            continue; // Skip already registered words [may happen due to LLM error]
+         for (const word of existingWords) {
+            existingWordsMap.set(word.word, word.id);
          }
+      }
 
-         const wordId = wordEntry.id;
+      // Step 3: Identify new words to insert
+      const newWords = wordsToProcess.filter((w) => !existingWordsMap.has(w.word));
 
-         // Step 2: Save translations
-         for (const [type, translationList] of Object.entries(translations)) {
-            const grammarType = mapStringToGrammarType(type);
-            for (const translation of translationList) {
-               await this.prisma.translation.create({
-                  data: {
+      // Step 4: Insert new words in chunks
+      if (newWords.length > 0) {
+         const newWordChunks = chunkArray(newWords, chunkSize);
+
+         for (const newWordChunk of newWordChunks) {
+            await this.prisma.word.createMany({
+               data: newWordChunk,
+            });
+         }
+      }
+
+      // Step 5: Fetch all words again to get complete wordId mapping
+      const allWordsMap = new Map<string, number>();
+
+      for (const wordChunk of wordChunks) {
+         const allWords = await this.prisma.word.findMany({
+            where: {
+               word: { in: wordChunk },
+               primary_language: primary_language,
+            },
+         });
+
+         for (const word of allWords) {
+            allWordsMap.set(word.word, word.id);
+         }
+      }
+
+      // Step 6: Prepare batch data for translations, similar words, and grammar categories
+      const translationsToInsert: Prisma.TranslationCreateManyInput[] = [];
+      const similarWordsToInsert: Prisma.SimilarWordCreateManyInput[] = [];
+      const grammarCategoriesToInsert: Prisma.GrammarCategoryCreateManyInput[] = [];
+
+      for (const processedWord of processedWords) {
+         const wordId = allWordsMap.get(processedWord.word);
+         if (wordId) {
+            // Translations
+            for (const [type, translationList] of Object.entries(processedWord.translations)) {
+               const grammarType = mapStringToGrammarType(type);
+               for (const translation of translationList) {
+                  translationsToInsert.push({
                      wordId: wordId,
                      primary_language: primary_language,
                      secondary_language: secondary_language,
                      type: grammarType,
                      translation: translation,
-                  },
-               });
+                  });
+               }
             }
-         }
 
-         // Step 3: Save similar words
-         for (const similarWord of similar_words) {
-            await this.prisma.similarWord.create({
-               data: {
+            // Similar Words
+            for (const similarWord of processedWord.similar_words) {
+               similarWordsToInsert.push({
                   wordId: wordId,
                   primary_language: primary_language,
                   similarWord: similarWord,
-               },
-            });
-         }
+               });
+            }
 
-         // Step 4: Save grammar categories
-         for (const grammarCategory of grammar_categories) {
-            const grammarType = mapStringToGrammarType(grammarCategory);
-            await this.prisma.grammarCategory.create({
-               data: {
+            // Grammar Categories
+            for (const grammarCategory of processedWord.grammar_categories) {
+               const grammarType = mapStringToGrammarType(grammarCategory);
+               grammarCategoriesToInsert.push({
                   wordId: wordId,
                   primary_language: primary_language,
                   secondary_language: secondary_language,
                   category: grammarType,
-               },
-            });
+               });
+            }
          }
       }
+
+      // Step 7: Batch insert translations, similar words, and grammar categories in chunks
+      // Adjust chunk sizes as needed to stay within the bind variable limit
+      const translationChunks = chunkArray(translationsToInsert, chunkSize);
+      for (const translationChunk of translationChunks) {
+         await this.prisma.translation.createMany({
+            data: translationChunk,
+         });
+      }
+
+      const similarWordsChunks = chunkArray(similarWordsToInsert, chunkSize);
+      for (const similarWordsChunk of similarWordsChunks) {
+         await this.prisma.similarWord.createMany({
+            data: similarWordsChunk,
+         });
+      }
+
+      const grammarCategoriesChunks = chunkArray(grammarCategoriesToInsert, chunkSize);
+      for (const grammarCategoriesChunk of grammarCategoriesChunks) {
+         await this.prisma.grammarCategory.createMany({
+            data: grammarCategoriesChunk,
+         });
+      }
+      const diff = process.hrtime(startTime);
+      const timeTaken = diff[0] + diff[1] / 1e9; // Converts time to seconds
+      this.logger.debug(`Finished saving batch result into database! Took ${timeTaken.toFixed(2)} seconds!`);
    }
 }

@@ -1,22 +1,38 @@
-import { Body, Controller, Get, Param, Post, Query, UseInterceptors, UploadedFile } from '@nestjs/common';
+import {
+   Body,
+   Controller,
+   Get,
+   Param,
+   Post,
+   Query,
+   UseInterceptors,
+   UploadedFile,
+   Logger,
+} from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { OpenaiService } from './openai/openai.service';
 import { CreateBatchFileDto } from './DTOs/create-batch-file.dto';
 import { LoadAndCreateBatchFileDto } from './DTOs/load-and-create-batch-file.dto';
-import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
 import { WesternTranslationResponseObj } from './structs/translation-response.structs';
 import { DictGeneratorService } from './dict-generator.service';
 import { CreatedFileObject } from './openai/types/batch-created-file';
 import { BatchProcess } from './openai/types/batch-process';
+import { SisyProducerService } from './sisyphus/sisy-producer.service';
+import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
 
 @Controller('dict-generator')
 export class DictGeneratorController {
+   private readonly logger = new Logger(DictGeneratorController.name);
    constructor(
       private readonly openaiServ: OpenaiService,
-      private readonly dictServ: DictGeneratorService
+      private readonly dictServ: DictGeneratorService,
+      private readonly sisyServ: SisyProducerService
    ) {}
 
+   /**
+    * Creates an 'OpenAI batch file' based on text input
+    */
    @Post('create-batch-file')
    async createBatchFile(@Body() body: CreateBatchFileDto): Promise<CreatedFileObject> {
       const file = await this.openaiServ.batchGetFile(
@@ -31,6 +47,9 @@ export class DictGeneratorController {
       return file;
    }
 
+   /**
+    * Creates an 'OpenAI batch file' based on the uploaded file
+    */
    @Post('load-and-create-batch-file')
    @UseInterceptors(FileInterceptor('wordFile'))
    async loadAndCreateBatchFile(
@@ -55,6 +74,32 @@ export class DictGeneratorController {
          createdFiles.push(batchFile);
       }
       return createdFiles;
+   }
+
+   /**
+    * Synchronously processes batches based on the uploaded file:
+    *
+    * - Creates batches
+    * - Waits for the results of each batch before proceeding to the next one
+    * - Process and save results into db
+    */
+   @Post('load-and-process-file')
+   @UseInterceptors(FileInterceptor('wordFile'))
+   async loadAndProcessFile(
+      @UploadedFile() file: Express.Multer.File,
+      @Body() body: LoadAndCreateBatchFileDto
+   ): Promise<{ message: string }> {
+      const batches = this.dictServ.splitFileIntoBatches(file.buffer, body.wordCapacity, body.maxBatchSize);
+
+      this.logger.log(`Request generated ${batches.length} batches. Enqueuing for processing...`);
+
+      await this.sisyServ.enqueueSequentialBatchProcessing({
+         batches,
+         sysMsg: body.systemMessage,
+         userMsgPrefix: body.userMessagePrefix,
+      });
+
+      return { message: 'Batch processing started.' };
    }
 
    @Post('create-batch-process')
