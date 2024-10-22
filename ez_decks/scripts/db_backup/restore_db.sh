@@ -27,7 +27,7 @@ fi
 docker cp "$LOCAL_BACKUP_PATH" postgres_db:$CONTAINER_BACKUP_PATH
 
 # Restoring the backup within the container
-docker exec -t postgres_db pg_restore -U $POSTGRES_USER -d $POSTGRES_DB -v $CONTAINER_BACKUP_PATH
+docker exec -t postgres_db pg_restore -U $POSTGRES_USER -d $POSTGRES_DB -v --clean --if-exists $CONTAINER_BACKUP_PATH
 
 # Cleanup: Remove the backup file from the container after restoring
 docker exec -t postgres_db rm -f $CONTAINER_BACKUP_PATH
