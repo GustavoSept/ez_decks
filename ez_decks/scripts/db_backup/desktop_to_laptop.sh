@@ -34,8 +34,8 @@ docker exec -t postgres_db pg_dump -U $POSTGRES_USER -F c -b -v -f $CONTAINER_BA
 # Copying the backup file from the container to the local machine
 docker cp postgres_db:$CONTAINER_BACKUP_PATH $LOCAL_BACKUP_PATH
 
-# Transfer the backup file to the desktop (remote machine)
-scp $LOCAL_BACKUP_PATH desktop:$REMOTE_BACKUP_PATH
+# Transfer the backup file to the laptop (remote machine)
+scp $LOCAL_BACKUP_PATH laptop:$REMOTE_BACKUP_PATH
 
 # Cleanup: Remove local backup file after transferring if --cleanup is passed
 if $CLEANUP; then
