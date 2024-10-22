@@ -37,8 +37,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 6G
-          cpus: '6'
+          memory: 1G
+          cpus: '1'
 
   queue:
     image: redis:7.4.1-bookworm
@@ -55,8 +55,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2G
-          cpus: '2'
+          memory: 1G
+          cpus: '1'
 
 volumes:
   postgres_data:
