@@ -39,10 +39,7 @@ model Language {
 
    // Relations to other models
    primaryWords               Word[]            @relation("PrimaryLanguageWords")
-   primarySimilarWords        SimilarWord[]     @relation("PrimaryLanguageSimilarWords")
-   primaryTranslations        Translation[]     @relation("PrimaryLanguageTranslations")
    secondaryTranslations      Translation[]     @relation("SecondaryLanguageTranslations")
-   primaryGrammarCategories   GrammarCategory[] @relation("PrimaryLanguageGrammarCategories")
    secondaryGrammarCategories GrammarCategory[] @relation("SecondaryLanguageGrammarCategories")
 }
 
@@ -50,56 +47,54 @@ model Word {
    id               Int      @id @default(autoincrement())
    word             String
    primary_language Int
-   language         Language @relation("PrimaryLanguageWords", fields: [primary_language], references: [id])
+   language         Language @relation("PrimaryLanguageWords", fields: [primary_language], references: [id], onDelete: Cascade)
 
    // Relations
-   translations      Translation[]
-   similarWords      SimilarWord[]
-   grammarCategories GrammarCategory[]
+   translations        Translation[]
+   similarWordsOrigin  SimilarWord[]     @relation("OriginSimilarWord")
+   similarWordsSimilar SimilarWord[]     @relation("OtherSimilarWord")
+   grammarCategories   GrammarCategory[]
 
-   @@index([primary_language])
+   @@unique([primary_language, word])
 }
 
 model Translation {
    id     Int  @id @default(autoincrement())
    wordId Int
-   word   Word @relation(fields: [wordId], references: [id])
+   word   Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
 
-   primary_language   Int
    secondary_language Int
-   primaryLanguage    Language @relation("PrimaryLanguageTranslations", fields: [primary_language], references: [id])
-   secondaryLanguage  Language @relation("SecondaryLanguageTranslations", fields: [secondary_language], references: [id])
+   secondaryLanguage  Language @relation("SecondaryLanguageTranslations", fields: [secondary_language], references: [id], onDelete: Cascade)
 
    type        GrammarTypes
    translation String
 
-   @@index([primary_language, secondary_language])
+   @@unique([wordId, secondary_language, translation, type])
+   @@index([secondary_language, translation])
 }
 
 model SimilarWord {
    id     Int  @id @default(autoincrement())
    wordId Int
-   word   Word @relation(fields: [wordId], references: [id])
+   word   Word @relation("OriginSimilarWord", fields: [wordId], references: [id], onDelete: Cascade)
 
-   primary_language Int
-   language         Language @relation("PrimaryLanguageSimilarWords", fields: [primary_language], references: [id])
+   similar_word Int
+   similarWord  Word @relation("OtherSimilarWord", fields: [similar_word], references: [id], onDelete: Cascade)
 
-   similarWord String
-
-   @@index([primary_language])
+   @@unique([wordId, similar_word, id])
+   @@index([similar_word, wordId])
 }
 
 model GrammarCategory {
    id     Int  @id @default(autoincrement())
    wordId Int
-   word   Word @relation(fields: [wordId], references: [id])
+   word   Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
 
-   primary_language   Int
    secondary_language Int
-   primaryLanguage    Language @relation("PrimaryLanguageGrammarCategories", fields: [primary_language], references: [id])
-   secondaryLanguage  Language @relation("SecondaryLanguageGrammarCategories", fields: [secondary_language], references: [id])
+   secondaryLanguage  Language @relation("SecondaryLanguageGrammarCategories", fields: [secondary_language], references: [id], onDelete: Cascade)
 
    category GrammarTypes
 
-   @@index([primary_language, secondary_language])
+   @@unique([secondary_language, wordId, category])
+   @@index([wordId, secondary_language])
 }
