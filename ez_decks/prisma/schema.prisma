@@ -38,9 +38,8 @@ model Language {
    name String @unique // e.g., "English", "German". Implemented as an enum (name to id mapping) in TypeScript code.
 
    // Relations to other models
-   primaryWords               Word[]            @relation("PrimaryLanguageWords")
-   secondaryTranslations      Translation[]     @relation("SecondaryLanguageTranslations")
-   secondaryGrammarCategories GrammarCategory[] @relation("SecondaryLanguageGrammarCategories")
+   primaryWords          Word[]        @relation("PrimaryLanguageWords")
+   secondaryTranslations Translation[] @relation("SecondaryLanguageTranslations")
 }
 
 model Word {
@@ -81,7 +80,7 @@ model SimilarWord {
    similar_word Int
    similarWord  Word @relation("OtherSimilarWord", fields: [similar_word], references: [id], onDelete: Cascade)
 
-   @@unique([wordId, similar_word, id])
+   @@unique([wordId, similar_word])
    @@index([similar_word, wordId])
 }
 
@@ -90,11 +89,7 @@ model GrammarCategory {
    wordId Int
    word   Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
 
-   secondary_language Int
-   secondaryLanguage  Language @relation("SecondaryLanguageGrammarCategories", fields: [secondary_language], references: [id], onDelete: Cascade)
-
    category GrammarTypes
 
-   @@unique([secondary_language, wordId, category])
-   @@index([wordId, secondary_language])
+   @@unique([wordId, category])
 }
