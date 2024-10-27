@@ -80,7 +80,7 @@ describe('DictGeneratorService', () => {
          );
 
          const batchResponse: BatchResponse = JSON.parse(fileContent);
-         const result = service.extractWordsAndTranslations(batchResponse);
+         const result = service.extractWordsAndTranslations(batchResponse, false, false);
 
          expect(result.words.length).toBeGreaterThan(0);
          expect(result.errors.length).toBe(0);
@@ -95,7 +95,7 @@ describe('DictGeneratorService', () => {
          );
 
          const batchResponse: BatchResponse = JSON.parse(fileContent);
-         const result = service.extractWordsAndTranslations(batchResponse);
+         const result = service.extractWordsAndTranslations(batchResponse, false, false);
 
          expect(result.words.length).toBeGreaterThan(0);
          expect(result.errors.length).toBe(0);
@@ -134,7 +134,7 @@ describe('DictGeneratorService', () => {
             errors: [],
          };
 
-         const result = service.extractWordsAndTranslations(batchResponse);
+         const result = service.extractWordsAndTranslations(batchResponse, false, false);
 
          expect(result.words.length).toBe(0);
          expect(result.errors.length).toBe(1);
@@ -183,7 +183,7 @@ describe('DictGeneratorService', () => {
             ],
             errors: [],
          };
-         const result = service.extractWordsAndTranslations(batchResponse);
+         const result = service.extractWordsAndTranslations(batchResponse, false, false);
 
          expect(result.words.length).toBe(0);
          expect(result.errors.length).toBe(1);
@@ -195,7 +195,7 @@ describe('DictGeneratorService', () => {
          const fileContent = fs.readFileSync(path.join(__dirname, 'test', 'aalend_output.txt'), 'utf8');
 
          const batchResponse: BatchResponse = JSON.parse(fileContent);
-         const result = service.extractWordsAndTranslations(batchResponse);
+         const result = service.extractWordsAndTranslations(batchResponse, false, false);
 
          expect(result.words.length).toBe(1);
          expect(result.words[0].word).toBe('aalend');

@@ -52,7 +52,11 @@ export class DictGeneratorService {
    /**
     * Extracts the primary_language words and their translations from the batch response.
     */
-   extractWordsAndTranslations(batchResponse: BatchResponse): {
+   extractWordsAndTranslations(
+      batchResponse: BatchResponse,
+      logToConsole: boolean = true,
+      saveMissedWords: boolean = true
+   ): {
       words: WesternTranslationResponse;
       errors: ErrorInfo[];
    } {
@@ -66,7 +70,7 @@ export class DictGeneratorService {
             } else if (result.response.body.choices[0].message.refusal) {
                errors.push(this.extractRefusalInfo(result));
             } else {
-               words.push(...this.extractValidWords(result));
+               words.push(...this.extractValidWords(result, logToConsole, saveMissedWords));
             }
          } catch {} // Skip problematic strings, if parsing fails
       });
@@ -77,7 +81,11 @@ export class DictGeneratorService {
    /**
     * Extracts valid primary_language words and translations from a batch result.
     */
-   private extractValidWords(result: BatchResult): WesternTranslationResponse {
+   private extractValidWords(
+      result: BatchResult,
+      logToConsole: boolean = true,
+      saveMissedWords: boolean = true
+   ): WesternTranslationResponse {
       const messageContent = result.response.body.choices[0].message.content;
       let parsedContent: { response: WesternTranslationResponse };
 
@@ -85,10 +93,12 @@ export class DictGeneratorService {
          parsedContent = JSON.parse(messageContent);
       } catch (error: any) {
          const sanitizedMessageContent = messageContent.replace(/[\n\t\r\v\f\u0009 ]/g, '');
-         console.info(`Error parsing messageContent: ${sanitizedMessageContent}. Error: ${error.message}`);
+         if (logToConsole === true)
+            console.info(`Error parsing messageContent: ${sanitizedMessageContent}. Error: ${error.message}`);
 
          // TODO: make a more scalable solution to automatically reprocess missed words
-         fs.writeFileSync('logs/missed_words.txt', sanitizedMessageContent + '\n', { flag: 'a+' });
+         if (saveMissedWords === true)
+            fs.writeFileSync('logs/missed_words.txt', sanitizedMessageContent + '\n', { flag: 'a+' });
 
          throw new Error('Error parsing BatchResult');
       }
