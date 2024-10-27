@@ -20,6 +20,8 @@ import { CreatedFileObject } from './openai/types/batch-created-file';
 import { BatchProcess } from './openai/types/batch-process';
 import { SisyProducerService } from './sisyphus/sisy-producer.service';
 import { CreateBatchProcessDto } from './DTOs/create-batch-process.dto';
+import fs from 'fs';
+import path from 'path';
 
 @Controller('dict-generator')
 export class DictGeneratorController {
@@ -129,6 +131,52 @@ export class DictGeneratorController {
 
       this.openaiServ.saveBatchResult(processedWords);
       return { processedWords, errors };
+   }
+
+   /**
+    * Manually save the contents of extracted batchIds into multiple batchResponses
+    * @param batchIds A json value with a list of batchIds
+    * @returns Creates files (on dist/local_files) with the content
+    */
+   @Post('batch-results/save-words')
+   async saveBatchWords(@Body('batch_ids') batchIds: string[]) {
+      const baseDirectory = path.join(__dirname, '../local_files/01_german_job/batches_output');
+
+      // Ensure the directory exists
+      if (!fs.existsSync(baseDirectory)) {
+         fs.mkdirSync(baseDirectory, { recursive: true });
+      }
+
+      console.log(baseDirectory);
+
+      // Find the largest numbered file in the directory
+      const existingFiles = fs
+         .readdirSync(baseDirectory)
+         .filter((file) => file.startsWith('batch_') && file.endsWith('.txt'));
+
+      let maxNumber = 0;
+      for (const file of existingFiles) {
+         const match = file.match(/batch_(\d+)\.txt/);
+         if (match) {
+            const number = parseInt(match[1], 10);
+            if (number > maxNumber) {
+               maxNumber = number;
+            }
+         }
+      }
+
+      // Iterate over each batchId, retrieve words and save them to a new file
+      for (const batchId of batchIds) {
+         const batchResponse = await this.openaiServ.batchRetrieveResults(batchId);
+         const { words } = this.dictServ.extractWordsAndTranslations(batchResponse);
+
+         const newFileName = `batch_${String(maxNumber + 1).padStart(2, '0')}.txt`;
+         const filePath = path.join(baseDirectory, newFileName);
+         fs.writeFileSync(filePath, words.map((word) => JSON.stringify(word)).join('\n'));
+         maxNumber++;
+      }
+
+      return { message: 'Words saved successfully' };
    }
 
    @Post('batch-cancel/:batchId')

@@ -50,8 +50,8 @@ model Word {
 
    // Relations
    translations        Translation[]
-   similarWordsOrigin  SimilarWord[]     @relation("OriginSimilarWord")
-   similarWordsSimilar SimilarWord[]     @relation("OtherSimilarWord")
+   similarWordsOrigin  SimilarWord[]     @relation("OriginSimilarWord") // The current word is the root of reference
+   similarWordsSimilar SimilarWord[]     @relation("OtherSimilarWord") // The current word is in the list of words that are similar to a "root"/origin
    grammarCategories   GrammarCategory[]
 
    @@unique([primary_language, word])
