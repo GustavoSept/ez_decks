@@ -122,7 +122,7 @@ describe('OpenaiService: saveBatchResult()', () => {
       await prismaService.$disconnect(); // Disconnect Prisma after tests
    });
 
-   afterEach(async () => {
+   beforeEach(async () => {
       // Clean up the database after each test
       await prismaService.grammarCategory.deleteMany();
       await prismaService.similarWord.deleteMany();
@@ -145,7 +145,7 @@ describe('OpenaiService: saveBatchResult()', () => {
 
       // Verify the total number of Words saved.
       const wordEntries = await prismaService.word.findMany({
-         where: { primary_language: Language.German },
+         where: { language: { id: Language.German } },
       });
 
       let duplicateWords: string[] = [];
@@ -189,7 +189,10 @@ describe('OpenaiService: saveBatchResult()', () => {
       }, 0);
 
       const translationEntries = await prismaService.translation.findMany({
-         where: { primary_language: Language.German, secondary_language: Language.English },
+         where: {
+            secondaryLanguage: { id: Language.English },
+            word: { language: { id: Language.German } },
+         },
       });
       expect(translationEntries.length).toBe(totalTranslations);
 
@@ -197,7 +200,7 @@ describe('OpenaiService: saveBatchResult()', () => {
       const totalSimilarWords = processedWords.reduce((acc, word) => acc + word.similar_words.length, 0);
 
       const similarWordEntries = await prismaService.similarWord.findMany({
-         where: { primary_language: Language.German },
+         where: { word: { language: { id: Language.German } } },
       });
       expect(similarWordEntries.length).toBe(totalSimilarWords);
 
@@ -208,7 +211,7 @@ describe('OpenaiService: saveBatchResult()', () => {
       );
 
       const grammarCategoryEntries = await prismaService.grammarCategory.findMany({
-         where: { primary_language: Language.German },
+         where: { word: { language: { id: Language.German } } },
       });
       expect(grammarCategoryEntries.length).toBe(totalGrammarCategories);
    });
