@@ -38,11 +38,11 @@ export class SisyProducerService {
     * Transforms data from `GenericTranslationShape[]` files, and stores it into the db
     */
    async enqueueProcessWordsIntoDb(local_file_path?: string) {
-      await this.dictToDbQueue.add(
+      await this.wordsToDbQueue.add(
          'manual_store_words',
          { local_file_path },
          {
-            attempts: 4,
+            attempts: 1,
             removeOnFail: 3,
             removeOnComplete: true,
          }

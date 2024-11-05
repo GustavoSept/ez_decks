@@ -4,6 +4,9 @@
 .coverage
 .coverage.*
 
+# Custom ignores
+local_files
+
 # NodeJs related files
 node_modules
 dist

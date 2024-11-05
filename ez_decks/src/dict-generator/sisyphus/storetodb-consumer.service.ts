@@ -26,6 +26,7 @@ export class ManualStoreWordsConsumerService extends WorkerHost {
 
    // eslint-disable-next-line @typescript-eslint/no-unused-vars
    async process(job: Job<{ local_file_path?: string }>): Promise<void> {
+      console.log('Got here without errors!');
       await this.storeWordsFromFiles(job.data.local_file_path);
    }
 
@@ -36,22 +37,31 @@ export class ManualStoreWordsConsumerService extends WorkerHost {
       const suffix_file_path = local_file_path ?? '/01_german_job/batches_output';
 
       try {
-         const baseDirectory = path.join(__dirname, '../../../local_files' + suffix_file_path);
-         const files = fs.readdirSync(baseDirectory);
-
-         for (const file of files) {
-            this.logger.log(`processing file: ${file}...`);
-
+         const baseDirectory = path.join(__dirname, '../../../../local_files' + suffix_file_path);
+         const files = fs.readdirSync(baseDirectory).filter((file) => {
             const filePath = path.join(baseDirectory, file);
-            const fileContent = fs.readFileSync(filePath, 'utf-8');
+            return fs.statSync(filePath).isFile();
+         });
 
-            const words = fileContent
-               .split('\n')
-               .filter((line) => line.trim()) // ignoring empty lines
-               .map((line) => JSON.parse(line)); // parsing each line as JSON
+         for (let i = 0; i < files.length; i += 5) {
+            const fileBatch = files.slice(i, i + 5);
 
-            const processedWords = this.dictServ.processTranslationResponse(words);
-            await this.openaiServ.saveBatchResult(processedWords); // enqueueing save operation for each file
+            await Promise.all(
+               fileBatch.map(async (file) => {
+                  this.logger.log(`processing file: ${file}...`);
+
+                  const filePath = path.join(baseDirectory, file);
+                  const fileContent = fs.readFileSync(filePath, 'utf-8');
+
+                  const words = fileContent
+                     .split('\n')
+                     .filter((line) => line.trim()) // ignoring empty lines
+                     .map((line) => JSON.parse(line)); // parsing each line as JSON
+
+                  const processedWords = this.dictServ.processTranslationResponse(words);
+                  await this.openaiServ.saveBatchResult(processedWords); // enqueueing save operation for each file
+               })
+            );
          }
 
          this.logger.log('All words from files stored successfully.');
