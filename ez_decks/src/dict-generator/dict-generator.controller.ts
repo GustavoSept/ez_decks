@@ -14,7 +14,10 @@ import { OpenaiService } from './openai/openai.service';
 import { CreateBatchFileDto } from './DTOs/create-batch-file.dto';
 import { LoadAndCreateBatchFileDto } from './DTOs/load-and-create-batch-file.dto';
 import { ListBatchProcessesDto } from './DTOs/list-batch-processes.dto';
-import { WesternTranslationResponseObj } from './structs/translation-response.structs';
+import {
+   GenericTranslationShape,
+   WesternTranslationResponseObj,
+} from './structs/translation-response.structs';
 import { DictGeneratorService } from './dict-generator.service';
 import { CreatedFileObject } from './openai/types/batch-created-file';
 import { BatchProcess } from './openai/types/batch-process';
@@ -138,7 +141,7 @@ export class DictGeneratorController {
     * @param batchIds A json value with a list of batchIds
     * @returns Creates files (on dist/local_files) with the content
     */
-   @Post('batch-results/save-words')
+   @Post('batch-results/manual-save-words')
    async saveBatchWords(@Body('batch_ids') batchIds: string[]) {
       const baseDirectory = path.join(__dirname, '../local_files/01_german_job/batches_output');
 
@@ -174,6 +177,32 @@ export class DictGeneratorController {
          const filePath = path.join(baseDirectory, newFileName);
          fs.writeFileSync(filePath, words.map((word) => JSON.stringify(word)).join('\n'));
          maxNumber++;
+      }
+
+      return { message: 'Words saved successfully' };
+   }
+
+   /**
+    * Manually store the contents of extracted words saved in local_files
+    */
+   @Post('batch-results/manual-store-words')
+   async storeBatchWords() {
+      const baseDirectory = path.join(__dirname, '../../../local_files/01_german_job/batches_output');
+      const files = fs.readdirSync(baseDirectory);
+
+      for (const file of files) {
+         console.info(`processing file: ${file}...`);
+
+         const filePath = path.join(baseDirectory, file);
+         const fileContent = fs.readFileSync(filePath, 'utf-8');
+
+         const words: GenericTranslationShape[] = fileContent
+            .split('\n')
+            .filter((line) => line.trim()) // ignoring empty lines
+            .map((line) => JSON.parse(line)); // parsing each line as JSON
+
+         const processedWords = this.dictServ.processTranslationResponse(words);
+         await this.openaiServ.saveBatchResult(processedWords); // enqueueing save operation for each file
       }
 
       return { message: 'Words saved successfully' };
