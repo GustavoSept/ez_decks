@@ -19,9 +19,31 @@
          "Aachenerinnen",
          "Aachenern",
          "Aacheners",
-         "Aachen",
          "aalender",
          "Aalener"
+      ],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aachen",
+      "translations": {
+         "verb": [],
+         "noun": ["Aachen", "Aix-la-Chapelle"],
+         "adjective": ["of or relating to Aachen"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aachener",
+         "Aachenerin",
+         "Aachenerinnen",
+         "Aachenern",
+         "Aacheners"
       ],
       "grammar_categories": ["noun", "adjective"]
    },
@@ -328,7 +350,6 @@
       },
       "similar_words": [
          "Aalangelfischerei",
-         "Aalangelns",
          "aalen",
          "aalenden",
          "Aalfische",
@@ -712,7 +733,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalborg"],
+      "similar_words": [],
       "grammar_categories": ["noun"]
    },
    {
@@ -1120,7 +1141,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalborg", "aalen", "aalend", "Aalens", "Aalfänge"],
+      "similar_words": ["aalen", "aalend", "Aalens", "Aalfänge"],
       "grammar_categories": ["noun"]
    },
    {
@@ -1365,8 +1386,7 @@
          "Aalfischern",
          "Aalfischers",
          "Aalkästchen",
-         "Aalkisten",
-         "Aalmolchen"
+         "Aalkisten"
       ],
       "grammar_categories": ["verb"]
    },
@@ -1804,8 +1824,7 @@
          "Aalkastens",
          "Aalkiste",
          "Aalkisten",
-         "Aalkörbchens",
-         "Aalstechens"
+         "Aalkörbchens"
       ],
       "grammar_categories": ["noun"]
    },
@@ -2082,9 +2101,6 @@
          "Aalkästchen",
          "Aalkiste",
          "Aalmolche",
-         "Aalmolchen",
-         "Aalmolches",
-         "Aalmolchs",
          "Aalquappe",
          "Aalquappen",
          "Aalreuse",
@@ -2110,9 +2126,6 @@
       "similar_words": [
          "Aalfische",
          "Aalmolch",
-         "Aalmolchen",
-         "Aalmolches",
-         "Aalmolchs",
          "Aalquappe",
          "Aalquappen",
          "Aalreusen",
@@ -2309,12 +2322,10 @@
          "Aalstreif",
          "Aalstrich",
          "Aalsuppe",
-         "aaltest",
          "Aalwels",
          "Aalwelse",
          "Aalwelsen",
-         "Aalwelses",
-         "Aaraus"
+         "Aalwelses"
       ],
       "grammar_categories": ["noun"]
    },
@@ -2441,12 +2452,9 @@
          "aalt",
          "aalte",
          "aalten",
-         "aaltest",
-         "aalet",
          "Aalwels",
          "Aar",
          "Aarau",
-         "Aaraus",
          "Aare"
       ],
       "grammar_categories": ["noun"]
@@ -2576,8 +2584,6 @@
          "aalt",
          "aalte",
          "aalten",
-         "aaltest",
-         "aalet",
          "Aar",
          "Aarau",
          "Aare"
@@ -2600,12 +2606,10 @@
       },
       "similar_words": [
          "Aalkästchen",
-         "Aalmolchen",
          "Aalrutte",
          "Aalrutten",
          "Aalspeeren",
          "aalst",
-         "Aalstechens",
          "Aalstreifen",
          "Aalstriche",
          "Aalstrichen",
@@ -2636,7 +2640,6 @@
          "Aalreuse",
          "Aalreusen",
          "Aalstreifen",
-         "Aalstreifs",
          "Aalstrich",
          "Aalstriche",
          "Aalstrichen"
@@ -2661,7 +2664,6 @@
          "Aalreusen",
          "Aalstechen",
          "Aalstreif",
-         "Aalstreifs",
          "Aalstrich",
          "Aalstriche",
          "Aalstrichen"
@@ -2687,7 +2689,6 @@
          "Aalreusen",
          "Aalstreif",
          "Aalstreifen",
-         "Aalstreifs",
          "Aalstriche",
          "Aalstrichen",
          "Aalstriches",
@@ -2738,7 +2739,6 @@
       "similar_words": [
          "Aalkörbchen",
          "Aalstechen",
-         "Aalstechens",
          "Aalstreif",
          "Aalstreifen",
          "Aalstrich",
@@ -2763,7 +2763,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalstechen", "Aalstechens", "Aalstrich", "Aalstriche", "Aalstrichen", "Aalstrichs"],
+      "similar_words": ["Aalstechen", "Aalstrich", "Aalstriche", "Aalstrichen", "Aalstrichs"],
       "grammar_categories": ["noun"]
    },
    {
@@ -2780,7 +2780,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalstreifs", "Aalstrich", "Aalstriche", "Aalstrichen", "Aalstriches"],
+      "similar_words": ["Aalstrich", "Aalstriche", "Aalstrichen", "Aalstriches"],
       "grammar_categories": ["noun"]
    },
    {
@@ -2831,7 +2831,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalstechens", "Aalsüppchen"],
+      "similar_words": ["Aalsüppchen"],
       "grammar_categories": ["noun"]
    },
    {
@@ -2916,8 +2916,6 @@
          "Aalstechen",
          "aalte",
          "aalten",
-         "aaltest",
-         "aalet",
          "Aar",
          "Aarau",
          "Aare"
@@ -2947,8 +2945,6 @@
          "Aalstechen",
          "aalt",
          "aalten",
-         "aaltest",
-         "aalet",
          "Aalwels",
          "Aar",
          "Aarau",
@@ -2979,8 +2975,6 @@
          "Aalstechen",
          "aalt",
          "aalte",
-         "aaltest",
-         "aalet",
          "Aalwels",
          "Aare"
       ],
@@ -3017,7 +3011,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalstechens", "Aaltierchen"],
+      "similar_words": ["Aaltierchen"],
       "grammar_categories": ["noun"]
    },
    {
@@ -3039,8 +3033,6 @@
          "Aals",
          "aalte",
          "aalten",
-         "aaltest",
-         "aalet",
          "Aalwelse",
          "Aalwelsen",
          "Aalwelses"
@@ -3061,7 +3053,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aalreuse", "Aalreusen", "aaltest", "Aalwels", "Aalwelsen", "Aalwelses"],
+      "similar_words": ["Aalreuse", "Aalreusen", "Aalwels", "Aalwelsen", "Aalwelses"],
       "grammar_categories": ["noun"]
    },
    {
@@ -3268,13 +3260,9 @@
          "aalst",
          "aalt",
          "aalte",
-         "aalet",
          "Aarau",
-         "Aaraus",
          "Aare",
-         "Aargau",
-         "Aarhus",
-         "Aaron"
+         "Aargau"
       ],
       "grammar_categories": ["noun"]
    },
@@ -3298,18 +3286,14 @@
          "aalst",
          "aalt",
          "aalte",
-         "aalet",
          "Aar",
          "Aarauer",
-         "Aaraus",
          "Aarburg",
          "Aare",
          "Aaretal",
          "Aargau",
          "Aargauer",
-         "Aargaus",
-         "Aarhus",
-         "Aaron"
+         "Aargaus"
       ],
       "grammar_categories": ["noun"]
    },
@@ -3331,7 +3315,6 @@
          "Aalraupe",
          "Aalraupen",
          "Aarau",
-         "Aaraus",
          "Aarburg",
          "Aare",
          "Aargau",
@@ -3339,8 +3322,7 @@
          "Aargauerin",
          "Aargauern",
          "Aargauers",
-         "Aargaus",
-         "Aarhus"
+         "Aargaus"
       ],
       "grammar_categories": ["noun", "adjective"]
    },
@@ -3358,7 +3340,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aarau", "Aarauer", "Aaraus", "Aarhus"],
+      "similar_words": ["Aarau", "Aarauer"],
       "grammar_categories": ["noun"]
    },
    {
@@ -3381,15 +3363,11 @@
          "aalt",
          "aalte",
          "aalten",
-         "aalet",
          "Aar",
          "Aarau",
          "Aarauer",
-         "Aaraus",
          "Aaretal",
-         "Aargau",
-         "Aarhus",
-         "Aaron"
+         "Aargau"
       ],
       "grammar_categories": ["noun"]
    },
@@ -3577,7 +3555,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["aalet", "Aarau", "Aare", "Aaretales", "Aaretals", "Aargau"],
+      "similar_words": ["Aarau", "Aare", "Aaretales", "Aaretals", "Aargau"],
       "grammar_categories": ["noun"]
    },
    {
@@ -3611,7 +3589,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aaraus", "Aaretal", "Aaretales", "Aargaus"],
+      "similar_words": ["Aaretal", "Aaretales", "Aargaus"],
       "grammar_categories": ["noun"]
    },
    {
@@ -3632,15 +3610,12 @@
          "Aar",
          "Aarau",
          "Aarauer",
-         "Aaraus",
          "Aare",
          "Aaretal",
          "Aargauer",
          "Aargauern",
          "Aargauers",
-         "Aargaus",
-         "Aarhus",
-         "Aaron"
+         "Aargaus"
       ],
       "grammar_categories": ["noun"]
    },
@@ -3661,7 +3636,6 @@
       "similar_words": [
          "Aarau",
          "Aarauer",
-         "Aaraus",
          "Aargau",
          "Aargauerin",
          "Aargauern",
@@ -3735,7 +3709,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aarauer", "Aaraus", "Aargau", "Aargauer", "Aargauerin", "Aargauern", "Aargaus"],
+      "similar_words": ["Aarauer", "Aargau", "Aargauer", "Aargauerin", "Aargauern", "Aargaus"],
       "grammar_categories": ["noun"]
    },
    {
@@ -3899,7 +3873,6 @@
       "similar_words": [
          "Aarau",
          "Aarauer",
-         "Aaraus",
          "Aaretals",
          "Aargau",
          "Aargauer",
@@ -3910,9 +3883,7 @@
          "aargauischem",
          "aargauischen",
          "aargauischer",
-         "aargauisches",
-         "Aarhus",
-         "Aaron"
+         "aargauisches"
       ],
       "grammar_categories": ["noun"]
    },
@@ -3947,7 +3918,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aaron", "aaronitische"],
+      "similar_words": ["aaronitische"],
       "grammar_categories": ["adjective"]
    },
    {
@@ -3964,7 +3935,7 @@
          "numeral": [],
          "modal_verb": []
       },
-      "similar_words": ["Aaron", "aaronitisch"],
+      "similar_words": ["aaronitisch"],
       "grammar_categories": ["adjective"]
    }
 ]

@@ -1,0 +1,121 @@
+[
+   {
+      "word": "Aword",
+      "translations": {
+         "verb": [],
+         "noun": ["Apalavra"],
+         "adjective": ["Awordar"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aworder",
+         "Awordin"
+      ],
+      "grammar_categories": ["noun", "adjective"]
+   },
+   {
+      "word": "Aworder",
+      "translations": {
+         "verb": [],
+         "noun": ["Apalavrador", "Ato de apalavrar"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aword",
+         "Awordin"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Awordin",
+      "translations": {
+         "verb": [],
+         "noun": ["Pequena palavra", "Minúscula palavra", "Pequenina palavra"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aword",
+         "Aworder"
+      ],
+      "grammar_categories": ["noun"]
+   },
+   {
+      "word": "Bchair",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["acadeirar", "ato de sentar"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Cchair"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Cchair",
+      "translations": {
+         "verb": [],
+         "noun": [],
+         "adjective": ["acadeirar", "momento de se deitar numa cadeira"],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Bchair"
+      ],
+      "grammar_categories": ["adjective"]
+   },
+   {
+      "word": "Aworder",
+      "translations": {
+         "verb": [],
+         "noun": ["Apalavradoramente"],
+         "adjective": [],
+         "adverb": [],
+         "pronoun": [],
+         "preposition": [],
+         "conjunction": [],
+         "article": [],
+         "numeral": [],
+         "modal_verb": []
+      },
+      "similar_words": [
+         "Aword",
+         "Awordin",
+         "Aworder"
+      ],
+      "grammar_categories": ["noun"]
+   }
+]

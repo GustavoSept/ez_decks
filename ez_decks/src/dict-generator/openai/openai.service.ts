@@ -24,7 +24,6 @@ import { PrismaService } from '../../prisma/prisma.service';
 import { Language } from '../../prisma/language.enum';
 import { OpenAIBatch } from './types/batch-query';
 import { Prisma } from '@prisma/client';
-import { chunkArray } from '../../common/utils/array/chunk-array';
 
 @Injectable()
 export class OpenaiService {
@@ -173,7 +172,7 @@ export class OpenaiService {
                   return JSON.parse(line) as BatchResult;
                } catch (error: any) {
                   const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
-                  console.info('Failed to parse error line:', sanitizedLine, error.message);
+                  this.logger.log('Failed to parse error line:', sanitizedLine, error.message);
 
                   // TODO: make a more scalable solution to automatically reprocess missed words
                   fs.writeFileSync('logs/missed_words.txt', sanitizedLine + '\n', { flag: 'a+' });
@@ -196,7 +195,7 @@ export class OpenaiService {
                   return JSON.parse(line);
                } catch (error: any) {
                   const sanitizedLine = line.replace(/[\n\t\r\v\f\u0009 ]/g, '');
-                  console.info('Failed to parse error line:', sanitizedLine, error.message);
+                  this.logger.log('Failed to parse error line:', sanitizedLine, error.message);
 
                   // TODO: make a more scalable solution to automatically reprocess missed words
                   fs.writeFileSync('logs/missed_words.txt', sanitizedLine + '\n', { flag: 'a+' });
@@ -244,82 +243,77 @@ export class OpenaiService {
    ) {
       const startTime = process.hrtime();
       this.logger.debug('Starting to save batch result into database...');
+      // console.log(`BEFORE PROCESSING: ${JSON.stringify(processedWords)}`);
 
-      // Step 1: Collect all unique words
-      const wordsToProcess = processedWords.map((pw) => ({
-         word: pw.word,
-         primary_language: primary_language,
-      }));
+      // Step 1: Clean input
+      const cleanedWords = this.cleanProcessedTranslationResponse<T>(processedWords);
 
-      // NOTE: Needs to be below the limit of the db's bind variables
-      const chunkSize = 16384;
+      // console.log(`AFTER PROCESSING: ${JSON.stringify(cleanedWords)}`);
 
-      // Step 2: Fetch existing words in chunks
-      const existingWordsMap = new Map<string, number>();
-
-      const wordChunks = chunkArray(
-         wordsToProcess.map((w) => w.word),
-         chunkSize
-      );
-
-      for (const wordChunk of wordChunks) {
-         const existingWords = await this.prisma.word.findMany({
-            where: {
-               word: { in: wordChunk },
-               primary_language: primary_language,
-            },
-         });
-
-         for (const word of existingWords) {
-            existingWordsMap.set(word.word, word.id);
-         }
-      }
-
-      // Step 3: Identify new words to insert
-      const newWords = wordsToProcess.filter((w) => !existingWordsMap.has(w.word));
-
-      // Step 4: Insert new words in chunks
-      if (newWords.length > 0) {
-         const newWordChunks = chunkArray(newWords, chunkSize);
-
-         for (const newWordChunk of newWordChunks) {
-            await this.prisma.word.createMany({
-               data: newWordChunk,
+      // Step 2: Insert new words synchronously, row by row
+      for (const newWord of cleanedWords) {
+         try {
+            await this.prisma.word.upsert({
+               where: {
+                  primary_language_word: {
+                     word: newWord.word,
+                     primary_language: primary_language,
+                  },
+               },
+               update: {}, // No update needed since we just want to ignore existing entries
+               create: {
+                  word: newWord.word,
+                  primary_language: primary_language,
+               },
             });
+         } catch (error: any) {
+            if (error.code === 'P2002') {
+               // Log unique constraint violation error
+               fs.writeFileSync(
+                  'logs/unique_constraint_error.txt',
+                  JSON.stringify(newWord) + ' (from wordsToProcess) \n',
+                  {
+                     flag: 'a+',
+                  }
+               );
+            } else {
+               throw error; // Re-throw if it's a different error
+            }
          }
       }
 
-      // Step 5: Fetch all words again to get complete wordId mapping
+      // Step 3: Fetch all words again to get complete wordId mapping
       const allWordsMap = new Map<string, number>();
 
-      for (const wordChunk of wordChunks) {
-         const allWords = await this.prisma.word.findMany({
-            where: {
-               word: { in: wordChunk },
-               primary_language: primary_language,
+      const allWords = await this.prisma.word.findMany({
+         where: {
+            primary_language: primary_language,
+            word: {
+               in: cleanedWords.map((word) => word.word),
             },
-         });
+         },
+      });
 
-         for (const word of allWords) {
-            allWordsMap.set(word.word, word.id);
-         }
+      for (const word of allWords) {
+         allWordsMap.set(word.word, word.id);
       }
 
-      // Step 6: Prepare batch data for translations, similar words, and grammar categories
+      // console.debug('All words map keys:', [...allWordsMap.keys()]);
+
+      // Step 4: Prepare batch data for translations, similar words, and grammar categories
       const translationsToInsert: Prisma.TranslationCreateManyInput[] = [];
       const similarWordsToInsert: Prisma.SimilarWordCreateManyInput[] = [];
       const grammarCategoriesToInsert: Prisma.GrammarCategoryCreateManyInput[] = [];
 
-      for (const processedWord of processedWords) {
-         const wordId = allWordsMap.get(processedWord.word);
+      for (const cleanWord of cleanedWords) {
+         const wordId = allWordsMap.get(cleanWord.word);
          if (wordId) {
             // Translations
-            for (const [type, translationList] of Object.entries(processedWord.translations)) {
+            for (const [type, translationList] of Object.entries(cleanWord.translations)) {
                const grammarType = mapStringToGrammarType(type);
                for (const translation of translationList) {
                   translationsToInsert.push({
                      wordId: wordId,
-                     primary_language: primary_language,
                      secondary_language: secondary_language,
                      type: grammarType,
                      translation: translation,
@@ -328,51 +322,117 @@ export class OpenaiService {
             }
 
             // Similar Words
-            for (const similarWord of processedWord.similar_words) {
-               similarWordsToInsert.push({
-                  wordId: wordId,
-                  primary_language: primary_language,
-                  similarWord: similarWord,
-               });
+            for (const similarWord of cleanWord.similar_words) {
+               const similarWordId = allWordsMap.get(similarWord);
+               if (similarWordId) {
+                  similarWordsToInsert.push({
+                     wordId: wordId,
+                     similar_word: similarWordId,
+                  });
+               }
             }
 
             // Grammar Categories
-            for (const grammarCategory of processedWord.grammar_categories) {
+            for (const grammarCategory of cleanWord.grammar_categories) {
                const grammarType = mapStringToGrammarType(grammarCategory);
                grammarCategoriesToInsert.push({
                   wordId: wordId,
-                  primary_language: primary_language,
-                  secondary_language: secondary_language,
                   category: grammarType,
                });
             }
          }
       }
 
-      // Step 7: Batch insert translations, similar words, and grammar categories in chunks
-      // Adjust chunk sizes as needed to stay within the bind variable limit
-      const translationChunks = chunkArray(translationsToInsert, chunkSize);
-      for (const translationChunk of translationChunks) {
-         await this.prisma.translation.createMany({
-            data: translationChunk,
-         });
+      // Step 5: Insert translations, similar words, and grammar categories synchronously, row by row
+
+      for (const translation of translationsToInsert) {
+         try {
+            await this.prisma.translation.create({
+               data: translation,
+            });
+         } catch (error: any) {
+            if (error.code === 'P2002') {
+               fs.writeFileSync(
+                  'logs/unique_constraint_error.txt',
+                  JSON.stringify(translation) + ' (from translationsToInsert) \n',
+                  {
+                     flag: 'a+',
+                  }
+               );
+            } else {
+               throw error; // Re-throw if it's a different error
+            }
+         }
       }
 
-      const similarWordsChunks = chunkArray(similarWordsToInsert, chunkSize);
-      for (const similarWordsChunk of similarWordsChunks) {
-         await this.prisma.similarWord.createMany({
-            data: similarWordsChunk,
-         });
+      for (const similarWord of similarWordsToInsert) {
+         try {
+            await this.prisma.similarWord.create({
+               data: similarWord,
+            });
+         } catch (error: any) {
+            if (error.code === 'P2002') {
+               fs.writeFileSync(
+                  'logs/unique_constraint_error.txt',
+                  JSON.stringify(similarWord) + ' (from similarWordsToInsert) \n',
+                  {
+                     flag: 'a+',
+                  }
+               );
+            } else {
+               throw error; // Re-throw if it's a different error
+            }
+         }
       }
 
-      const grammarCategoriesChunks = chunkArray(grammarCategoriesToInsert, chunkSize);
-      for (const grammarCategoriesChunk of grammarCategoriesChunks) {
-         await this.prisma.grammarCategory.createMany({
-            data: grammarCategoriesChunk,
-         });
+      for (const grammarCategory of grammarCategoriesToInsert) {
+         try {
+            await this.prisma.grammarCategory.create({
+               data: grammarCategory,
+            });
+         } catch (error: any) {
+            if (error.code === 'P2002') {
+               fs.writeFileSync(
+                  'logs/unique_constraint_error.txt',
+                  JSON.stringify(grammarCategory) + ' (from grammarCategoriesToInsert) \n',
+                  {
+                     flag: 'a+',
+                  }
+               );
+            } else {
+               throw error; // Re-throw if it's a different error
+            }
+         }
       }
+
       const diff = process.hrtime(startTime);
       const timeTaken = diff[0] + diff[1] / 1e9; // Converts time to seconds
       this.logger.debug(`Finished saving batch result into database! Took ${timeTaken.toFixed(2)} seconds!`);
+   }
+
+   /**
+    * Runs .trim() and toLowerCase() on all strings
+    *
+    * Also removes duplicated rows based on "word"
+    */
+   cleanProcessedTranslationResponse<T extends GenericTranslationShape>(
+      processedWords: ProcessedTranslationResponse<T>[]
+   ) {
+      const wordsToProcess = processedWords.map((pw) => ({
+         word: pw.word.trim().toLowerCase(),
+         translations: Object.fromEntries(
+            Object.entries(pw.translations).map(([key, value]) => [
+               key.trim().toLowerCase(),
+               Array.from(new Set(value.map((v) => v.trim().toLowerCase()))),
+            ])
+         ),
+         similar_words: Array.from(new Set(pw.similar_words.map((s) => s.trim().toLowerCase()))),
+         grammar_categories: Array.from(new Set(pw.grammar_categories.map((g) => g.trim().toLowerCase()))),
+      }));
+
+      const uniqueWordsToProcess = Array.from(
+         new Map(wordsToProcess.map((item) => [item.word, item])).values()
+      );
+      return uniqueWordsToProcess;
    }
 }
