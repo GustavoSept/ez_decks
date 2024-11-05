@@ -24,6 +24,7 @@ import { PrismaService } from '../../prisma/prisma.service';
 import { Language } from '../../prisma/language.enum';
 import { OpenAIBatch } from './types/batch-query';
 import { Prisma } from '@prisma/client';
+import { chunkArray } from 'src/common/utils/array/chunk-array';
 
 @Injectable()
 export class OpenaiService {
@@ -243,48 +244,26 @@ export class OpenaiService {
    ) {
       const startTime = process.hrtime();
       this.logger.debug('Starting to save batch result into database...');
-      // console.log(`BEFORE PROCESSING: ${JSON.stringify(processedWords)}`);
 
       // Step 1: Clean input
       const cleanedWords = this.cleanProcessedTranslationResponse<T>(processedWords);
 
-      // console.log(`AFTER PROCESSING: ${JSON.stringify(cleanedWords)}`);
+      // Step 2: Insert new words using createMany with skipDuplicates: true
+      const wordsToInsert = cleanedWords.map((newWord) => ({
+         word: newWord.word,
+         primary_language: primary_language,
+      }));
 
-      // Step 2: Insert new words synchronously, row by row
-      for (const newWord of cleanedWords) {
-         try {
-            await this.prisma.word.upsert({
-               where: {
-                  primary_language_word: {
-                     word: newWord.word,
-                     primary_language: primary_language,
-                  },
-               },
-               update: {}, // No update needed since we just want to ignore existing entries
-               create: {
-                  word: newWord.word,
-                  primary_language: primary_language,
-               },
-            });
-         } catch (error: any) {
-            if (error.code === 'P2002') {
-               // Log unique constraint violation error
-               fs.writeFileSync(
-                  'logs/unique_constraint_error.txt',
-                  JSON.stringify(newWord) + ' (from wordsToProcess) \n',
-                  {
-                     flag: 'a+',
-                  }
-               );
-            } else {
-               throw error; // Re-throw if it's a different error
-            }
-         }
+      const wordChunks = chunkArray(wordsToInsert, 1000);
+
+      for (const chunk of wordChunks) {
+         await this.prisma.word.createMany({
+            data: chunk,
+            skipDuplicates: true,
+         });
       }
 
-      // Step 3: Fetch all words again to get complete wordId mapping
-      const allWordsMap = new Map<string, number>();
-
+      // Step 3: Fetch all words to get complete wordId mapping
       const allWords = await this.prisma.word.findMany({
          where: {
             primary_language: primary_language,
@@ -294,11 +273,10 @@ export class OpenaiService {
          },
       });
 
+      const allWordsMap = new Map<string, number>();
       for (const word of allWords) {
          allWordsMap.set(word.word, word.id);
       }
-
-      // console.debug('All words map keys:', [...allWordsMap.keys()]);
 
       // Step 4: Prepare batch data for translations, similar words, and grammar categories
       const translationsToInsert: Prisma.TranslationCreateManyInput[] = [];
@@ -343,66 +321,29 @@ export class OpenaiService {
          }
       }
 
-      // Step 5: Insert translations, similar words, and grammar categories synchronously, row by row
-
-      for (const translation of translationsToInsert) {
-         try {
-            await this.prisma.translation.create({
-               data: translation,
-            });
-         } catch (error: any) {
-            if (error.code === 'P2002') {
-               fs.writeFileSync(
-                  'logs/unique_constraint_error.txt',
-                  JSON.stringify(translation) + ' (from translationsToInsert) \n',
-                  {
-                     flag: 'a+',
-                  }
-               );
-            } else {
-               throw error; // Re-throw if it's a different error
-            }
-         }
+      // Step 5: Insert translations, similar words, and grammar categories using createMany with skipDuplicates: true
+      const translationChunks = chunkArray(translationsToInsert, 1000);
+      for (const chunk of translationChunks) {
+         await this.prisma.translation.createMany({
+            data: chunk,
+            skipDuplicates: true,
+         });
       }
 
-      for (const similarWord of similarWordsToInsert) {
-         try {
-            await this.prisma.similarWord.create({
-               data: similarWord,
-            });
-         } catch (error: any) {
-            if (error.code === 'P2002') {
-               fs.writeFileSync(
-                  'logs/unique_constraint_error.txt',
-                  JSON.stringify(similarWord) + ' (from similarWordsToInsert) \n',
-                  {
-                     flag: 'a+',
-                  }
-               );
-            } else {
-               throw error; // Re-throw if it's a different error
-            }
-         }
+      const similarWordsChunks = chunkArray(similarWordsToInsert, 1000);
+      for (const chunk of similarWordsChunks) {
+         await this.prisma.similarWord.createMany({
+            data: chunk,
+            skipDuplicates: true,
+         });
       }
 
-      for (const grammarCategory of grammarCategoriesToInsert) {
-         try {
-            await this.prisma.grammarCategory.create({
-               data: grammarCategory,
-            });
-         } catch (error: any) {
-            if (error.code === 'P2002') {
-               fs.writeFileSync(
-                  'logs/unique_constraint_error.txt',
-                  JSON.stringify(grammarCategory) + ' (from grammarCategoriesToInsert) \n',
-                  {
-                     flag: 'a+',
-                  }
-               );
-            } else {
-               throw error; // Re-throw if it's a different error
-            }
-         }
+      const grammarCategoriesChunks = chunkArray(grammarCategoriesToInsert, 1000);
+      for (const chunk of grammarCategoriesChunks) {
+         await this.prisma.grammarCategory.createMany({
+            data: chunk,
+            skipDuplicates: true,
+         });
       }
 
       const diff = process.hrtime(startTime);

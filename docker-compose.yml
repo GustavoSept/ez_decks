@@ -16,6 +16,7 @@ services:
     volumes:
       - ./ez_decks:/usr/src/app
       - ./ez_decks/logs:/usr/src/app/logs
+      - ./local_files:/usr/src/app/local_files
       - type: tmpfs
         target: ${NODE_TEMP_PATH:-/tmp}
    #  deploy:

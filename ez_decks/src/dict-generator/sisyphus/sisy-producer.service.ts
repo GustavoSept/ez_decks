@@ -8,7 +8,8 @@ import { OpenAIBatch } from '../openai/types/batch-query';
 export class SisyProducerService {
    constructor(
       @InjectQueue('sequential_batch_processing') private batchQueue: Queue,
-      @InjectQueue('dict_to_db') private dictToDbQueue: Queue
+      @InjectQueue('dict_to_db') private dictToDbQueue: Queue,
+      @InjectQueue('manual_store_words') private wordsToDbQueue: Queue
    ) {}
 
    /**
@@ -30,6 +31,21 @@ export class SisyProducerService {
          'processBatchIntoDb',
          { batchResponse, batchId },
          { attempts: 4, removeOnFail: 3, removeOnComplete: true }
+      );
+   }
+
+   /**
+    * Transforms data from `GenericTranslationShape[]` files, and stores it into the db
+    */
+   async enqueueProcessWordsIntoDb(local_file_path?: string) {
+      await this.dictToDbQueue.add(
+         'manual_store_words',
+         { local_file_path },
+         {
+            attempts: 4,
+            removeOnFail: 3,
+            removeOnComplete: true,
+         }
       );
    }
 }

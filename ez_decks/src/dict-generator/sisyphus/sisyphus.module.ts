@@ -6,6 +6,7 @@ import { SequentialBatchProcessingConsumer } from './sequential-batch-processing
 import { OpenaiModule } from '../openai/openai.module';
 import { DictGeneratorService } from '../dict-generator.service';
 import { BatchToDbConsumerService } from './batchtodb-consumer.service';
+import { ManualStoreWordsConsumerService } from './storetodb-consumer.service';
 
 /**
  * This module is used to long-poll openAI, get results, store on db, repeat.
@@ -24,12 +25,9 @@ import { BatchToDbConsumerService } from './batchtodb-consumer.service';
          }),
       }),
       BullModule.registerQueue(
-         {
-            name: 'sequential_batch_processing',
-         },
-         {
-            name: 'dict_to_db',
-         }
+         { name: 'sequential_batch_processing' },
+         { name: 'dict_to_db' },
+         { name: 'manual_store_words' }
       ),
       OpenaiModule,
    ],
@@ -37,6 +35,7 @@ import { BatchToDbConsumerService } from './batchtodb-consumer.service';
       SisyProducerService,
       SequentialBatchProcessingConsumer,
       BatchToDbConsumerService,
+      ManualStoreWordsConsumerService,
       DictGeneratorService,
    ],
    exports: [SisyProducerService],
